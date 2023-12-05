@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Box, Button, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, SimpleGrid } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
+import ShieldIcon from "/public/assets/icons/ShieldIcon.svg";
 
 export default function Home() {
   return (
@@ -35,7 +36,11 @@ export default function Home() {
       </Flex>
 
       <Box position="absolute" bottom="0" left="0" p="4">
-        <Button size="lg" bg="brand.yellow">
+        <Button
+          size="lg"
+          bg="brand.yellow"
+          leftIcon={<Image src={ShieldIcon} alt="Parent Zone Icon" />}
+        >
           Parent Zone
         </Button>
       </Box>
