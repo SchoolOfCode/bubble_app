@@ -2,6 +2,7 @@
 
 import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import "@fontsource/happy-monkey/400.css";
 
 const colors = {
   brand: {
@@ -11,8 +12,8 @@ const colors = {
 };
 
 const fonts = {
-  heading: "Happy Monkey",
   body: "Happy Monkey",
+  heading: "Happy Monkey",
 };
 
 export const theme = extendTheme({ colors, fonts });

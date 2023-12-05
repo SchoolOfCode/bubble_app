@@ -13,9 +13,7 @@ export default function Home() {
     >
       <Box>
         <Image src={Logo} alt="Logo" />
-        <Text fontFamily="fonts.body" color="white">
-          where mindful moments are made...
-        </Text>
+        <Text color="white">where mindful moments are made...</Text>
         <Button>Bubble Breathing</Button>
         <Button>Record Your Mood</Button>
         <Button>Earlier Logs</Button>
