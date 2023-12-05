@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
-import SmallLogo from "/public/assets/BubbleLogoSmall.svg";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
         </Box>
       </Flex>
       <Box position="absolute" bottom="0" left="0" p="4">
-        <Image src={SmallLogo} alt="Logo" />
         <Button>Parent Zone</Button>
       </Box>
     </Box>
