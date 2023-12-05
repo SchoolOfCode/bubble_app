@@ -1,12 +1,26 @@
 import Image from "next/image";
-import { Box } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Logo from "/public/assets/BubbleLogo.svg";
 
 export default function Home() {
   return (
-    <Box bg="brand.900" h="100vh">
-      <h1>Homepage</h1>
-      <Image src={Logo} alt="Logo" />
-    </Box>
+    <Flex
+      direction="column"
+      align="center"
+      justify="center"
+      bgGradient="linear(to-b, brand.700, brand.900 50%)"
+      h="100vh"
+    >
+      <Box>
+        <Image src={Logo} alt="Logo" />
+        <Text fontFamily="fonts.body" color="white">
+          where mindful moments are made...
+        </Text>
+        <Button>Bubble Breathing</Button>
+        <Button>Record Your Mood</Button>
+        <Button>Earlier Logs</Button>
+        <Button>Parent Zone</Button>
+      </Box>
+    </Flex>
   );
 }
