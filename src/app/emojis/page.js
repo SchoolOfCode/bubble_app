@@ -17,10 +17,12 @@ export default function Emojis() {
   //trying to get the emoji to link to the next page
   // const router = useRouter();
   // router.push("../page.js");
-  
+  //define the date 
+    const date = new Date().toLocaleString();
+    console.log(date);
   async function emojiClickHandler(emoji) {
     console.log(emoji);
-    const { data, error } = await supabase.from("mood").insert([{ emoji }])
+    const { data, error } = await supabase.from("mood").insert([{ emoji, date: new Date().toLocaleString() }])
 
     if (error){
       console.log(error);
