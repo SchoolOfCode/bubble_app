@@ -1,10 +1,12 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import { Box } from "@chakra-ui/react";
+import Logo from "/public/assets/BubbleLogo.svg";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <Box bg="brand.900" h="100vh">
       <h1>Homepage</h1>
-    </main>
+      <Image src={Logo} alt="Logo" />
+    </Box>
   );
 }
