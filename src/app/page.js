@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
 
 export default function Home() {
@@ -13,14 +13,22 @@ export default function Home() {
         <Box>
           <Image src={Logo} alt="Logo" />
         </Box>
+
+        <SimpleGrid columns={2} spacing={10} >
         <Box pt="15vh">
-          <Button>Bubble Breathing</Button>
-          <Button>Record Your Mood</Button>
-          <Button>Earlier Logs</Button>
+          <Button size="lg" style={{width:"35%", height: "100px"}} bg= "brand.pink">Bubble Breathing</Button>
+          </Box>
+          <Box pt="15vh">
+          <Button bg= "brand.green">Record Your Mood</Button>
+        
         </Box>
+        </SimpleGrid>
+
+        <Box> <Button bg= "brand.purple">Earlier Logs</Button> </Box>
+
       </Flex>
       <Box position="absolute" bottom="0" left="0" p="4">
-        <Button>Parent Zone</Button>
+        <Button bg= "brand.yellow">Parent Zone</Button>
       </Box>
     </Box>
   );

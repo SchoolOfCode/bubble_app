@@ -8,6 +8,12 @@ const colors = {
   brand: {
     900: "#4258A6",
     700: "#29D7CD",
+    pink: "#F2BAC9",
+    green: "#9CD6BB",
+    purple: "#C0B9DD",
+    yellow: "#F0DAA2",
+
+
   },
 };
 
