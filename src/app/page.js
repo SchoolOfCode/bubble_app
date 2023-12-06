@@ -8,7 +8,7 @@ export default function Home() {
     <Box position="relative">
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box mb="10">
-          <Image src={Logo} alt="Logo" />
+          <Image src={Logo} priority={true} alt="Logo" />
         </Box>
 
         <SimpleGrid columns={2} spacing={5} mt="10vh">
