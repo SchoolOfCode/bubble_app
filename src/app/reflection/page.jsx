@@ -45,7 +45,7 @@ export default function page() {
           border="none"
           boxShadow="lg"
         />
-        <FinishButton />
+
         <Button bg="brand.yellow" maxW="600px" boxShadow="lg">
           See everything you jotted down
         </Button>
