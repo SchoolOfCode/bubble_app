@@ -16,14 +16,14 @@ export default function Navbar() {
   };
   return (
     <>
-      <Flex as="nav" alignItems="center" p="15px">
-        <Box onClick={goBack}>
+      <Flex as="nav" alignItems="center" p="20px">
+        <Box onClick={goBack} pl="20px">
           <Link href="/">
             <Image src={BackButton} alt="Back Button" />
           </Link>
         </Box>
         <Spacer />
-        <Box>
+        <Box pr="20px">
           <Image src={SmallLogo} alt="Logo" />
         </Box>
       </Flex>

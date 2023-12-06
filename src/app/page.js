@@ -1,58 +1,82 @@
 import Image from "next/image";
-import { Box, Button, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Box, Button, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
 import Link from "next/link";
 import ShieldIcon from "/public/assets/icons/ShieldIcon.svg";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <Box position="relative">
-      <Flex direction="column" align="center" justify="center" h="100%">
-        <Box>
-          <Image src={Logo} priority={true} alt="Logo" />
-        </Box>
-
-        <SimpleGrid columns={2} spacing={5} mt="10">
-          <Box>
-            <Button size="lg" w="100%" h="100px" bg="brand.pink" boxShadow="lg">
-              Bubble Breathing
-            </Button>
+    <Flex direction="column" h="100%">
+      <Box>
+        <Flex direction="column" align="center" justify="center">
+          <Box mt="20">
+            <Image src={Logo} priority={true} alt="Logo" />
           </Box>
-          <Box>
-            <Link href="/emojis">
+
+          <SimpleGrid
+            columns={2}
+            spacing={{ base: "5", md: "8", lg: "10" }}
+            mt={{ base: "15px", md: "40px", lg: "40px" }}
+          >
+            <Box>
               <Button
-                size="lg"
+                size={{ base: "lg" }}
                 w="100%"
                 h="100px"
-                bg="brand.green"
+                bg="brand.pink"
                 boxShadow="lg"
               >
-                Record Your Mood
+                <Text fontSize={{ base: "xl", md: "2xl", lg: "2xl" }}>
+                  Bubble Breathing
+                </Text>
               </Button>
-            </Link>
+            </Box>
+            <Box>
+              <Link href="/emojis">
+                <Button
+                  size="lg"
+                  w="100%"
+                  h="100px"
+                  bg="brand.green"
+                  boxShadow="lg"
+                >
+                  <Text fontSize={{ base: "xl", md: "2xl", lg: "2xl" }}>
+                    Record Your Mood
+                  </Text>
+                </Button>
+              </Link>
+            </Box>
+          </SimpleGrid>
+
+          <Box minW="268px" mt={{ base: "20px", md: "40px", lg: "40px" }}>
+            <Button
+              size="lg"
+              w="100%"
+              h="100px"
+              bg="brand.purple"
+              boxShadow="lg"
+            >
+              <Text fontSize={{ base: "xl", md: "2xl", lg: "2xl" }}>
+                Earlier Logs
+              </Text>
+            </Button>
           </Box>
-        </SimpleGrid>
+        </Flex>
+      </Box>
 
-        <Box minW="214px" mt="5" mb="10">
-          <Button size="lg" w="100%" h="100px" bg="brand.purple" boxShadow="lg">
-            Earlier Logs
-          </Button>
-        </Box>
-      </Flex>
-
-      <Box position="relative" bottom="10" left="0" p="4" mt="20">
+      <Box bottom="20" p="10" position="fixed">
         <Button
           size="lg"
           bg="brand.yellow"
           leftIcon={<Image src={ShieldIcon} alt="Parent Zone Icon" />}
           boxShadow="lg"
         >
-          Parent Zone
+          <Text fontSize="xl">Parent Zone</Text>
         </Button>
+
+        <Footer />
       </Box>
-      <Footer />
-    </Box>
+    </Flex>
   );
 }
