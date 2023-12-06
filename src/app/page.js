@@ -16,13 +16,19 @@ export default function Home() {
 
         <SimpleGrid columns={2} spacing={5} mt="10vh">
           <Box>
-            <Button size="lg" w="100%" h="100px" bg="brand.pink">
+            <Button size="lg" w="100%" h="100px" bg="brand.pink" boxShadow="lg">
               Bubble Breathing
             </Button>
           </Box>
           <Box>
             <Link href="/emojis">
-              <Button size="lg" w="100%" h="100px" bg="brand.green">
+              <Button
+                size="lg"
+                w="100%"
+                h="100px"
+                bg="brand.green"
+                boxShadow="lg"
+              >
                 Record Your Mood
               </Button>
             </Link>
@@ -30,7 +36,7 @@ export default function Home() {
         </SimpleGrid>
 
         <Box mt="10">
-          <Button size="lg" w="100%" h="100px" bg="brand.purple">
+          <Button size="lg" w="100%" h="100px" bg="brand.purple" boxShadow="lg">
             Earlier Logs
           </Button>
         </Box>
@@ -41,6 +47,7 @@ export default function Home() {
           size="lg"
           bg="brand.yellow"
           leftIcon={<Image src={ShieldIcon} alt="Parent Zone Icon" />}
+          boxShadow="lg"
         >
           Parent Zone
         </Button>
