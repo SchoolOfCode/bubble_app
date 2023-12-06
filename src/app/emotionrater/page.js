@@ -59,12 +59,12 @@ const RatingButtons = () => {
     <Box position="relative">
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box size="lg" w="70%" h="100px" bg="brand.blue" borderRadius="md">
-          <Heading>Let’s dive deeper (rate your emotions)</Heading>
+          <Heading align="center">Let’s dive deeper (rate your emotions)</Heading>
         </Box>
 
         <Box>
           <Box
-            bg="brand.lightBlue"
+            bg="brand.blue"
             borderRadius="lg"
             w="100%"
             p="1rem"
