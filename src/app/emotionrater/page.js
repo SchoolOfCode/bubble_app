@@ -44,6 +44,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             w="100%"
             p="1rem"
             my="1rem"
+            minWidth="485px"
           >
             <Heading align="center">How happy do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
@@ -163,6 +164,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             w="100%"
             p="1rem"
             my="1rem"
+            minWidth="485px"
           >
             <Heading align="center">How sad do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
@@ -282,6 +284,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             w="100%"
             p="1rem"
             my="1rem"
+            minWidth="485px"
           >
             <Heading align="center">How angry do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
@@ -401,6 +404,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             w="100%"
             p="1rem"
             my="1rem"
+            minWidth="485px"
           >
             <Heading align="center">How cheeky do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
@@ -520,6 +524,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             w="100%"
             p="1rem"
             my="1rem"
+            minWidth="485px"
           >
             <Heading align="center">How tired do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
@@ -639,6 +644,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             w="100%"
             p="1rem"
             my="1rem"
+            minWidth="485px"
           >
             <Heading align="center">How worried do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
