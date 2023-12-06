@@ -26,7 +26,7 @@ const HappinessRatingButtons = () => {
   return (
     <Box position="relative">
       <Flex direction="column" align="center" justify="center" h="100%">
-        <Box size="lg" w="70%" h="100px" bg="brand.blue">
+        <Box size="lg" w="70%" h="100px" bg="brand.blue" borderRadius="md">
           <Heading>Let’s dive deeper (rate your emotions)</Heading>
         </Box>
 
@@ -43,47 +43,125 @@ const HappinessRatingButtons = () => {
               <Box display="flex">
                 <Text size="sm">Not Happy</Text>
               </Box>
-              <Image
-                src={Bubble}
-                alt="Bubble1"
-                onClick={() => handleHappinessRatingChange(1)}
-                width={50}
-                height={50}
-              />
-              <Image
-                src={Bubble}
-                alt="Bubble1"
-                onClick={() => handleHappinessRatingChange(2)}
-                width={50}
-                height={50}
-              />
-              <Image
-                src={Bubble}
-                alt="Bubble1"
-                onClick={() => handleHappinessRatingChange(3)}
-                width={50}
-                height={50}
-              />
-              <Image
-                src={Bubble}
-                alt="Bubble1"
-                onClick={() => handleHappinessRatingChange(4)}
-                width={50}
-                height={50}
-              />
-              <Image
-                src={Bubble}
-                alt="Bubble1"
-                onClick={() => handleHappinessRatingChange(5)}
-                width={50}
-                height={50}
-              />
+              <Image />
+              <Box position="relative" display="inline-block">
+                <Image
+                  src={Bubble}
+                  alt="Bubble1"
+                  onClick={() => handleHappinessRatingChange(1)}
+                  width={50}
+                  height={50}
+                />
+
+                <Text
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  borderRadius="md"
+                >
+                  1
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image
+                  src={Bubble}
+                  alt="Bubble2"
+                  onClick={() => handleHappinessRatingChange(2)}
+                  width={50}
+                  height={50}
+                />
+
+                <Text
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  borderRadius="md"
+                >
+                  2
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image
+                  src={Bubble}
+                  alt="Bubble3"
+                  onClick={() => handleHappinessRatingChange(3)}
+                  width={50}
+                  height={50}
+                />
+
+                <Text
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  borderRadius="md"
+                >
+                  3
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image
+                  src={Bubble}
+                  alt="Bubble4"
+                  onClick={() => handleHappinessRatingChange(4)}
+                  width={50}
+                  height={50}
+                />
+
+                <Text
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  borderRadius="md"
+                >
+                  4
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image
+                  src={Bubble}
+                  alt="Bubble5"
+                  onClick={() => handleHappinessRatingChange(5)}
+                  width={50}
+                  height={50}
+                />
+
+                <Text
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  borderRadius="md"
+                >
+                  5
+                </Text>
+              </Box>
 
               <Text size="sm">Very Happy</Text>
             </Box>
-          <Box align="center" >
-            1 2 3 4 5
-          </Box>
           </Box>
         </Box>
       </Flex>
