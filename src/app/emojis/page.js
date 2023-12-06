@@ -41,7 +41,7 @@ export default function Emojis() {
     //set up a div to contain the text - "How are you feeling? (just pick one)
     //need to display the 6 emoji images in a grid - chakra ui grid
     <>
-    <Navbar />
+      <Navbar />
       <Box
         maxW="500px"
         mx="auto"
@@ -148,8 +148,8 @@ export default function Emojis() {
               </Text>
             </Box>
           </Flex>
-          <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box w="250px">
+          <Flex justify="flex-start" alignItems="flex-start" h="100%">
+            <Box>
               <Link href="/">
                 <Image
                   src={Tired}
