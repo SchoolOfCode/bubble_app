@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Box, Button, Flex, SimpleGrid } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
 import ShieldIcon from "/public/assets/icons/ShieldIcon.svg";
-import BubbleAnimation from "./components/BubbleAnimation";
 
 export default function Home() {
   return (
@@ -41,7 +40,6 @@ export default function Home() {
           Parent Zone
         </Button>
       </Box>
-      <BubbleAnimation />
     </Box>
   );
 }
