@@ -57,7 +57,7 @@ export default function Emojis() {
       <Flex justify="center" alignItems="center">
         <SimpleGrid columns={3} spacing={8} mx="auto">
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Happy}
@@ -74,7 +74,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Sad}
@@ -91,7 +91,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Cheeky}
@@ -110,7 +110,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Angry}
@@ -127,7 +127,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Worried}
@@ -146,7 +146,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Tired}
