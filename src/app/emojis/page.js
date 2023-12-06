@@ -93,7 +93,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Cheeky}
