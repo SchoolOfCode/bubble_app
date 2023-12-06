@@ -15,18 +15,49 @@ import Bubble from "../../../public/assets/Bubble.svg";
 
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 
-const HappinessRatingButtons = () => {
+const RatingButtons = () => {
   const [happinessRating, setHappinessRating] = useState(null);
 console.log(`This is the happiness rating ${happinessRating}`);
+  const [sadnessRating, setSadnessRating] = useState(null);
+  console.log(`This is the sadness rating ${sadnessRating}`);
+  const [angryRating, setAngryRating] = useState(null);
+  console.log(`This is the angry rating ${angryRating}`);
+  const [cheekyRating, setCheekyRating] = useState(null);
+  console.log(`This is the cheeky rating ${cheekyRating}`);
+  const [tiredRating, setTiredRating] = useState(null);
+  console.log(`This is the tired rating ${tiredRating}`);
+  const [worriedRating, setWorriedRating] = useState(null);
+  console.log(`This is the worried rating ${worriedRating}`);
+  
   const handleHappinessRatingChange = async (rating) => {
     console.log(rating);
     setHappinessRating(rating);
+  };
+  const handleSadnessRatingChange = async (rating) => {
+    console.log(rating);
+    setSadnessRating(rating);
+  };
+  const handleAngryRatingChange = async (rating) => {
+    console.log(rating);
+    setAngryRating(rating);
+  };
+  const handleCheekyRatingChange = async (rating) => {
+    console.log(rating);
+    setCheekyRating(rating);
+  };
+  const handleTiredRatingChange = async (rating) => {
+    console.log(rating);
+    setTiredRating(rating);
+  };
+  const handleWorriedRatingChange = async (rating) => {
+    console.log(rating);
+    setWorriedRating(rating);
   };
 
   SubmitEvent = async () => {
     const { error  } = await supabase
       .from("mood")
-      .update({happy: happinessRating})
+      .update({happy: happinessRating, sad: sadnessRating, angry: angryRating, cheeky: cheekyRating, tired: tiredRating, worried: worriedRating})
       .eq("uuid", `135086d0-9c0e-4444-b110-9a964710cff3`);
   };
 
@@ -175,7 +206,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(1)}
+                  onClick={() => handleSadnessRatingChange(1)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -195,7 +226,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(2)}
+                  onClick={() => handleSadnessRatingChange(2)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -215,7 +246,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(3)}
+                  onClick={() => handleSadnessRatingChange(3)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -235,7 +266,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(4)}
+                  onClick={() => handleSadnessRatingChange(4)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -255,7 +286,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(5)}
+                  onClick={() => handleSadnessRatingChange(5)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -295,7 +326,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(1)}
+                  onClick={() => handleAngryRatingChange(1)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -315,7 +346,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(2)}
+                  onClick={() => handleAngryRatingChange(2)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -335,7 +366,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(3)}
+                  onClick={() => handleAngryRatingChange(3)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -355,7 +386,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(4)}
+                  onClick={() => handleAngryRatingChange(4)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -375,7 +406,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(5)}
+                  onClick={() => handleAngryRatingChange(5)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -415,7 +446,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(1)}
+                  onClick={() => handleCheekyRatingChange(1)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -435,7 +466,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(2)}
+                  onClick={() => handleCheekyRatingChange(2)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -455,7 +486,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(3)}
+                  onClick={() => handleCheekyRatingChange(3)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -475,7 +506,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(4)}
+                  onClick={() => handleCheekyRatingChange(4)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -495,7 +526,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(5)}
+                  onClick={() => handleCheekyRatingChange(5)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -535,7 +566,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(1)}
+                  onClick={() => handleTiredRatingChange(1)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -555,7 +586,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(2)}
+                  onClick={() => handleTiredRatingChange(2)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -575,7 +606,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(3)}
+                  onClick={() => handleTiredRatingChange(3)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -595,7 +626,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(4)}
+                  onClick={() => handleTiredRatingChange(4)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -615,7 +646,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(5)}
+                  onClick={() => handleTiredRatingChange(5)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -655,7 +686,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(1)}
+                  onClick={() => handleWorriedRatingChange(1)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -675,7 +706,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(2)}
+                  onClick={() => handleWorriedRatingChange(2)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -695,7 +726,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(3)}
+                  onClick={() => handleWorriedRatingChange(3)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -715,7 +746,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(4)}
+                  onClick={() => handleWorriedRatingChange(4)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -735,7 +766,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} />
 
                 <Text
-                  onClick={() => handleHappinessRatingChange(5)}
+                  onClick={() => handleWorriedRatingChange(5)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -764,4 +795,4 @@ console.log(`This is the happiness rating ${happinessRating}`);
   );
 };
 
-export default HappinessRatingButtons;
+export default RatingButtons;
