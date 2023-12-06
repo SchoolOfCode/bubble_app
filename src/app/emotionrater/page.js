@@ -155,7 +155,604 @@ console.log(`This is the happiness rating ${happinessRating}`);
             </Box>
           </Box>
         </Box>
+
+        <Box>
+          <Box
+            bg="brand.yellow"
+            borderRadius="lg"
+            w="100%"
+            p="1rem"
+            my="1rem"
+          >
+            <Heading align="center">How sad do you feel?</Heading>
+            <Box display="flex" justifyContent="space-between">
+              <Box display="flex">
+                <Text size="sm">Not Sad</Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble1" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(1)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  1
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble2" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(2)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  2
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble3" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(3)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  3
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble4" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(4)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  4
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble5" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(5)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  5
+                </Text>
+              </Box>
+
+              <Text size="sm">Very Sad</Text>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box>
+          <Box
+            bg="brand.green"
+            borderRadius="lg"
+            w="100%"
+            p="1rem"
+            my="1rem"
+          >
+            <Heading align="center">How angry do you feel?</Heading>
+            <Box display="flex" justifyContent="space-between">
+              <Box display="flex">
+                <Text size="sm">Not Angry</Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble1" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(1)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  1
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble2" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(2)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  2
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble3" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(3)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  3
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble4" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(4)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  4
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble5" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(5)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  5
+                </Text>
+              </Box>
+
+              <Text size="sm">Very Angry</Text>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box>
+          <Box
+            bg="brand.pink"
+            borderRadius="lg"
+            w="100%"
+            p="1rem"
+            my="1rem"
+          >
+            <Heading align="center">How cheeky do you feel?</Heading>
+            <Box display="flex" justifyContent="space-between">
+              <Box display="flex">
+                <Text size="sm">Not Cheeky</Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble1" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(1)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  1
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble2" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(2)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  2
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble3" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(3)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  3
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble4" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(4)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  4
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble5" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(5)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  5
+                </Text>
+              </Box>
+
+              <Text size="sm">Very Cheeky</Text>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box>
+          <Box
+            bg="brand.purple"
+            borderRadius="lg"
+            w="100%"
+            p="1rem"
+            my="1rem"
+          >
+            <Heading align="center">How tired do you feel?</Heading>
+            <Box display="flex" justifyContent="space-between">
+              <Box display="flex">
+                <Text size="sm">Not Tired</Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble1" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(1)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  1
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble2" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(2)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  2
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble3" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(3)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  3
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble4" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(4)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  4
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble5" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(5)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  5
+                </Text>
+              </Box>
+
+              <Text size="sm">Very Tired</Text>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box>
+          <Box
+            bg="brand.green"
+            borderRadius="lg"
+            w="100%"
+            p="1rem"
+            my="1rem"
+          >
+            <Heading align="center">How worried do you feel?</Heading>
+            <Box display="flex" justifyContent="space-between">
+              <Box display="flex">
+                <Text size="sm">Not Worried</Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble1" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(1)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  1
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble2" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(2)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  2
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble3" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(3)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  3
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble4" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(4)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  4
+                </Text>
+              </Box>
+              <Box position="relative" display="inline-block">
+                <Image src={Bubble} alt="Bubble5" width={50} height={50} />
+
+                <Text
+                  onClick={() => handleHappinessRatingChange(5)}
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  p={4}
+                  pt={1}
+                  pb={1}
+                  borderRadius="md"
+                >
+                  5
+                </Text>
+              </Box>
+
+              <Text size="sm">Very Worried</Text>
+            </Box>
+          </Box>
+        </Box>
+
       </Flex>
+      
       <Button onClick={() => SubmitEvent()}>Submit</Button>
     </Box>
   );
