@@ -17,10 +17,17 @@ import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 
 const HappinessRatingButtons = () => {
   const [happinessRating, setHappinessRating] = useState(null);
-
+console.log(`This is the happiness rating ${happinessRating}`);
   const handleHappinessRatingChange = async (rating) => {
-    await supabase.rpc("update_happiness_rating", { rating });
+    console.log(rating);
     setHappinessRating(rating);
+  };
+
+  SubmitEvent = async () => {
+    const { error  } = await supabase
+      .from("mood")
+      .update({happy: happinessRating})
+      .eq("uuid", `135086d0-9c0e-4444-b110-9a964710cff3`);
   };
 
   return (
@@ -43,17 +50,11 @@ const HappinessRatingButtons = () => {
               <Box display="flex">
                 <Text size="sm">Not Happy</Text>
               </Box>
-              <Image />
               <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble1"
-                  onClick={() => handleHappinessRatingChange(1)}
-                  width={50}
-                  height={50}
-                />
+                <Image src={Bubble} alt="Bubble1" width={50} height={50} />
 
                 <Text
+                  onClick={() => handleHappinessRatingChange(1)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -62,21 +63,18 @@ const HappinessRatingButtons = () => {
                   fontWeight="bold"
                   color="black"
                   p={4}
+                  pt={1}
+                  pb={1}
                   borderRadius="md"
                 >
                   1
                 </Text>
               </Box>
               <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble2"
-                  onClick={() => handleHappinessRatingChange(2)}
-                  width={50}
-                  height={50}
-                />
+                <Image src={Bubble} alt="Bubble2" width={50} height={50} />
 
                 <Text
+                  onClick={() => handleHappinessRatingChange(2)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -85,21 +83,18 @@ const HappinessRatingButtons = () => {
                   fontWeight="bold"
                   color="black"
                   p={4}
+                  pt={1}
+                  pb={1}
                   borderRadius="md"
                 >
                   2
                 </Text>
               </Box>
               <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble3"
-                  onClick={() => handleHappinessRatingChange(3)}
-                  width={50}
-                  height={50}
-                />
+                <Image src={Bubble} alt="Bubble3" width={50} height={50} />
 
                 <Text
+                  onClick={() => handleHappinessRatingChange(3)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -108,21 +103,18 @@ const HappinessRatingButtons = () => {
                   fontWeight="bold"
                   color="black"
                   p={4}
+                  pt={1}
+                  pb={1}
                   borderRadius="md"
                 >
                   3
                 </Text>
               </Box>
               <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble4"
-                  onClick={() => handleHappinessRatingChange(4)}
-                  width={50}
-                  height={50}
-                />
+                <Image src={Bubble} alt="Bubble4" width={50} height={50} />
 
                 <Text
+                  onClick={() => handleHappinessRatingChange(4)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -131,21 +123,18 @@ const HappinessRatingButtons = () => {
                   fontWeight="bold"
                   color="black"
                   p={4}
+                  pt={1}
+                  pb={1}
                   borderRadius="md"
                 >
                   4
                 </Text>
               </Box>
               <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble5"
-                  onClick={() => handleHappinessRatingChange(5)}
-                  width={50}
-                  height={50}
-                />
+                <Image src={Bubble} alt="Bubble5" width={50} height={50} />
 
                 <Text
+                  onClick={() => handleHappinessRatingChange(5)}
                   position="absolute"
                   top="50%"
                   left="50%"
@@ -154,6 +143,8 @@ const HappinessRatingButtons = () => {
                   fontWeight="bold"
                   color="black"
                   p={4}
+                  pt={1}
+                  pb={1}
                   borderRadius="md"
                 >
                   5
@@ -165,6 +156,7 @@ const HappinessRatingButtons = () => {
           </Box>
         </Box>
       </Flex>
+      <Button onClick={() => SubmitEvent()}>Submit</Button>
     </Box>
   );
 };
