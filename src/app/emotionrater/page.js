@@ -17,40 +17,34 @@ import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 
 const RatingButtons = () => {
   const [happinessRating, setHappinessRating] = useState(null);
-console.log(`This is the happiness rating ${happinessRating}`);
+// console.log(`This is the happiness rating ${happinessRating}`);
   const [sadnessRating, setSadnessRating] = useState(null);
-  console.log(`This is the sadness rating ${sadnessRating}`);
+  // console.log(`This is the sadness rating ${sadnessRating}`);
   const [angryRating, setAngryRating] = useState(null);
-  console.log(`This is the angry rating ${angryRating}`);
+  // console.log(`This is the angry rating ${angryRating}`);
   const [cheekyRating, setCheekyRating] = useState(null);
-  console.log(`This is the cheeky rating ${cheekyRating}`);
+  //console.log(`This is the cheeky rating ${cheekyRating}`);
   const [tiredRating, setTiredRating] = useState(null);
-  console.log(`This is the tired rating ${tiredRating}`);
+  //console.log(`This is the tired rating ${tiredRating}`);
   const [worriedRating, setWorriedRating] = useState(null);
-  console.log(`This is the worried rating ${worriedRating}`);
+  console.log(`This is the happiness rating ${happinessRating} This is the sadness rating ${sadnessRating} This is the angry rating ${angryRating} This is the cheeky rating ${cheekyRating} This is the tired rating ${tiredRating}  This is the worried rating ${worriedRating}`);
   
   const handleHappinessRatingChange = async (rating) => {
-    console.log(rating);
     setHappinessRating(rating);
   };
   const handleSadnessRatingChange = async (rating) => {
-    console.log(rating);
     setSadnessRating(rating);
   };
   const handleAngryRatingChange = async (rating) => {
-    console.log(rating);
     setAngryRating(rating);
   };
   const handleCheekyRatingChange = async (rating) => {
-    console.log(rating);
     setCheekyRating(rating);
   };
   const handleTiredRatingChange = async (rating) => {
-    console.log(rating);
     setTiredRating(rating);
   };
   const handleWorriedRatingChange = async (rating) => {
-    console.log(rating);
     setWorriedRating(rating);
   };
 
@@ -80,7 +74,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             <Heading align="center">How happy do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text size="sm">Not Happy</Text>
+                <Text align="center" w="60px" size="sm">Not Happy</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -183,7 +177,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 </Text>
               </Box>
 
-              <Text size="sm">Very Happy</Text>
+              <Text align="center" w="60px" size="sm">Very Happy</Text>
             </Box>
           </Box>
         </Box>
@@ -200,7 +194,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             <Heading align="center">How sad do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text size="sm">Not Sad</Text>
+                <Text align="center" w="60px" size="sm">Not Sad</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -303,7 +297,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 </Text>
               </Box>
 
-              <Text size="sm">Very Sad</Text>
+              <Text align="center" w="60px" size="sm">Very Sad</Text>
             </Box>
           </Box>
         </Box>
@@ -320,7 +314,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             <Heading align="center">How angry do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text size="sm">Not Angry</Text>
+                <Text align="center" w="60px" size="sm">Not Angry</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -423,7 +417,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 </Text>
               </Box>
 
-              <Text size="sm">Very Angry</Text>
+              <Text align="center" w="60px" size="sm">Very Angry</Text>
             </Box>
           </Box>
         </Box>
@@ -440,7 +434,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             <Heading align="center">How cheeky do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text size="sm">Not Cheeky</Text>
+                <Text align="center" w="60px" size="sm">Not Cheeky</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -543,7 +537,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 </Text>
               </Box>
 
-              <Text size="sm">Very Cheeky</Text>
+              <Text align="center" w="60px" size="sm">Very Cheeky</Text>
             </Box>
           </Box>
         </Box>
@@ -560,7 +554,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             <Heading align="center">How tired do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text size="sm">Not Tired</Text>
+                <Text align="center" w="60px" size="sm">Not Tired</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -663,7 +657,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 </Text>
               </Box>
 
-              <Text size="sm">Very Tired</Text>
+              <Text align="center" w="60px" size="sm">Very Tired</Text>
             </Box>
           </Box>
         </Box>
@@ -680,7 +674,7 @@ console.log(`This is the happiness rating ${happinessRating}`);
             <Heading align="center">How worried do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text size="sm">Not Worried</Text>
+                <Text align="center" w="60px" size="sm">Not Worried</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -783,14 +777,14 @@ console.log(`This is the happiness rating ${happinessRating}`);
                 </Text>
               </Box>
 
-              <Text size="sm">Very Worried</Text>
+              <Text align="center" w="60px" size="sm">Very Worried</Text>
             </Box>
           </Box>
         </Box>
 
       </Flex>
       
-      <Button onClick={() => SubmitEvent()}>Submit</Button>
+      <Button position="relative" bottom="0" right="0" onClick={() => SubmitEvent()}>Submit</Button>
     </Box>
   );
 };
