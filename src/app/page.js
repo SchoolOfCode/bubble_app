@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <Box position="relative">
       <Flex direction="column" align="center" justify="center" h="100%">
-        <Box mb="10">
+        <Box>
           <Image src={Logo} priority={true} alt="Logo" />
         </Box>
 
-        <SimpleGrid columns={2} spacing={5} mt="10vh">
+        <SimpleGrid columns={2} spacing={5} mt="10">
           <Box>
             <Button size="lg" w="100%" h="100px" bg="brand.pink" boxShadow="lg">
               Bubble Breathing
