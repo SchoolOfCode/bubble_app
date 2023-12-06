@@ -11,6 +11,7 @@ import Angry from "../../../public/assets/emojis/Angry.svg";
 import Worried from "../../../public/assets/emojis/Worried.svg";
 import Tired from "../../../public/assets/emojis/Tired.svg";
 import Link from "next/link.js";
+import Bubble from "../../../public/assets/Bubble.svg";
 
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 
@@ -30,52 +31,60 @@ const HappinessRatingButtons = () => {
         </Box>
 
         <Box>
-          <Heading>How happy do you feel?</Heading>
-          <Box display="flex" justifyContent="space-between">
-            <Button
-              onClick={() => handleHappinessRatingChange(1)}
-              colorScheme="red"
-              size="sm"
-            >
-              Not Happy
-            </Button>
-            <Button
-              onClick={() => handleHappinessRatingChange(2)}
-              colorScheme="orange"
-              size="sm"
-            >
-              1
-            </Button>
-            <Button
-              onClick={() => handleHappinessRatingChange(3)}
-              colorScheme="yellow"
-              size="sm"
-            >
-              2
-            </Button>
-            <Button
-              onClick={() => handleHappinessRatingChange(4)}
-              colorScheme="green"
-              size="sm"
-            >
-              3
-            </Button>
-            <Button
-              onClick={() => handleHappinessRatingChange(5)}
-              colorScheme="teal"
-              size="sm"
-            >
-              4
-            </Button>
-            <Button
-              onClick={() => handleHappinessRatingChange(6)}
-              colorScheme="blue"
-              size="sm"
-            >
-              Very Happy
-            </Button>
+          <Box
+            bg="brand.lightBlue"
+            borderRadius="lg"
+            w="100%"
+            p="1rem"
+            my="1rem"
+          >
+            <Heading align="center">How happy do you feel?</Heading>
+            <Box display="flex" justifyContent="space-between">
+              <Box display="flex">
+                <Text size="sm">Not Happy</Text>
+              </Box>
+              <Image
+                src={Bubble}
+                alt="Bubble1"
+                onClick={() => handleHappinessRatingChange(1)}
+                width={50}
+                height={50}
+              />
+              <Image
+                src={Bubble}
+                alt="Bubble1"
+                onClick={() => handleHappinessRatingChange(2)}
+                width={50}
+                height={50}
+              />
+              <Image
+                src={Bubble}
+                alt="Bubble1"
+                onClick={() => handleHappinessRatingChange(3)}
+                width={50}
+                height={50}
+              />
+              <Image
+                src={Bubble}
+                alt="Bubble1"
+                onClick={() => handleHappinessRatingChange(4)}
+                width={50}
+                height={50}
+              />
+              <Image
+                src={Bubble}
+                alt="Bubble1"
+                onClick={() => handleHappinessRatingChange(5)}
+                width={50}
+                height={50}
+              />
+
+              <Text size="sm">Very Happy</Text>
+            </Box>
+          <Box align="center" >
+            1 2 3 4 5
           </Box>
-          <Text>Your happiness rating: {happinessRating}</Text>
+          </Box>
         </Box>
       </Flex>
     </Box>
