@@ -12,6 +12,7 @@ import Worried from "../../../public/assets/emojis/Worried.svg";
 import Tired from "../../../public/assets/emojis/Tired.svg";
 import Link from "next/link.js";
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import Navbar from "../components/Navbar.jsx";
 
 export default function Emojis() {
   //trying to get the emoji to link to the next page
@@ -39,6 +40,7 @@ export default function Emojis() {
     //set up a div to contain the text - "How are you feeling? (just pick one)
     //need to display the 6 emoji images in a grid - chakra ui grid
     <>
+    <Navbar />
       <Box
         maxW="500px"
         mx="auto"
@@ -57,7 +59,7 @@ export default function Emojis() {
       <Flex justify="center" alignItems="center">
         <SimpleGrid columns={3} spacing={8} mx="auto">
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Happy}
@@ -74,7 +76,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Sad}
@@ -110,7 +112,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Angry}
@@ -127,7 +129,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Worried}
@@ -146,7 +148,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
+            <Box>
               <Link href="/">
                 <Image
                   src={Tired}

@@ -2,10 +2,12 @@ import Image from "next/image";
 import { Box, Button, Flex, SimpleGrid } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
 import ShieldIcon from "/public/assets/icons/ShieldIcon.svg";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <Box position="relative">
+    <Navbar/>
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box mb="10">
           <Image src={Logo} priority={true} alt="Logo" />
