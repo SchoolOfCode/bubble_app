@@ -21,11 +21,11 @@ export default function Home() {
             </Button>
           </Box>
           <Box>
-          <Link href="/emojis">
-            <Button size="lg" w="100%" h="100px" bg="brand.green">
-              Record Your Mood
-            </Button>
-          </Link>
+            <Link href="/emojis">
+              <Button size="lg" w="100%" h="100px" bg="brand.green">
+                Record Your Mood
+              </Button>
+            </Link>
           </Box>
         </SimpleGrid>
 
@@ -36,7 +36,7 @@ export default function Home() {
         </Box>
       </Flex>
 
-      <Box position="relative" bottom="0" left="0" p="4">
+      <Box position="fixed" bottom="10" left="0" p="4">
         <Button
           size="lg"
           bg="brand.yellow"
@@ -45,7 +45,7 @@ export default function Home() {
           Parent Zone
         </Button>
       </Box>
-    <Footer />
+      <Footer />
     </Box>
   );
 }
