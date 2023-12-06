@@ -11,8 +11,7 @@ const colors = {
     green: "#9CD6BB",
     purple: "#C0B9DD",
     yellow: "#F0DAA2",
-    blue: "#A2C1F0",
-    lightBlue: "#BAD7F2"
+    blue: "#A2C1F0"
   },
 };
 
@@ -25,7 +24,9 @@ const styles = {
   global: {
     body: {
       backgroundImage: "linear(to-b, brand.700, brand.900 50%)",
-      height: "100vh",
+      minHeight: "100vh",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
     },
   },
 };

@@ -2,7 +2,7 @@
 import supabase from "../config/supbaseClient.js";
 import { useEffect, useState } from "react";
 import { useLink } from "next/router";
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import Happy from "../../../public/assets/emojis/Happy.svg";
 import Sad from "../../../public/assets/emojis/Sad.svg";
@@ -12,6 +12,8 @@ import Worried from "../../../public/assets/emojis/Worried.svg";
 import Tired from "../../../public/assets/emojis/Tired.svg";
 import Link from "next/link.js";
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
 
 export default function Emojis() {
   //trying to get the emoji to link to the next page
@@ -39,6 +41,7 @@ export default function Emojis() {
     //set up a div to contain the text - "How are you feeling? (just pick one)
     //need to display the 6 emoji images in a grid - chakra ui grid
     <>
+      <Navbar />
       <Box
         maxW="500px"
         mx="auto"
@@ -47,7 +50,7 @@ export default function Emojis() {
         bg="brand.green"
         p="2"
         mt="10"
-        mb="10"
+        mb="20"
         boxShadow="lg"
       >
         <Heading>How are you feeling?</Heading>
@@ -57,8 +60,8 @@ export default function Emojis() {
       <Flex justify="center" alignItems="center">
         <SimpleGrid columns={3} spacing={8} mx="auto">
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
-              <Link href="/">
+            <Box>
+              <Link href="/reflection">
                 <Image
                   src={Happy}
                   alt="Happy-Emoji"
@@ -74,8 +77,8 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
-              <Link href="/">
+            <Box>
+              <Link href="/reflection">
                 <Image
                   src={Sad}
                   alt="Sad-Emoji"
@@ -91,8 +94,8 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
-              <Link href="/">
+            <Box>
+              <Link href="/reflection">
                 <Image
                   src={Cheeky}
                   alt="Cheeky-Emoji"
@@ -110,8 +113,8 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
-              <Link href="/">
+            <Box>
+              <Link href="/reflection">
                 <Image
                   src={Angry}
                   alt="Angry-Emoji"
@@ -127,8 +130,8 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
-              <Link href="/">
+            <Box>
+              <Link href="/reflection">
                 <Image
                   src={Worried}
                   alt="Worried-Emoji"
@@ -145,9 +148,9 @@ export default function Emojis() {
               </Text>
             </Box>
           </Flex>
-          <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box border="1px solid">
-              <Link href="/">
+          <Flex justify="flex-start" alignItems="flex-start" h="100%">
+            <Box>
+              <Link href="/reflection">
                 <Image
                   src={Tired}
                   alt="Tired-Emoji"
@@ -163,7 +166,11 @@ export default function Emojis() {
             </Box>
           </Flex>
         </SimpleGrid>
+        <Link href="/reflection">
+          <Button>Next</Button>
+        </Link>
       </Flex>
+      <Footer />
     </>
   );
 }
