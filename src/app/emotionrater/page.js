@@ -69,12 +69,12 @@ const RatingButtons = () => {
             w="100%"
             p="1rem"
             my="1rem"
-            minWidth="485px"
+            minWidth="500px"
           >
             <Heading align="center">How happy do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="60px" size="sm">Not Happy</Text>
+                <Text align="center" w="65px" size="sm">Not Happy</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -177,7 +177,7 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="60px" size="sm">Very Happy</Text>
+              <Text align="center" w="65px" size="sm">Very Happy</Text>
             </Box>
           </Box>
         </Box>
@@ -189,12 +189,12 @@ const RatingButtons = () => {
             w="100%"
             p="1rem"
             my="1rem"
-            minWidth="485px"
+            minWidth="500px"
           >
             <Heading align="center">How sad do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="60px" size="sm">Not Sad</Text>
+                <Text align="center" w="65px" size="sm">Not Sad</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -297,7 +297,7 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="60px" size="sm">Very Sad</Text>
+              <Text align="center" w="65px" size="sm">Very Sad</Text>
             </Box>
           </Box>
         </Box>
@@ -309,12 +309,12 @@ const RatingButtons = () => {
             w="100%"
             p="1rem"
             my="1rem"
-            minWidth="485px"
+            minWidth="500px"
           >
             <Heading align="center">How angry do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="60px" size="sm">Not Angry</Text>
+                <Text align="center" w="65px" size="sm">Not Angry</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -417,7 +417,7 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="60px" size="sm">Very Angry</Text>
+              <Text align="center" w="65px" size="sm">Very Angry</Text>
             </Box>
           </Box>
         </Box>
@@ -429,12 +429,12 @@ const RatingButtons = () => {
             w="100%"
             p="1rem"
             my="1rem"
-            minWidth="485px"
+            minWidth="500px"
           >
             <Heading align="center">How cheeky do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="60px" size="sm">Not Cheeky</Text>
+                <Text align="center" w="65px" size="sm">Not Cheeky</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -537,7 +537,7 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="60px" size="sm">Very Cheeky</Text>
+              <Text align="center" w="65px" size="sm">Very Cheeky</Text>
             </Box>
           </Box>
         </Box>
@@ -549,12 +549,12 @@ const RatingButtons = () => {
             w="100%"
             p="1rem"
             my="1rem"
-            minWidth="485px"
+            minWidth="500px"
           >
             <Heading align="center">How tired do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="60px" size="sm">Not Tired</Text>
+                <Text align="center" w="65px" size="sm">Not Tired</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -657,7 +657,7 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="60px" size="sm">Very Tired</Text>
+              <Text align="center" w="65px" size="sm">Very Tired</Text>
             </Box>
           </Box>
         </Box>
@@ -669,12 +669,12 @@ const RatingButtons = () => {
             w="100%"
             p="1rem"
             my="1rem"
-            minWidth="485px"
+            minWidth="500px"
           >
             <Heading align="center">How worried do you feel?</Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="60px" size="sm">Not Worried</Text>
+                <Text align="center" w="65px" size="sm">Not Worried</Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} />
@@ -777,7 +777,7 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="60px" size="sm">Very Worried</Text>
+              <Text align="center" w="65px" size="sm">Very Worried</Text>
             </Box>
           </Box>
         </Box>
