@@ -13,6 +13,7 @@ import Tired from "../../../public/assets/emojis/Tired.svg";
 import Link from "next/link.js";
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
 
 export default function Emojis() {
   //trying to get the emoji to link to the next page
@@ -49,7 +50,7 @@ export default function Emojis() {
         bg="brand.green"
         p="2"
         mt="10"
-        mb="10"
+        mb="20"
         boxShadow="lg"
       >
         <Heading>How are you feeling?</Heading>
@@ -148,7 +149,7 @@ export default function Emojis() {
             </Box>
           </Flex>
           <Flex justifyContent="center" alignItems="center" h="100%">
-            <Box>
+            <Box w="250px">
               <Link href="/">
                 <Image
                   src={Tired}
@@ -166,6 +167,7 @@ export default function Emojis() {
           </Flex>
         </SimpleGrid>
       </Flex>
+      <Footer />
     </>
   );
 }

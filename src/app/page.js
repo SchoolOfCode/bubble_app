@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { Box, Button, Flex, SimpleGrid } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
+import Link from "next/link";
 import ShieldIcon from "/public/assets/icons/ShieldIcon.svg";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <Box position="relative">
-    <Navbar/>
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box mb="10">
           <Image src={Logo} priority={true} alt="Logo" />
@@ -20,9 +21,11 @@ export default function Home() {
             </Button>
           </Box>
           <Box>
+          <Link href="/emojis">
             <Button size="lg" w="100%" h="100px" bg="brand.green">
               Record Your Mood
             </Button>
+          </Link>
           </Box>
         </SimpleGrid>
 
@@ -42,6 +45,7 @@ export default function Home() {
           Parent Zone
         </Button>
       </Box>
+    <Footer />
     </Box>
   );
 }
