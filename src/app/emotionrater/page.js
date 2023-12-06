@@ -4,12 +4,6 @@ import { useEffect, useState } from "react";
 import { useLink } from "next/router";
 import { SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
-import Happy from "../../../public/assets/emojis/Happy.svg";
-import Sad from "../../../public/assets/emojis/Sad.svg";
-import Cheeky from "../../../public/assets/emojis/Cheeky.svg";
-import Angry from "../../../public/assets/emojis/Angry.svg";
-import Worried from "../../../public/assets/emojis/Worried.svg";
-import Tired from "../../../public/assets/emojis/Tired.svg";
 import Link from "next/link.js";
 import Bubble from "../../../public/assets/Bubble.svg";
 
@@ -48,7 +42,7 @@ const RatingButtons = () => {
     setWorriedRating(rating);
   };
 
-  SubmitEvent = async () => {
+  const SubmitEvent = async () => {
     const { error  } = await supabase
       .from("mood")
       .update({happy: happinessRating, sad: sadnessRating, angry: angryRating, cheeky: cheekyRating, tired: tiredRating, worried: worriedRating})
