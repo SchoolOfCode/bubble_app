@@ -35,7 +35,7 @@ export default function Home() {
           </Box>
         </SimpleGrid>
 
-        <Box mt="10">
+        <Box minW="214px" mt="10">
           <Button size="lg" w="100%" h="100px" bg="brand.purple" boxShadow="lg">
             Earlier Logs
           </Button>
