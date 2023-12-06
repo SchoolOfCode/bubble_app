@@ -2,7 +2,7 @@
 import supabase from "../config/supbaseClient.js";
 import { useEffect, useState } from "react";
 import { useLink } from "next/router";
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import Happy from "../../../public/assets/emojis/Happy.svg";
 import Sad from "../../../public/assets/emojis/Sad.svg";
@@ -166,6 +166,9 @@ export default function Emojis() {
             </Box>
           </Flex>
         </SimpleGrid>
+        <Link href="/reflection">
+          <Button>Next</Button>
+        </Link>
       </Flex>
       <Footer />
     </>
