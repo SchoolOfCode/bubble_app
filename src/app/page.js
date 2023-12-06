@@ -5,11 +5,7 @@ import ShieldIcon from "/public/assets/icons/ShieldIcon.svg";
 
 export default function Home() {
   return (
-    <Box
-      position="relative"
-      bgGradient="linear(to-b, brand.700, brand.900 50%)"
-      h="100vh"
-    >
+    <Box position="relative">
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box mb="10">
           <Image src={Logo} alt="Logo" />
@@ -35,7 +31,7 @@ export default function Home() {
         </Box>
       </Flex>
 
-      <Box position="absolute" bottom="0" left="0" p="4">
+      <Box position="relative" bottom="0" left="0" p="4">
         <Button
           size="lg"
           bg="brand.yellow"

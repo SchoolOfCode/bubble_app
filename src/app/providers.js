@@ -1,5 +1,4 @@
 "use client";
-
 import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "@fontsource/happy-monkey/400.css";
@@ -12,8 +11,6 @@ const colors = {
     green: "#9CD6BB",
     purple: "#C0B9DD",
     yellow: "#F0DAA2",
-
-
   },
 };
 
@@ -22,7 +19,16 @@ const fonts = {
   heading: "Happy Monkey",
 };
 
-export const theme = extendTheme({ colors, fonts });
+const styles = {
+  global: {
+    body: {
+      backgroundImage: "linear(to-b, brand.700, brand.900 50%)",
+      height: "100vh",
+    },
+  },
+};
+
+export const theme = extendTheme({ colors, fonts, styles });
 
 export function Providers({ children }) {
   return (
