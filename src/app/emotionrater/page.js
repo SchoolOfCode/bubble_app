@@ -1,10 +1,10 @@
 "use client";
 import supabase from "../config/supbaseClient.js";
 import { useEffect, useState } from "react";
-import { useLink } from "next/router";
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, useToast } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link.js";
+import { useRouter } from "next/navigation";
 import Bubble from "../../../public/assets/Bubble.svg";
 import Navbar from "../components/Navbar.jsx";
 
@@ -12,6 +12,8 @@ import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 
 const RatingButtons = () => {
 
+const toast = useToast();
+const router = useRouter();
   //Retrieving a value
 const uniqueID = localStorage.getItem('uniqueid');
 console.log(uniqueID); // Output: uuid
@@ -51,6 +53,24 @@ console.log(uniqueID); // Output: uuid
   };
 
   const SubmitEvent = async () => {
+
+    if (!happinessRating || !sadnessRating || !angryRating || !cheekyRating || !tiredRating || !worriedRating) {
+
+      toast({
+        position: "top",
+        duration: 5000,
+        render: () => (
+          <Flex justifyContent="center" textAlign="center">
+            <Box color="black" p={3} bg="white" borderRadius="md">
+              <Text fontSize="lg" as="em">
+                Oops, not all of them have been filled in! Double-check you've picked a bubble for each question!
+              </Text>
+            </Box>
+          </Flex>
+        )})
+
+  } else {
+
     const { error } = await supabase
       .from("mood")
       .update({
@@ -62,7 +82,13 @@ console.log(uniqueID); // Output: uuid
         worried: worriedRating,
       })
       .eq("uuid", uniqueID);
-  };
+
+    if (error) {
+      console.log(error);
+    }
+
+    router.push("/reflection");
+  }}
 
   return (
     <Box position="relative">
@@ -1058,7 +1084,6 @@ console.log(uniqueID); // Output: uuid
           </Box>
         </Box>
       </Flex>
-      <Link href="/reflection">
         <Button
           position="relative"
           bottom="0"
@@ -1067,7 +1092,6 @@ console.log(uniqueID); // Output: uuid
         >
           Submit
         </Button>
-      </Link>
       <Link href="/reflection">
         <Button>Next</Button>
       </Link>
