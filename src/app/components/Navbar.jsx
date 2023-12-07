@@ -16,7 +16,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <Flex as="nav" alignItems="center" p="20px">
+      <Flex as="nav" alignItems="center" p="10px">
         <Box onClick={goBack} pl="20px">
           <Link href="/">
             <Image src={BackButton} alt="Back Button" />
