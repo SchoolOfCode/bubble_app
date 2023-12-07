@@ -102,14 +102,11 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={happinessRating === 1 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
                   borderRadius="md"
-                  style={{
-                    visibility: happinessRating !== 1 ? "none" : "inherit"
-                  }}
                 >
                   1
                 </Text>
