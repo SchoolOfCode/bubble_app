@@ -239,7 +239,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={sadnessRating === 1 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -261,7 +261,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={sadnessRating === 2 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -283,7 +283,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={sadnessRating === 3 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -305,7 +305,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={sadnessRating === 4 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -327,7 +327,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={sadnessRating === 5 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -373,7 +373,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={angryRating === 1 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -395,7 +395,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={angryRating === 2 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -417,7 +417,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={angryRating === 3 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -439,7 +439,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={angryRating === 4 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -461,7 +461,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={angryRating === 5 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -507,7 +507,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={cheekyRating === 1 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -529,7 +529,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={cheekyRating === 2 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -551,7 +551,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={cheekyRating === 3 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -573,7 +573,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={cheekyRating === 4 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -595,7 +595,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={cheekyRating === 5 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -641,7 +641,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={tiredRating === 1 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -663,7 +663,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={tiredRating === 2 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -685,7 +685,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={tiredRating === 3 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -707,7 +707,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={tiredRating === 4 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -729,7 +729,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={tiredRating === 5 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -775,7 +775,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={worriedRating === 1 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -797,7 +797,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={worriedRating === 2 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -819,7 +819,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={worriedRating === 3 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -841,7 +841,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={worriedRating === 4 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
@@ -863,7 +863,7 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color="black"
+                  color={worriedRating === 5 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
