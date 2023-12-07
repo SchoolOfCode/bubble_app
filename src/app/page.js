@@ -17,7 +17,7 @@ export default function Home() {
           <SimpleGrid
             columns={2}
             spacing={{ base: "5", md: "8", lg: "10" }}
-            mt={{ base: "15px", md: "20px", lg: "20px" }}
+            mt={{ base: "15px", md: "10px", lg: "10px" }}
           >
             <Box>
               <Button
