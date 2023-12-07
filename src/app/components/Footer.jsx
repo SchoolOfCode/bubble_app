@@ -6,15 +6,14 @@ export default function Footer() {
     <Box
       alignItems="center"
       textAlign="center"
-      color="white"
+      color="brand.footer"
       position="fixed"
       bottom="0"
       left="0"
       width="100%"
       padding="5px"
     >
-      <Text>© Team 11 Ltd.</Text>
-      <Text>Fostering mindful bubbles since 2023.</Text>
+      <Text>© Team 11 Ltd. Fostering mindful bubbles since 2023.</Text>
     </Box>
   );
 }
