@@ -22,8 +22,7 @@ export default function Textbox() {
           <Flex justifyContent="center" textAlign="center">
             <Box color="black" p={3} bg="white" borderRadius="md">
               <Text fontSize="lg" as="em">
-                Oops, nothing has been filled! If you're stuck write about a
-                positive interaction with someone instead!{" "}
+                Oops, nothing has been filled! If you&apos;re stuck just write about a positive interaction with someone instead!
               </Text>
             </Box>
           </Flex>
