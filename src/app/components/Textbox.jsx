@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Textarea, Box, Button, useToast, Text, Flex } from "@chakra-ui/react";
 import supabase from "../config/supbaseClient";
-import FinishButton from "./FinishButton";
 // import useValue from "../hooks/useValue"
 
 export default function Textbox() {
