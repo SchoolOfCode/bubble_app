@@ -4,12 +4,6 @@ import { useEffect, useState } from "react";
 import { useLink } from "next/router";
 import { SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
-import Happy from "../../../public/assets/emojis/Happy.svg";
-import Sad from "../../../public/assets/emojis/Sad.svg";
-import Cheeky from "../../../public/assets/emojis/Cheeky.svg";
-import Angry from "../../../public/assets/emojis/Angry.svg";
-import Worried from "../../../public/assets/emojis/Worried.svg";
-import Tired from "../../../public/assets/emojis/Tired.svg";
 import Link from "next/link.js";
 import Bubble from "../../../public/assets/Bubble.svg";
 
@@ -48,7 +42,7 @@ const RatingButtons = () => {
     setWorriedRating(rating);
   };
 
-  SubmitEvent = async () => {
+  const SubmitEvent = async () => {
     const { error  } = await supabase
       .from("mood")
       .update({happy: happinessRating, sad: sadnessRating, angry: angryRating, cheeky: cheekyRating, tired: tiredRating, worried: worriedRating})
@@ -59,12 +53,12 @@ const RatingButtons = () => {
     <Box position="relative">
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box size="lg" w="70%" h="100px" bg="brand.blue" borderRadius="md">
-          <Heading>Let’s dive deeper (rate your emotions)</Heading>
+          <Heading align="center">Let’s dive deeper (rate your emotions)</Heading>
         </Box>
 
         <Box>
           <Box
-            bg="brand.lightBlue"
+            bg="brand.blue"
             borderRadius="lg"
             w="100%"
             p="1rem"
