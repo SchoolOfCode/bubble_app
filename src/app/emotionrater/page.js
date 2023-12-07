@@ -61,7 +61,7 @@ console.log(uniqueID); // Output: uuid
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="black" p={3} bg="white" borderRadius="md">
+            <Box color="black" p={3} bg="#F58484" borderRadius="md">
               <Text fontSize="lg" as="em">
                 Oops, not all of them have been filled in! Double-check you've picked a bubble for each question!
               </Text>

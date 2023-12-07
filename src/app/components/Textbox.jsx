@@ -23,7 +23,7 @@ export default function Textbox() {
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="black" p={3} bg="white" borderRadius="md">
+            <Box color="black" p={3} bg="#F58484" borderRadius="md">
               <Text fontSize="lg" as="em">
                 Oops, nothing has been filled! If you&apos;re stuck just write
                 about a positive interaction with someone instead!
@@ -50,7 +50,7 @@ export default function Textbox() {
           duration: 3000,
           render: () => (
             <Flex justifyContent="center" textAlign="center">
-              <Box color="black" p={3} bg="brand.purple" borderRadius="md">
+              <Box color="black" p={3} bg="#C2F2BA" borderRadius="md">
                 <Text fontSize="lg" as="em">
                   That&apos;s been saved, thanks for filling that out! Have you
                   tried bubble breathing?
