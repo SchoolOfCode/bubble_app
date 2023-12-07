@@ -41,6 +41,7 @@ const router = useRouter();
     //need to display the 6 emoji images in a grid - chakra ui grid
     <>
       <Navbar />
+      <Flex justify="center" alignItems="center">
       <Box>
         <Box
           maxW="500px"
@@ -55,8 +56,6 @@ const router = useRouter();
           <Heading>How are you feeling?</Heading>
           <Text fontSize="lg">(click an emoji)</Text>
         </Box>
-
-        <Flex justify="center" alignItems="center">
           <SimpleGrid columns={3} spacing={10} mx="auto">
             <Flex justifyContent="center" alignItems="center" h="100%">
               <Box>
@@ -170,11 +169,11 @@ const router = useRouter();
             </Flex>
           </SimpleGrid>
 
-          <Link href="/emotionrater">
-            <Button>Next</Button>
-          </Link>
-        </Flex>
       </Box>
+          {/* <Link href="/emotionrater">
+            <Button>Next</Button>
+          </Link> */}
+    </Flex>
       <Footer />
     </>
   );
