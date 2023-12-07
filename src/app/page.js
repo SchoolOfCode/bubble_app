@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <Flex direction="column" h="100%">
-      <Box mb-20>
+      <Box mb="20">
         <Flex direction="column" align="center" justify="center">
           <Box>
             <Image src={Logo} priority={true} alt="Logo" />

@@ -1,7 +1,5 @@
 "use client";
 import supabase from "../config/supbaseClient.js";
-import { useEffect, useState } from "react";
-import { useLink } from "next/router";
 import { SimpleGrid, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import Happy from "../../../public/assets/emojis/Happy.svg";
@@ -14,27 +12,28 @@ import Link from "next/link.js";
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import { useRouter } from "next/navigation";
 
 export default function Emojis() {
-  //trying to get the emoji to link to the next page
-  //   const router = useRouter();
-  // router.push("../page.js");
-  //define the date
-  const date = new Date().toLocaleString();
-  console.log(date);
+const router = useRouter();
+
   async function emojiClickHandler(emoji) {
-    console.log(emoji);
+
     const { data, error } = await supabase
       .from("mood")
-      .insert([{ emoji, date: new Date().toLocaleString() }]);
+      .insert([{ emoji, date: new Date().toLocaleString() }])
+      .select();
 
     if (error) {
       console.log(error);
     }
     if (data) {
       console.log("this has worked, check supabase");
+      let uuid = data[0].uuid;
+      // console.log(uuid);
+      localStorage.setItem('uniqueid', uuid);
+      router.push("/emotionrater");
     }
-    // router.push("/");
   }
 
   return (
@@ -61,7 +60,6 @@ export default function Emojis() {
           <SimpleGrid columns={3} spacing={10} mx="auto">
             <Flex justifyContent="center" alignItems="center" h="100%">
               <Box>
-                <Link href="/emotionrater">
                   <Image
                     src={Happy}
                     alt="Happy-Emoji"
@@ -72,7 +70,6 @@ export default function Emojis() {
                       )
                     }
                   />
-                </Link>
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
                   Happy
                 </Text>

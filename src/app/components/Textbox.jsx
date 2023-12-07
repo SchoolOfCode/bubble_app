@@ -4,6 +4,9 @@ import supabase from "../config/supbaseClient";
 // import useValue from "../hooks/useValue"
 
 export default function Textbox() {
+  const uniqueID = localStorage.getItem('uniqueid');
+  // console.log(uniqueID); // Output: uuid
+
   const toast = useToast();
 
   let [value, setValue] = useState("");
@@ -33,7 +36,7 @@ export default function Textbox() {
       const { data, error } = await supabase
         .from("mood")
         .update([{ reflection: value }])
-        .eq("uuid", "b8301da4-0338-4e3b-aeaf-c8e995464ffa")
+        .eq("uuid", uniqueID)
         .select();
 
       if (error) {
@@ -58,6 +61,8 @@ export default function Textbox() {
       }
 
       setValue("");
+      localStorage.removeItem('uniqueid');
+      console.log(uniqueID);
     }
   }
 

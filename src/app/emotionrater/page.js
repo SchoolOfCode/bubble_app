@@ -11,6 +11,11 @@ import Navbar from "../components/Navbar.jsx";
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 
 const RatingButtons = () => {
+
+  //Retrieving a value
+const uniqueID = localStorage.getItem('uniqueid');
+console.log(uniqueID); // Output: uuid
+
   const [happinessRating, setHappinessRating] = useState(null);
   // console.log(`This is the happiness rating ${happinessRating}`);
   const [sadnessRating, setSadnessRating] = useState(null);
@@ -22,9 +27,9 @@ const RatingButtons = () => {
   const [tiredRating, setTiredRating] = useState(null);
   //console.log(`This is the tired rating ${tiredRating}`);
   const [worriedRating, setWorriedRating] = useState(null);
-  console.log(
-    `This is the happiness rating ${happinessRating} This is the sadness rating ${sadnessRating} This is the angry rating ${angryRating} This is the cheeky rating ${cheekyRating} This is the tired rating ${tiredRating}  This is the worried rating ${worriedRating}`
-  );
+  // console.log(
+  //   `This is the happiness rating ${happinessRating} This is the sadness rating ${sadnessRating} This is the angry rating ${angryRating} This is the cheeky rating ${cheekyRating} This is the tired rating ${tiredRating}  This is the worried rating ${worriedRating}`
+  // );
 
   const handleHappinessRatingChange = async (rating) => {
     setHappinessRating(rating);
@@ -56,7 +61,7 @@ const RatingButtons = () => {
         tired: tiredRating,
         worried: worriedRating,
       })
-      .eq("uuid", `135086d0-9c0e-4444-b110-9a964710cff3`);
+      .eq("uuid", uniqueID);
   };
 
   return (
