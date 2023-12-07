@@ -50,7 +50,7 @@ export default function Emojis() {
           textAlign="center"
           bg="brand.green"
           p="2"
-          mb="7"
+          mb="10"
           boxShadow="lg"
         >
           <Heading>How are you feeling?</Heading>
