@@ -8,16 +8,16 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <Flex direction="column" h="100%">
-      <Box>
+      <Box mb-20>
         <Flex direction="column" align="center" justify="center">
-          <Box mt="20">
+          <Box>
             <Image src={Logo} priority={true} alt="Logo" />
           </Box>
 
           <SimpleGrid
             columns={2}
             spacing={{ base: "5", md: "8", lg: "10" }}
-            mt={{ base: "15px", md: "40px", lg: "40px" }}
+            mt={{ base: "15px", md: "10px", lg: "10px" }}
           >
             <Box>
               <Button

@@ -1,18 +1,10 @@
-import { useToast, Button } from "@chakra-ui/react";
+import { useToast, Button, Box } from "@chakra-ui/react";
 
 export default function FinishButton() {
-  // Via instantiation
-  const toast = useToast({
-    position: "bottom",
-    title: "That's been saved, why not try bubble breathing!",
-    duration: 2000,
-    containerStyle: {
-      width: "800px",
-      maxWidth: "100%",
-    },
-  });
+  const toast= useToast();
   // Or via trigger
   // Style here will overwrite the entire style above
+  
   return (
     <Button
       bg="brand.purple"
@@ -20,13 +12,14 @@ export default function FinishButton() {
       boxShadow="lg"
       onClick={() => {
         toast({
-          position: "bottom",
-          title: "That's been saved, why not try bubble breathing!",
-          duration: 2000,
-          containerStyle: {
-            width: "800px",
-            maxWidth: "100%",
-          },
+          position: "top",
+          duration: 3000,
+          render: () => (
+            <Box color='black' p={3} bg='brand.purple' borderRadius="md" height="50">
+              That's been saved why not try bubble breathing?
+            </Box>
+          )
+
         });
       }}
     >

@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Textarea, Box, Button } from "@chakra-ui/react";
+import { Textarea, Box, Button, useToast, Text, Flex } from "@chakra-ui/react";
 import supabase from "../config/supbaseClient";
+import FinishButton from "./FinishButton";
 // import useValue from "../hooks/useValue"
 
 export default function Textbox() {
-    
+  const toast = useToast();
+
   let [value, setValue] = useState("");
   let handleInputChange = (e) => {
     let inputValue = e.target.value;
@@ -12,20 +14,52 @@ export default function Textbox() {
   };
 
   async function sendDataToDB(value) {
-    console.log(value);
-    const { data, error } = await supabase
-      .from("mood")
-      .update([{ reflection: value } ])
-      .eq( "uuid", "91689b2d-decd-48c6-837f-ae029f4102e4")
-      .select();
+    if (!value) {
+      toast({
+        position: "top",
+        duration: 5000,
+        render: () => (
+          <Flex justifyContent="center" textAlign="center">
+            <Box color="black" p={3} bg="white" borderRadius="md">
+              <Text fontSize="lg" as="em">
+                Oops, nothing has been filled! If you&apos;re stuck just write about a positive interaction with someone instead!
+              </Text>
+            </Box>
+          </Flex>
+        ),
+      });
+    } else {
+      console.log(value);
+      const { data, error } = await supabase
+        .from("mood")
+        .update([{ reflection: value }])
+        .eq("uuid", "b8301da4-0338-4e3b-aeaf-c8e995464ffa")
+        .select();
 
-    if (error) {
-      console.log(error);
+      if (error) {
+        console.log(error);
+      }
+      if (data) {
+        console.log("this has worked, check supabase");
+        toast({
+          position: "top",
+          duration: 3000,
+          render: () => (
+            <Flex justifyContent="center" textAlign="center">
+              <Box color="black" p={3} bg="brand.purple" borderRadius="md">
+                <Text fontSize="lg" as="em">
+                  That's been saved, thanks for filling that out! Have you tried
+                  bubble breathing?
+                </Text>
+              </Box>
+            </Flex>
+          ),
+        });
+      }
+
+      setValue("");
     }
-    if (data) {
-      console.log("this has worked, check supabase");
-    }
-}
+  }
 
   return (
     <>
@@ -36,7 +70,7 @@ export default function Textbox() {
         borderRadius="20"
         textAlign="center"
         p="2"
-        mb="5"
+        mb="3"
         boxShadow="lg"
       >
         <Textarea
@@ -50,7 +84,9 @@ export default function Textbox() {
         bg="brand.purple"
         maxW="600px"
         boxShadow="lg"
-        onClick={() => sendDataToDB(value)}
+        onClick={() => {
+          sendDataToDB(value);
+        }}
       >
         Finish
       </Button>
