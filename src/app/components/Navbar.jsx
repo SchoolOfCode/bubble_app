@@ -5,18 +5,19 @@ import Link from "next/link";
 import SmallLogo from "../../../public/assets/BubbleLogoSmall.svg";
 import BackButton from "../../../public/assets/icons/BackButton.svg";
 import HomeIcon from "../../../public/assets/icons/HomeIcon.svg";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 import React from "react";
 
 export default function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
 
   const goBack = () => {
     router.back();
   };
 
-  const isHomeButtonVisible = router.pathname !== "/emojis";
+  const isHomeButtonVisible = pathname !== "/emojis";
 
   console.log(router.asPath);
 
@@ -35,7 +36,6 @@ export default function Navbar() {
             </Link>
           </Box>
         )}
-
         <Spacer />
         <Box pr="20px">
           <Image src={SmallLogo} alt="Logo" />
