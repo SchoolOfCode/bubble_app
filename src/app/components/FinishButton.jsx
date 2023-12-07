@@ -16,7 +16,7 @@ export default function FinishButton() {
           duration: 3000,
           render: () => (
             <Box color='black' p={3} bg='brand.purple' borderRadius="md" height="50">
-              That's been saved why not try bubble breathing?
+              That&apos;s been saved why not try bubble breathing?
             </Box>
           )
 
