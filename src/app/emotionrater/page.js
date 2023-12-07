@@ -1063,6 +1063,9 @@ const RatingButtons = () => {
           Submit
         </Button>
       </Link>
+      <Link href="/reflection">
+        <Button>Next</Button>
+      </Link>
     </Box>
   );
 };
