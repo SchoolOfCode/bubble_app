@@ -63,7 +63,7 @@ const RatingButtons = () => {
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box size="lg" w="70%" h="100px" bg="brand.blue" borderRadius="md">
           <Heading align="center">
-            Let’s dive deeper (rate your emotions)
+            Let’s dive deeper (rate your emotions - click on the bubbles)
           </Heading>
         </Box>
 
@@ -90,7 +90,7 @@ const RatingButtons = () => {
                   width={50}
                   height={50}
                   style={{
-                    filter: happinessRating !== 1 ? "grayscale(100%)" : "none",
+                    filter: happinessRating !== 1 ? "opacity(50%)" : "none",
                   }}
                 />
 
@@ -113,7 +113,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} style={{
-                    filter: happinessRating !== 2 ? "grayscale(100%)" : "none",
+                    filter: happinessRating !== 2 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -124,21 +124,18 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color={happinessRating === 1 ? "black":"grey"}
+                  color={happinessRating === 2 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
                   borderRadius="md"
-                  style={{
-                    visibility: happinessRating !== 2 ? "grayscale(100%)" : "none",
-                  }}
                 >
                   2
                 </Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} style={{
-                    filter: happinessRating !== 3 ? "grayscale(100%)" : "none",
+                    filter: happinessRating !== 3 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -149,21 +146,19 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color={happinessRating === 1 ? "black":"grey"}
+                  color={happinessRating === 3 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
                   borderRadius="md"
-                  style={{
-                    visibility: happinessRating !== 3 ? "grayscale(100%)" : "none",
-                  }}
+
                 >
                   3
                 </Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} style={{
-                    filter: happinessRating !== 4 ? "grayscale(100%)" : "none",
+                    filter: happinessRating !== 4 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -174,21 +169,19 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color={happinessRating === 1 ? "black":"grey"}
+                  color={happinessRating === 4 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
                   borderRadius="md"
-                  style={{
-                    visibility: happinessRating !== 4 ? "grayscale(100%)" : "none",
-                  }}
+                  
                 >
                   4
                 </Text>
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} style={{
-                    filter: happinessRating !== 5 ? "grayscale(100%)" : "none",
+                    filter: happinessRating !== 5 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -199,14 +192,12 @@ const RatingButtons = () => {
                   transform="translate(-50%, -50%)"
                   fontSize="lg"
                   fontWeight="bold"
-                  color={happinessRating === 1 ? "black":"grey"}
+                  color={happinessRating === 5 ? "black":"grey"}
                   p={4}
                   pt={1}
                   pb={1}
                   borderRadius="md"
-                  style={{
-                    visibility: happinessRating !== 5 ? "grayscale(100%)" : "none",
-                  }}
+                  
                 >
                   5
                 </Text>
@@ -237,7 +228,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} style={{
-                    filter: sadnessRating !== 1 ? "grayscale(100%)" : "none",
+                    filter: sadnessRating !== 1 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -259,7 +250,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} style={{
-                    filter: sadnessRating !== 2 ? "grayscale(100%)" : "none",
+                    filter: sadnessRating !== 2 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -281,7 +272,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} style={{
-                    filter: sadnessRating !== 3 ? "grayscale(100%)" : "none",
+                    filter: sadnessRating !== 3 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -303,7 +294,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} style={{
-                    filter: sadnessRating !== 4 ? "grayscale(100%)" : "none",
+                    filter: sadnessRating !== 4 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -325,7 +316,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} style={{
-                    filter: sadnessRating !== 5 ? "grayscale(100%)" : "none",
+                    filter: sadnessRating !== 5 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -371,7 +362,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} style={{
-                    filter: angryRating !== 1 ? "grayscale(100%)" : "none",
+                    filter: angryRating !== 1 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -393,7 +384,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} style={{
-                    filter: angryRating !== 2 ? "grayscale(100%)" : "none",
+                    filter: angryRating !== 2 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -415,7 +406,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} style={{
-                    filter: angryRating !== 3 ? "grayscale(100%)" : "none",
+                    filter: angryRating !== 3 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -437,7 +428,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} style={{
-                    filter: angryRating !== 4 ? "grayscale(100%)" : "none",
+                    filter: angryRating !== 4 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -459,7 +450,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} style={{
-                    filter: angryRating !== 5 ? "grayscale(100%)" : "none",
+                    filter: angryRating !== 5 ? "opacity(50%)" : "none",
                   }} />
 
                 <Text
@@ -505,7 +496,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} style={{
-                    filter: cheekyRating !== 1 ? "grayscale(100%)" : "none",
+                    filter: cheekyRating !== 1 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -527,7 +518,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} style={{
-                    filter: cheekyRating !== 2 ? "grayscale(100%)" : "none",
+                    filter: cheekyRating !== 2 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -549,7 +540,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} style={{
-                    filter: cheekyRating !== 3 ? "grayscale(100%)" : "none",
+                    filter: cheekyRating !== 3 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -571,7 +562,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} style={{
-                    filter: cheekyRating !== 4 ? "grayscale(100%)" : "none",
+                    filter: cheekyRating !== 4 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -593,7 +584,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} style={{
-                    filter: cheekyRating !== 5 ? "grayscale(100%)" : "none",
+                    filter: cheekyRating !== 5 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -639,7 +630,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} style={{
-                    filter: tiredRating !== 1 ? "grayscale(100%)" : "none",
+                    filter: tiredRating !== 1 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -661,7 +652,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} style={{
-                    filter: tiredRating !== 2 ? "grayscale(100%)" : "none",
+                    filter: tiredRating !== 2 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -683,7 +674,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} style={{
-                    filter: tiredRating !== 3 ? "grayscale(100%)" : "none",
+                    filter: tiredRating !== 3 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -705,7 +696,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} style={{
-                    filter: tiredRating !== 4 ? "grayscale(100%)" : "none",
+                    filter: tiredRating !== 4 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -727,7 +718,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} style={{
-                    filter: tiredRating !== 5 ? "grayscale(100%)" : "none",
+                    filter: tiredRating !== 5 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -773,7 +764,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble1" width={50} height={50} style={{
-                    filter: worriedRating !== 1 ? "grayscale(100%)" : "none",
+                    filter: worriedRating !== 1 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -795,7 +786,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble2" width={50} height={50} style={{
-                    filter: worriedRating !== 2 ? "grayscale(100%)" : "none",
+                    filter: worriedRating !== 2 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -817,7 +808,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble3" width={50} height={50} style={{
-                    filter: worriedRating !== 3 ? "grayscale(100%)" : "none",
+                    filter: worriedRating !== 3 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -839,7 +830,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble4" width={50} height={50} style={{
-                    filter: worriedRating !== 4 ? "grayscale(100%)" : "none",
+                    filter: worriedRating !== 4 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
@@ -861,7 +852,7 @@ const RatingButtons = () => {
               </Box>
               <Box position="relative" display="inline-block">
                 <Image src={Bubble} alt="Bubble5" width={50} height={50} style={{
-                    filter: worriedRating !== 5 ? "grayscale(100%)" : "none",
+                    filter: worriedRating !== 5 ? "opacity(50%)" : "none",
                   }}/>
 
                 <Text
