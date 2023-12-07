@@ -1053,15 +1053,16 @@ const RatingButtons = () => {
           </Box>
         </Box>
       </Flex>
-
-      <Button
-        position="relative"
-        bottom="0"
-        right="0"
-        onClick={() => SubmitEvent()}
-      >
-        Submit
-      </Button>
+      <Link href="/reflection">
+        <Button
+          position="relative"
+          bottom="0"
+          right="0"
+          onClick={() => SubmitEvent()}
+        >
+          Submit
+        </Button>
+      </Link>
     </Box>
   );
 };
