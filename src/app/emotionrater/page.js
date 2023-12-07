@@ -1,22 +1,23 @@
 "use client";
 import supabase from "../config/supbaseClient.js";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { SimpleGrid, useToast } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link.js";
 import { useRouter } from "next/navigation";
 import Bubble from "../../../public/assets/Bubble.svg";
 import Navbar from "../components/Navbar.jsx";
-
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
+import { UserIdContext } from "../context/useridcontext.js"
 
 const RatingButtons = () => {
-
+const { uuid } = useContext(UserIdContext);
+  
 const toast = useToast();
 const router = useRouter();
   //Retrieving a value
-const uniqueID = localStorage.getItem('uniqueid');
-console.log(uniqueID); // Output: uuid
+// const uniqueID = localStorage.getItem('uniqueid');
+// console.log(uniqueID); // Output: uuid
 
   const [happinessRating, setHappinessRating] = useState(null);
   // console.log(`This is the happiness rating ${happinessRating}`);
@@ -81,7 +82,7 @@ console.log(uniqueID); // Output: uuid
         tired: tiredRating,
         worried: worriedRating,
       })
-      .eq("uuid", uniqueID);
+      .eq("uuid", uuid);
 
     if (error) {
       console.log(error);
@@ -94,12 +95,12 @@ console.log(uniqueID); // Output: uuid
     <Box position="relative">
       <Navbar />
       <Flex direction="column" align="center" justify="center" h="100%">
-        <Box size="lg" w="70%" h="100px" bg="brand.blue" borderRadius="md">
+        <Box size="lg" w="70%" h="100px" bg="brand.blue" borderRadius="md" mb="10px">
           <Heading align="center">
             Let&apos;s dive deeper (rate your emotions - click on the bubbles)
           </Heading>
         </Box>
-
+        <SimpleGrid columns={2} spacing={5}>
         <Box>
           <Box
             bg="brand.blue"
@@ -1083,6 +1084,7 @@ console.log(uniqueID); // Output: uuid
             </Box>
           </Box>
         </Box>
+        </SimpleGrid>
       </Flex>
         <Button
           position="relative"

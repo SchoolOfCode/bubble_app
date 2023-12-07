@@ -1,12 +1,14 @@
-
+"use client"
 import { useState } from "react";
 import { Textarea, Box, Button, useToast, Text, Flex } from "@chakra-ui/react";
 import supabase from "../config/supbaseClient";
+import { useContext } from "react";
+import { UserIdContext } from "../context/useridcontext";
 // import useValue from "../hooks/useValue"
 
 export default function Textbox() {
-  const uniqueID = localStorage.getItem('uniqueid');
-  // console.log(uniqueID); // Output: uuid
+
+  const { uuid } = useContext(UserIdContext);
 
   const toast = useToast();
 
@@ -37,7 +39,7 @@ export default function Textbox() {
       const { data, error } = await supabase
         .from("mood")
         .update([{ reflection: value }])
-        .eq("uuid", uniqueID)
+        .eq("uuid", uuid)
         .select();
 
       if (error) {
@@ -62,8 +64,6 @@ export default function Textbox() {
       }
 
       setValue("");
-      localStorage.removeItem('uniqueid');
-      console.log(uniqueID);
     }
   }
 
