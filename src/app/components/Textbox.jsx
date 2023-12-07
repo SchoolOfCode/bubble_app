@@ -84,6 +84,8 @@ export default function Textbox() {
           onChange={handleInputChange}
           placeholder="If you’re stuck, that’s okay start by writing about your day...what happened?"
           border="none"
+          size="lg"
+          h="325px"
         />
       </Box>
       <Button
