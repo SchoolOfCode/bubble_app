@@ -173,9 +173,9 @@ export default function Emojis() {
             </Flex>
           </SimpleGrid>
 
-          {/* <Link href="/reflection">
+          <Link href="/reflection">
             <Button>Next</Button>
-          </Link> */}
+          </Link>
         </Flex>
       </Box>
       <Footer />
