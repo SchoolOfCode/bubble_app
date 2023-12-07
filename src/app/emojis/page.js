@@ -44,7 +44,7 @@ export default function Emojis() {
       <Navbar />
       <Box>
         <Box
-          maxW="500px"
+          w={[300, 400, 500]}
           mx="auto"
           borderRadius="20"
           textAlign="center"
@@ -53,8 +53,10 @@ export default function Emojis() {
           mb="10"
           boxShadow="lg"
         >
-          <Heading>How are you feeling?</Heading>
-          <Text fontSize="lg">(click an emoji)</Text>
+          <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
+            How are you feeling?
+          </Heading>
+          <Text fontSize="xl">(click an emoji)</Text>
         </Box>
 
         <Flex justify="center" alignItems="center">
