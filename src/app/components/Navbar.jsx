@@ -1,7 +1,6 @@
 "use client";
 import { Box, Flex, Spacer } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
 import SmallLogo from "../../../public/assets/BubbleLogoSmall.svg";
 import BackButton from "../../../public/assets/icons/BackButton.svg";
 import HomeIcon from "../../../public/assets/icons/HomeIcon.svg";
@@ -17,23 +16,21 @@ export default function Navbar() {
     router.back();
   };
 
-  const isHomeButtonVisible = pathname !== "/emojis";
+  const goHome = () => {
+    router.push("/");
+  };
 
-  console.log(router.asPath);
+  const isHomeButtonVisible = pathname !== "/emojis";
 
   return (
     <>
       <Flex as="nav" alignItems="center" p="10px">
         <Box onClick={goBack} pl="20px">
-          <Link href="/">
             <Image src={BackButton} alt="Back Button" />
-          </Link>
         </Box>
         {isHomeButtonVisible && (
-          <Box pl="20px">
-            <Link href="/">
+          <Box pl="20px" onClick={goHome}>
               <Image src={HomeIcon} alt="Home Button" />
-            </Link>
           </Box>
         )}
         <Spacer />

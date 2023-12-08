@@ -2,15 +2,26 @@ import Image from "next/image";
 import { Box, Button, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
 import Link from "next/link";
+import Head from "next/head";
 import ShieldIcon from "/public/assets/icons/ShieldIcon.svg";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <Box>
-      <Flex direction="column" h="100%">
-        <Box mb-20>
-          <Flex direction="column" align="center" justify="center">
+
+    <>
+    <Flex direction="column" h="100%">
+      <Box mb="20">
+        <Flex direction="column" align="center" justify="center">
+          <Box>
+            <Image src={Logo} priority={true} alt="Logo" />
+          </Box>
+
+          <SimpleGrid
+            columns={2}
+            spacing={{ base: "5", md: "8", lg: "10" }}
+            mt={{ base: "15px", md: "10px", lg: "10px" }}
+          >
             <Box>
               <Image src={Logo} priority={true} alt="Logo" />
             </Box>
@@ -70,6 +81,7 @@ export default function Home() {
           </Flex>
         </Box>
 
+
         <Box bottom={{ base: "10", lg: "15" }} p="10" position="fixed">
           <Button
             size="lg"
@@ -87,5 +99,6 @@ export default function Home() {
       </Flex>
       <Footer />
     </Box>
+
   );
 }
