@@ -310,7 +310,7 @@ const RatingButtons = () => {
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
                   <Text align="center" w="65px" size="sm">
-                    Not Sad
+                    Not <br></br> Sad
                   </Text>
                 </Box>
                 <Box position="relative" display="inline-block">
