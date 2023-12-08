@@ -1,5 +1,5 @@
 "use client";
-import supabase from "../config/supabaseClient.js";
+import supabase from "../config/supbaseClient.js";
 import { useContext, useEffect, useState } from "react";
 import { SimpleGrid, useToast } from "@chakra-ui/react";
 import Image from "next/image";
@@ -7,7 +7,6 @@ import Link from "next/link.js";
 import { useRouter } from "next/navigation";
 import Bubble from "../../../public/assets/Bubble.svg";
 import Navbar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 import { UserIdContext } from "../context/useridcontext.js";
 
@@ -104,27 +103,15 @@ const RatingButtons = () => {
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box
           size="lg"
-
-          w={[300, 400, 500]}
+          w="70%"
+          h="100px"
           bg="brand.blue"
-          borderRadius="20"
-          boxShadow="lg"
+          borderRadius="md"
+          mb="10px"
         >
-          <Heading
-            align="center"
-            pt="15px"
-            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-          >
-            Let&apos;s dive deeper...
-
+          <Heading align="center">
+            Let&apos;s dive deeper (rate your emotions - click on the bubbles)
           </Heading>
-          <Text
-            fontSize={{ base: "md", md: "xl", lg: "xl" }}
-            align="center"
-            pb="5px"
-          >
-            (rate your emotions - click on the bubbles)
-          </Text>
         </Box>
         <SimpleGrid columns={2} spacing={5}>
           <Box>
@@ -154,43 +141,33 @@ const RatingButtons = () => {
                     }}
                   />
 
-
-        <Box>
-          <Box
-            bg="brand.blue"
-            borderRadius="20"
-            w={[300, 400, 500]}
-            p="1rem"
-            mb="0.5rem"
-            mt="1.5rem"
-            boxShadow="lg"
-          >
-            <Heading
-              fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
-              align="center"
-              mb="10px"
-            >
-              How happy do you feel?
-            </Heading>
-            <Box display="flex" justifyContent="space-between">
-              <Box display="flex">
-                <Text
-                  align="center"
-                  fontSize={{ base: "sm", md: "md", lg: "md" }}
-                >
-                  Not <br></br> Happy
-                </Text>
-              </Box>
-              <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble1"
-                  width={50}
-                  height={50}
-                  style={{
-                    filter: happinessRating !== 1 ? "opacity(50%)" : "none",
-                  }}
-                />
+                  <Text
+                    onClick={() => handleHappinessRatingChange(1)}
+                    position="absolute"
+                    top="50%"
+                    left="50%"
+                    transform="translate(-50%, -50%)"
+                    fontSize="lg"
+                    fontWeight="bold"
+                    color={happinessRating === 1 ? "black" : "grey"}
+                    p={4}
+                    pt={1}
+                    pb={1}
+                    borderRadius="md"
+                  >
+                    1
+                  </Text>
+                </Box>
+                <Box position="relative" display="inline-block">
+                  <Image
+                    src={Bubble}
+                    alt="Bubble2"
+                    width={50}
+                    height={50}
+                    style={{
+                      filter: happinessRating !== 2 ? "opacity(50%)" : "none",
+                    }}
+                  />
 
                   <Text
                     onClick={() => handleHappinessRatingChange(2)}
@@ -298,58 +275,35 @@ const RatingButtons = () => {
                   Very Happy
                 </Text>
               </Box>
-
-
-              <Box display="flex">
-                <Text
-                  align="center"
-                  fontSize={{ base: "sm", md: "md", lg: "md" }}
-                >
-                  Very <br></br> Happy
-                </Text>
-              </Box>
-
             </Box>
           </Box>
 
-
-        <Box>
-          <Box
-            bg="brand.yellow"
-            borderRadius="20"
-            w={[300, 400, 500]}
-            p="1rem"
-            my="0.5rem"
-            boxShadow="lg"
-          >
-            <Heading
-              fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
-              align="center"
-              mb="10px"
+          <Box>
+            <Box
+              bg="brand.yellow"
+              borderRadius="lg"
+              w="100%"
+              p="1rem"
+              my="1rem"
+              minWidth="500px"
             >
-              How sad do you feel?
-            </Heading>
-            <Box display="flex" justifyContent="space-between">
-              <Box display="flex">
-                <Text
-                  align="center"
-                  fontSize={{ base: "sm", md: "md", lg: "md" }}
-                >
-                  Not <br></br> Sad
-                </Text>
-              </Box>
-              <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble1"
-                  width={50}
-                  height={50}
-                  style={{
-                    filter: sadnessRating !== 1 ? "opacity(50%)" : "none",
-                  }}
-                />
-
-
+              <Heading align="center">How sad do you feel?</Heading>
+              <Box display="flex" justifyContent="space-between">
+                <Box display="flex">
+                  <Text align="center" w="65px" size="sm">
+                    Not Sad
+                  </Text>
+                </Box>
+                <Box position="relative" display="inline-block">
+                  <Image
+                    src={Bubble}
+                    alt="Bubble1"
+                    width={50}
+                    height={50}
+                    style={{
+                      filter: sadnessRating !== 1 ? "opacity(50%)" : "none",
+                    }}
+                  />
 
                   <Text
                     onClick={() => handleSadnessRatingChange(1)}
@@ -485,55 +439,35 @@ const RatingButtons = () => {
                   Very Sad
                 </Text>
               </Box>
-
-
-              <Text
-                align="center"
-                fontSize={{ base: "sm", md: "md", lg: "md" }}
-              >
-                Very <br></br> Sad
-              </Text>
-
             </Box>
           </Box>
 
-
-        <Box>
-          <Box
-            bg="brand.green"
-            borderRadius="20"
-            w={[300, 400, 500]}
-            p="1rem"
-            my="0.5rem"
-            boxShadow="lg"
-          >
-            <Heading
-              fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
-              align="center"
-              mb="10px"
+          <Box>
+            <Box
+              bg="brand.green"
+              borderRadius="lg"
+              w="100%"
+              p="1rem"
+              my="1rem"
+              minWidth="500px"
             >
-              How angry do you feel?
-            </Heading>
-            <Box display="flex" justifyContent="space-between">
-              <Box display="flex">
-                <Text
-                  align="center"
-                  fontSize={{ base: "sm", md: "md", lg: "md" }}
-                >
-                  Not <br></br>Angry
-                </Text>
-              </Box>
-              <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble1"
-                  width={50}
-                  height={50}
-                  style={{
-                    filter: angryRating !== 1 ? "opacity(50%)" : "none",
-                  }}
-                />
-
+              <Heading align="center">How angry do you feel?</Heading>
+              <Box display="flex" justifyContent="space-between">
+                <Box display="flex">
+                  <Text align="center" w="65px" size="sm">
+                    Not Angry
+                  </Text>
+                </Box>
+                <Box position="relative" display="inline-block">
+                  <Image
+                    src={Bubble}
+                    alt="Bubble1"
+                    width={50}
+                    height={50}
+                    style={{
+                      filter: angryRating !== 1 ? "opacity(50%)" : "none",
+                    }}
+                  />
 
                   <Text
                     onClick={() => handleAngryRatingChange(1)}
@@ -669,55 +603,35 @@ const RatingButtons = () => {
                   Very Angry
                 </Text>
               </Box>
-
-
-              <Text
-                align="center"
-                fontSize={{ base: "sm", md: "md", lg: "md" }}
-              >
-                Very<br></br>Angry
-              </Text>
-
             </Box>
           </Box>
 
-
-        <Box>
-          <Box
-            bg="brand.pink"
-            borderRadius="20"
-            w={[300, 400, 500]}
-            p="1rem"
-            my="0.5rem"
-            boxShadow="lg"
-          >
-            <Heading
-              fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
-              align="center"
-              mb="10px"
+          <Box>
+            <Box
+              bg="brand.pink"
+              borderRadius="lg"
+              w="100%"
+              p="1rem"
+              my="1rem"
+              minWidth="500px"
             >
-              How cheeky do you feel?
-            </Heading>
-            <Box display="flex" justifyContent="space-between">
-              <Box display="flex">
-                <Text
-                  align="center"
-                  fontSize={{ base: "sm", md: "md", lg: "md" }}
-                >
-                  Not Cheeky
-                </Text>
-              </Box>
-              <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble1"
-                  width={50}
-                  height={50}
-                  style={{
-                    filter: cheekyRating !== 1 ? "opacity(50%)" : "none",
-                  }}
-                />
-
+              <Heading align="center">How cheeky do you feel?</Heading>
+              <Box display="flex" justifyContent="space-between">
+                <Box display="flex">
+                  <Text align="center" w="65px" size="sm">
+                    Not Cheeky
+                  </Text>
+                </Box>
+                <Box position="relative" display="inline-block">
+                  <Image
+                    src={Bubble}
+                    alt="Bubble1"
+                    width={50}
+                    height={50}
+                    style={{
+                      filter: cheekyRating !== 1 ? "opacity(50%)" : "none",
+                    }}
+                  />
 
                   <Text
                     onClick={() => handleCheekyRatingChange(1)}
@@ -853,55 +767,35 @@ const RatingButtons = () => {
                   Very Cheeky
                 </Text>
               </Box>
-
-
-              <Text
-                align="center"
-                fontSize={{ base: "sm", md: "md", lg: "md" }}
-              >
-                Very Cheeky
-              </Text>
-
             </Box>
           </Box>
 
-
-        <Box>
-          <Box
-            bg="brand.purple"
-            borderRadius="20"
-            w={[300, 400, 500]}
-            p="1rem"
-            my="0.5rem"
-            boxShadow="lg"
-          >
-            <Heading
-              fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
-              align="center"
-              mb="10px"
+          <Box>
+            <Box
+              bg="brand.purple"
+              borderRadius="lg"
+              w="100%"
+              p="1rem"
+              my="1rem"
+              minWidth="500px"
             >
-              How tired do you feel?
-            </Heading>
-            <Box display="flex" justifyContent="space-between">
-              <Box display="flex">
-                <Text
-                  align="center"
-                  fontSize={{ base: "sm", md: "md", lg: "md" }}
-                >
-                  Not Tired
-                </Text>
-              </Box>
-              <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble1"
-                  width={50}
-                  height={50}
-                  style={{
-                    filter: tiredRating !== 1 ? "opacity(50%)" : "none",
-                  }}
-                />
-
+              <Heading align="center">How tired do you feel?</Heading>
+              <Box display="flex" justifyContent="space-between">
+                <Box display="flex">
+                  <Text align="center" w="65px" size="sm">
+                    Not Tired
+                  </Text>
+                </Box>
+                <Box position="relative" display="inline-block">
+                  <Image
+                    src={Bubble}
+                    alt="Bubble1"
+                    width={50}
+                    height={50}
+                    style={{
+                      filter: tiredRating !== 1 ? "opacity(50%)" : "none",
+                    }}
+                  />
 
                   <Text
                     onClick={() => handleTiredRatingChange(1)}
@@ -1037,54 +931,35 @@ const RatingButtons = () => {
                   Very Tired
                 </Text>
               </Box>
-
-
-              <Text
-                align="center"
-                fontSize={{ base: "sm", md: "md", lg: "md" }}
-              >
-                Very Tired
-              </Text>
-
             </Box>
           </Box>
 
-        <Box>
-          <Box
-            bg="brand.green"
-            borderRadius="20"
-            w={[300, 400, 500]}
-            p="1rem"
-            my="0.5rem"
-            boxShadow="lg"
-          >
-            <Heading
-              fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
-              align="center"
-              mb="10px"
+          <Box>
+            <Box
+              bg="brand.green"
+              borderRadius="lg"
+              w="100%"
+              p="1rem"
+              my="1rem"
+              minWidth="500px"
             >
-              How worried do you feel?
-            </Heading>
-            <Box display="flex" justifyContent="space-between">
-              <Box display="flex">
-                <Text
-                  align="center"
-                  fontSize={{ base: "sm", md: "md", lg: "md" }}
-                >
-                  Not Worried
-                </Text>
-              </Box>
-              <Box position="relative" display="inline-block">
-                <Image
-                  src={Bubble}
-                  alt="Bubble1"
-                  width={50}
-                  height={50}
-                  style={{
-                    filter: worriedRating !== 1 ? "opacity(50%)" : "none",
-                  }}
-                />
-
+              <Heading align="center">How worried do you feel?</Heading>
+              <Box display="flex" justifyContent="space-between">
+                <Box display="flex">
+                  <Text align="center" w="65px" size="sm">
+                    Not Worried
+                  </Text>
+                </Box>
+                <Box position="relative" display="inline-block">
+                  <Image
+                    src={Bubble}
+                    alt="Bubble1"
+                    width={50}
+                    height={50}
+                    style={{
+                      filter: worriedRating !== 1 ? "opacity(50%)" : "none",
+                    }}
+                  />
 
                   <Text
                     onClick={() => handleWorriedRatingChange(1)}
@@ -1220,36 +1095,21 @@ const RatingButtons = () => {
                   Very Worried
                 </Text>
               </Box>
-
-
-              <Text
-                align="center"
-                fontSize={{ base: "sm", md: "md", lg: "md" }}
-              >
-                Very Worried
-              </Text>
             </Box>
           </Box>
-        </Box>
-        <Link href="/reflection">
-          <Button
-            position="relative"
-            bottom="0"
-            onClick={() => SubmitEvent()}
-            boxShadow="lg"
-            align="center"
-            bg="brand.blue"
-            size="lg"
-          >
-            Next
-          </Button>
-        </Link>
+        </SimpleGrid>
       </Flex>
-       <Link href="/reflection">
-        <Button>Dummy Next</Button>
-
+      <Button
+        position="relative"
+        bottom="0"
+        right="0"
+        onClick={() => SubmitEvent()}
+      >
+        Submit
+      </Button>
+      <Link href="/reflection">
+        <Button>Next</Button>
       </Link>
-      <Footer />
     </Box>
   );
 };
