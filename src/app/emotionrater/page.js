@@ -1,7 +1,7 @@
 "use client";
 import supabase from "../config/supabaseClient.js";
 import { useContext, useEffect, useState } from "react";
-import { SimpleGrid, useToast } from "@chakra-ui/react";
+import { SimpleGrid, useToast, Center } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link.js";
 import { useRouter } from "next/navigation";
@@ -69,8 +69,8 @@ const RatingButtons = () => {
           <Flex justifyContent="center" textAlign="center">
             <Box color="black" p={3} bg="#F58484" borderRadius="md">
               <Text fontSize="lg" as="em">
-                Oops not all of them have been selected! Double-check you&apos;ve
-                picked a bubble for each question!
+                Oops not all of them have been selected! Double-check
+                you&apos;ve picked a bubble for each question!
               </Text>
             </Box>
           </Flex>
@@ -1099,17 +1099,19 @@ const RatingButtons = () => {
           </Box>
         </SimpleGrid>
       </Flex>
-      <Button
-        position="relative"
-        bottom="0"
-        right="0"
-        onClick={() => SubmitEvent()}
-      >
-        Submit
-      </Button>
-      <Link href="/reflection">
-        <Button>Next</Button>
-      </Link>
+      <Center>
+        <Button
+          position="relative"
+          bottom="0"
+          right="0"
+          onClick={() => SubmitEvent()}
+        >
+          Submit
+        </Button>
+        <Link href="/reflection">
+          <Button>Next</Button>
+        </Link>
+      </Center>
     </Box>
   );
 };
