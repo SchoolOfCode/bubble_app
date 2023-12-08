@@ -1,5 +1,5 @@
 "use client";
-import supabase from "../config/supbaseClient.js";
+import supabase from "../config/supabaseClient.js";
 import { useContext, useEffect, useState } from "react";
 import { SimpleGrid, useToast } from "@chakra-ui/react";
 import Image from "next/image";
@@ -69,7 +69,7 @@ const RatingButtons = () => {
           <Flex justifyContent="center" textAlign="center">
             <Box color="black" p={3} bg="#F58484" borderRadius="md">
               <Text fontSize="lg" as="em">
-                Oops, not all of them have been filled in! Double-check you've
+                Oops not all of them have been selected! Double-check you&apos;ve
                 picked a bubble for each question!
               </Text>
             </Box>

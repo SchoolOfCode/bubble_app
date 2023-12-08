@@ -1,5 +1,5 @@
 "use client";
-import supabase from "../config/supbaseClient.js";
+import supabase from "../config/supabaseClient.js";
 import Image from "next/image";
 import Happy from "../../../public/assets/emojis/Happy.svg";
 import Sad from "../../../public/assets/emojis/Sad.svg";
