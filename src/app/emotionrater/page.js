@@ -1,5 +1,5 @@
 "use client";
-import supabase from "../config/supbaseClient.js";
+import supabase from "../config/supabaseClient.js";
 import { useContext, useEffect, useState } from "react";
 import { SimpleGrid, useToast } from "@chakra-ui/react";
 import Image from "next/image";
