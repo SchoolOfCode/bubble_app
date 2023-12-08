@@ -13,14 +13,13 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
-import { UserIdContext} from "../context/useridcontext.js";
+import { UserIdContext } from "../context/useridcontext.js";
 
 export default function Emojis() {
-const { setUuid } = useContext(UserIdContext);
-const router = useRouter();
+  const { setUuid } = useContext(UserIdContext);
+  const router = useRouter();
 
   async function emojiClickHandler(emoji) {
-
     const { data, error } = await supabase
       .from("mood")
       .insert([{ emoji, date: new Date().toLocaleString() }])
@@ -42,35 +41,33 @@ const router = useRouter();
     <>
       <Navbar />
       <Flex justify="center" alignItems="center">
-      <Box>
-        <Box
-          w={[300, 400, 500]}
-          mx="auto"
-          borderRadius="20"
-          textAlign="center"
-          bg="brand.green"
-          p="2"
-          mb="10"
-          boxShadow="lg"
-        >
-          <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
-            How are you feeling?
-          </Heading>
-          <Text fontSize="xl">(click an emoji)</Text>
-        </Box>
+        <Box>
+          <Box
+            w={[300, 400, 500]}
+            mx="auto"
+            borderRadius="20"
+            textAlign="center"
+            bg="brand.green"
+            p="2"
+            mb="10"
+            boxShadow="lg"
+          >
+            <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
+              How are you feeling?
+            </Heading>
+            <Text fontSize="xl">(click an emoji)</Text>
+          </Box>
           <SimpleGrid columns={3} spacing={10} mx="auto">
             <Flex justifyContent="center" alignItems="center" h="100%">
               <Box>
-                  <Image
-                    src={Happy}
-                    alt="Happy-Emoji"
-                    priority
-                    onClick={() =>
-                      emojiClickHandler(
-                        "../../../public/assets/emojis/Happy.svg"
-                      )
-                    }
-                  />
+                <Image
+                  src={Happy}
+                  alt="Happy-Emoji"
+                  priority
+                  onClick={() =>
+                    emojiClickHandler("../../../public/assets/emojis/Happy.svg")
+                  }
+                />
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
                   Happy
                 </Text>
@@ -170,12 +167,11 @@ const router = useRouter();
               </Box>
             </Flex>
           </SimpleGrid>
-
-      </Box>
-          {/* <Link href="/emotionrater">
+        </Box>
+        {/* <Link href="/emotionrater">
             <Button>Next</Button>
           </Link> */}
-    </Flex>
+      </Flex>
       <Footer />
     </>
   );
