@@ -7,7 +7,7 @@ export default function Footer() {
       alignItems="center"
       textAlign="center"
       color="brand.footer"
-      position="fixed"
+      position="absolute"
       bottom="0"
       left="0"
       width="100%"

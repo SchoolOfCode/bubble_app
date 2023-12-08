@@ -44,7 +44,7 @@ const router = useRouter();
       <Flex justify="center" alignItems="center">
       <Box>
         <Box
-          maxW="500px"
+          w={[300, 400, 500]}
           mx="auto"
           borderRadius="20"
           textAlign="center"
@@ -53,8 +53,10 @@ const router = useRouter();
           mb="10"
           boxShadow="lg"
         >
-          <Heading>How are you feeling?</Heading>
-          <Text fontSize="lg">(click an emoji)</Text>
+          <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
+            How are you feeling?
+          </Heading>
+          <Text fontSize="xl">(click an emoji)</Text>
         </Box>
           <SimpleGrid columns={3} spacing={10} mx="auto">
             <Flex justifyContent="center" alignItems="center" h="100%">
