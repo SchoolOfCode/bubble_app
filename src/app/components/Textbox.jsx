@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { Textarea, Box, Button, useToast, Text, Flex } from "@chakra-ui/react";
 import supabase from "../config/supabaseClient";
