@@ -1,5 +1,6 @@
 import { Providers } from "./providers";
-import { UserIdProvider } from "./context/useridcontext";
+import { UserIdProvider } from "./context/useridcontext"; 
+import "../app/globals.css";
 
 const metadata = {
   title: "Bubble",
