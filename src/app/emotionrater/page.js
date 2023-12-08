@@ -253,12 +253,14 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text
-                align="center"
-                fontSize={{ base: "sm", md: "md", lg: "md" }}
-              >
-                Very <br></br> Happy
-              </Text>
+              <Box display="flex">
+                <Text
+                  align="center"
+                  fontSize={{ base: "sm", md: "md", lg: "md" }}
+                >
+                  Very <br></br> Happy
+                </Text>
+              </Box>
             </Box>
           </Box>
         </Box>
@@ -633,7 +635,10 @@ const RatingButtons = () => {
             </Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="65px" size="sm">
+                <Text
+                  align="center"
+                  fontSize={{ base: "sm", md: "md", lg: "md" }}
+                >
                   Not Cheeky
                 </Text>
               </Box>
@@ -778,7 +783,10 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="65px" size="sm">
+              <Text
+                align="center"
+                fontSize={{ base: "sm", md: "md", lg: "md" }}
+              >
                 Very Cheeky
               </Text>
             </Box>
@@ -803,7 +811,10 @@ const RatingButtons = () => {
             </Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="65px" size="sm">
+                <Text
+                  align="center"
+                  fontSize={{ base: "sm", md: "md", lg: "md" }}
+                >
                   Not Tired
                 </Text>
               </Box>
@@ -948,7 +959,10 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="65px" size="sm">
+              <Text
+                align="center"
+                fontSize={{ base: "sm", md: "md", lg: "md" }}
+              >
                 Very Tired
               </Text>
             </Box>
@@ -973,7 +987,10 @@ const RatingButtons = () => {
             </Heading>
             <Box display="flex" justifyContent="space-between">
               <Box display="flex">
-                <Text align="center" w="65px" size="sm">
+                <Text
+                  align="center"
+                  fontSize={{ base: "sm", md: "md", lg: "md" }}
+                >
                   Not Worried
                 </Text>
               </Box>
@@ -1118,7 +1135,10 @@ const RatingButtons = () => {
                 </Text>
               </Box>
 
-              <Text align="center" w="65px" size="sm">
+              <Text
+                align="center"
+                fontSize={{ base: "sm", md: "md", lg: "md" }}
+              >
                 Very Worried
               </Text>
             </Box>
