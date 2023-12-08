@@ -15,6 +15,20 @@ export default function RootLayout({ children }) {
     <title>{metadata.title}</title>
     </head>
       <body>
+      <section className="sticky">
+          <div className="bubbles">
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+          </div>
+        </section>
         <Providers>
         <UserIdProvider>
         {children}
