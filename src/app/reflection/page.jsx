@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Box, Button, Heading, Text, Textarea, Flex } from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Textbox from "../components/Textbox";
-import supabase from "../config/supbaseClient";
-import useValue from "../hooks/useValue";
 
 export default function page() {
   return (
