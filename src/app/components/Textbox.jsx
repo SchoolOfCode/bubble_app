@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { Textarea, Box, Button, useToast, Text, Flex } from "@chakra-ui/react";
-import supabase from "../config/supbaseClient";
+import supabase from "../config/supabaseClient";
 import { useContext } from "react";
 import { UserIdContext } from "../context/useridcontext";
 // import useValue from "../hooks/useValue"
