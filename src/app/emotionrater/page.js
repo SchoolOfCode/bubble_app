@@ -69,8 +69,8 @@ const RatingButtons = () => {
           <Flex justifyContent="center" textAlign="center">
             <Box color="black" p={3} bg="#F58484" borderRadius="md">
               <Text fontSize="lg" as="em">
-                Oops not all of them have been selected! Double-check you&apos;ve
-                picked a bubble for each question!
+                Oops not all of them have been selected! Double-check
+                you&apos;ve picked a bubble for each question!
               </Text>
             </Box>
           </Flex>
@@ -102,28 +102,41 @@ const RatingButtons = () => {
       <Navbar />
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box
-          size="lg"
-          w="70%"
-          h="100px"
+          fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
           bg="brand.blue"
-          borderRadius="md"
-          mb="10px"
+          borderRadius="20"
+          mb="1rem"
+          w={[300, 400, 500]}
+          boxShadow="lg"
+          p="2"
         >
-          <Heading align="center">
-            Let&apos;s dive deeper (rate your emotions - click on the bubbles)
+          <Heading
+            align="center"
+            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+          >
+            Let&apos;s dive deeper...
           </Heading>
+          <Text fontSize="xl" align="center">
+            (rate your emotions - click on the bubbles)
+          </Text>
         </Box>
-        <SimpleGrid columns={2} spacing={5}>
+        <SimpleGrid columns={[1, 2, 2]} spacing={5} align="center">
           <Box>
             <Box
               bg="brand.blue"
-              borderRadius="lg"
-              w="100%"
+              borderRadius="20"
               p="1rem"
-              my="1rem"
-              minWidth="500px"
+              my="0.5rem"
+              w={[300, 400, 500]}
+              h={[100, 125, 125]}
             >
-              <Heading align="center">How happy do you feel?</Heading>
+              <Heading
+                align="center"
+                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                mb="10px"
+              >
+                How happy do you feel?
+              </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
                   <Text align="center" w="65px" size="sm">
@@ -281,13 +294,19 @@ const RatingButtons = () => {
           <Box>
             <Box
               bg="brand.yellow"
-              borderRadius="lg"
-              w="100%"
+              borderRadius="20"
               p="1rem"
-              my="1rem"
-              minWidth="500px"
+              my="0.5rem"
+              w={[300, 400, 500]}
+              h={[100, 125, 125]}
             >
-              <Heading align="center">How sad do you feel?</Heading>
+              <Heading
+                align="center"
+                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                mb="10px"
+              >
+                How sad do you feel?
+              </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
                   <Text align="center" w="65px" size="sm">
@@ -445,13 +464,19 @@ const RatingButtons = () => {
           <Box>
             <Box
               bg="brand.green"
-              borderRadius="lg"
-              w="100%"
+              borderRadius="20"
               p="1rem"
-              my="1rem"
-              minWidth="500px"
+              my="0.5rem"
+              w={[300, 400, 500]}
+              h={[100, 125, 125]}
             >
-              <Heading align="center">How angry do you feel?</Heading>
+              <Heading
+                align="center"
+                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                mb="10px"
+              >
+                How angry do you feel?
+              </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
                   <Text align="center" w="65px" size="sm">
@@ -609,13 +634,19 @@ const RatingButtons = () => {
           <Box>
             <Box
               bg="brand.pink"
-              borderRadius="lg"
-              w="100%"
+              borderRadius="20"
               p="1rem"
-              my="1rem"
-              minWidth="500px"
+              my="0.5rem"
+              w={[300, 400, 500]}
+              h={[100, 125, 125]}
             >
-              <Heading align="center">How cheeky do you feel?</Heading>
+              <Heading
+                align="center"
+                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                mb="10px"
+              >
+                How cheeky do you feel?
+              </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
                   <Text align="center" w="65px" size="sm">
@@ -773,13 +804,19 @@ const RatingButtons = () => {
           <Box>
             <Box
               bg="brand.purple"
-              borderRadius="lg"
-              w="100%"
+              borderRadius="20"
               p="1rem"
-              my="1rem"
-              minWidth="500px"
+              my="0.5rem"
+              w={[300, 400, 500]}
+              h={[100, 125, 125]}
             >
-              <Heading align="center">How tired do you feel?</Heading>
+              <Heading
+                align="center"
+                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                mb="10px"
+              >
+                How tired do you feel?
+              </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
                   <Text align="center" w="65px" size="sm">
@@ -937,13 +974,19 @@ const RatingButtons = () => {
           <Box>
             <Box
               bg="brand.green"
-              borderRadius="lg"
-              w="100%"
+              borderRadius="20"
               p="1rem"
-              my="1rem"
-              minWidth="500px"
+              my="0.5rem"
+              w={[300, 400, 500]}
+              h={[100, 125, 125]}
             >
-              <Heading align="center">How worried do you feel?</Heading>
+              <Heading
+                align="center"
+                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                mb="10px"
+              >
+                How worried do you feel?
+              </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
                   <Text align="center" w="65px" size="sm">
