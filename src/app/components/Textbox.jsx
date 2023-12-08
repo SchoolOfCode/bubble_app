@@ -1,12 +1,14 @@
 "use client";
 import { useState } from "react";
 import { Textarea, Box, Button, useToast, Text, Flex } from "@chakra-ui/react";
-import supabase from "../config/supbaseClient";
+import supabase from "../config/supabaseClient";
+import { useContext } from "react";
+import { UserIdContext } from "../context/useridcontext";
 // import useValue from "../hooks/useValue"
 
 export default function Textbox() {
-  const uniqueID = localStorage.getItem('uniqueid');
-  // console.log(uniqueID); // Output: uuid
+
+  const { uuid } = useContext(UserIdContext);
 
   const toast = useToast();
 
@@ -23,7 +25,7 @@ export default function Textbox() {
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="black" p={3} bg="white" borderRadius="md">
+            <Box color="black" p={3} bg="#F58484" borderRadius="md">
               <Text fontSize="lg" as="em">
                 Oops, nothing has been filled! If you&apos;re stuck just write
                 about a positive interaction with someone instead!
@@ -37,7 +39,7 @@ export default function Textbox() {
       const { data, error } = await supabase
         .from("mood")
         .update([{ reflection: value }])
-        .eq("uuid", uniqueID)
+        .eq("uuid", uuid)
         .select();
 
       if (error) {
@@ -50,7 +52,7 @@ export default function Textbox() {
           duration: 3000,
           render: () => (
             <Flex justifyContent="center" textAlign="center">
-              <Box color="black" p={3} bg="brand.purple" borderRadius="md">
+              <Box color="black" p={3} bg="#C2F2BA" borderRadius="md">
                 <Text fontSize="lg" as="em">
                   That&apos;s been saved, thanks for filling that out! Have you
                   tried bubble breathing?
@@ -62,8 +64,6 @@ export default function Textbox() {
       }
 
       setValue("");
-      localStorage.removeItem('uniqueid');
-      console.log(uniqueID);
     }
   }
 
@@ -84,6 +84,8 @@ export default function Textbox() {
           onChange={handleInputChange}
           placeholder="If you’re stuck, that’s okay start by writing about your day...what happened?"
           border="none"
+          size="lg"
+          h="325px"
         />
       </Box>
       <Button

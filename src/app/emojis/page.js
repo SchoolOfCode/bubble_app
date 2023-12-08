@@ -1,6 +1,5 @@
 "use client";
-import supabase from "../config/supbaseClient.js";
-import { SimpleGrid, Button } from "@chakra-ui/react";
+import supabase from "../config/supabaseClient.js";
 import Image from "next/image";
 import Happy from "../../../public/assets/emojis/Happy.svg";
 import Sad from "../../../public/assets/emojis/Sad.svg";
@@ -9,12 +8,15 @@ import Angry from "../../../public/assets/emojis/Angry.svg";
 import Worried from "../../../public/assets/emojis/Worried.svg";
 import Tired from "../../../public/assets/emojis/Tired2.svg";
 import Link from "next/link.js";
-import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, SimpleGrid } from "@chakra-ui/react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import { UserIdContext} from "../context/useridcontext.js";
 
 export default function Emojis() {
+const { setUuid } = useContext(UserIdContext);
 const router = useRouter();
 
   async function emojiClickHandler(emoji) {
@@ -29,10 +31,8 @@ const router = useRouter();
     }
     if (data) {
       console.log("this has worked, check supabase");
-      let uuid = data[0].uuid;
-      // console.log(uuid);
-      localStorage.setItem('uniqueid', uuid);
       router.push("/emotionrater");
+      setUuid(data[0].uuid);
     }
   }
 
@@ -41,6 +41,7 @@ const router = useRouter();
     //need to display the 6 emoji images in a grid - chakra ui grid
     <>
       <Navbar />
+      <Flex justify="center" alignItems="center">
       <Box>
         <Box
           maxW="500px"
@@ -55,8 +56,6 @@ const router = useRouter();
           <Heading>How are you feeling?</Heading>
           <Text fontSize="lg">(click an emoji)</Text>
         </Box>
-
-        <Flex justify="center" alignItems="center">
           <SimpleGrid columns={3} spacing={10} mx="auto">
             <Flex justifyContent="center" alignItems="center" h="100%">
               <Box>
@@ -170,11 +169,11 @@ const router = useRouter();
             </Flex>
           </SimpleGrid>
 
-          <Link href="/emotionrater">
-            <Button>Next</Button>
-          </Link>
-        </Flex>
       </Box>
+          {/* <Link href="/emotionrater">
+            <Button>Next</Button>
+          </Link> */}
+    </Flex>
       <Footer />
     </>
   );

@@ -1,7 +1,6 @@
 "use client";
 import { Box, Flex, Spacer } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
 import SmallLogo from "../../../public/assets/BubbleLogoSmall.svg";
 import BackButton from "../../../public/assets/icons/BackButton.svg";
 import HomeIcon from "../../../public/assets/icons/HomeIcon.svg";

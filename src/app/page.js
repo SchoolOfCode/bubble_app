@@ -2,11 +2,13 @@ import Image from "next/image";
 import { Box, Button, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Logo from "/public/assets/Logo.svg";
 import Link from "next/link";
+import Head from "next/head";
 import ShieldIcon from "/public/assets/icons/ShieldIcon.svg";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
+    <>
     <Flex direction="column" h="100%">
       <Box mb="20">
         <Flex direction="column" align="center" justify="center">
@@ -78,5 +80,6 @@ export default function Home() {
         <Footer />
       </Box>
     </Flex>
+    </>
   );
 }
