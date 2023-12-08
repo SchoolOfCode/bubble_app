@@ -113,7 +113,7 @@ a {
   overflow:hidden;
   top:0;
   left:0;
-}
+  }
 .bubble{
   position: absolute;
   bottom:-100px;
