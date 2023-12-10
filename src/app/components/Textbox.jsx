@@ -7,15 +7,13 @@ import { UserIdContext } from "../context/useridcontext";
 // import useValue from "../hooks/useValue"
 
 export default function Textbox() {
-
   const { uuid } = useContext(UserIdContext);
 
   const toast = useToast();
 
   let [value, setValue] = useState("");
   const [textBorder, setTextBorder] = useState("none");
-  
-  
+
   let handleInputChange = (e) => {
     let inputValue = e.target.value;
     setValue(inputValue);
@@ -35,9 +33,9 @@ export default function Textbox() {
               </Text>
             </Box>
           </Flex>
-        )
+        ),
       }),
-      setTextBorder("3px solid red");
+        setTextBorder("3px solid red");
       setTimeout(() => {
         setTextBorder("none");
       }, 5000);
