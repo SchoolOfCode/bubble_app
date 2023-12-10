@@ -5,7 +5,7 @@ import { SimpleGrid, useToast, Center } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link.js";
 import { useRouter } from "next/navigation";
-import Bubble from "../../../public/assets/Bubble.svg";
+import Bubble from "../../../public/assets/Bubble.png";
 import Navbar from "../components/Navbar.jsx";
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 import { UserIdContext } from "../context/useridcontext.js";
