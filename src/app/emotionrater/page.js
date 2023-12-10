@@ -7,7 +7,7 @@ import Link from "next/link.js";
 import { useRouter } from "next/navigation";
 import Bubble from "../../../public/assets/Bubble.png";
 import Navbar from "../components/Navbar.jsx";
-import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Flex, Spacer } from "@chakra-ui/react";
 import { UserIdContext } from "../context/useridcontext.js";
 import Footer from "../components/Footer.jsx";
 
@@ -100,7 +100,6 @@ const RatingButtons = () => {
 
   return (
     <>
-    <Box position="relative">
       <Navbar />
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box
@@ -1143,8 +1142,6 @@ const RatingButtons = () => {
             </Box>
           </Box>
         </SimpleGrid>
-      </Flex>
-      <Center>
         <Button
           bg="brand.purple"
           maxW="600px"
@@ -1152,16 +1149,17 @@ const RatingButtons = () => {
           position="relative"
           bottom="0"
           right="0"
+          size="lg"
+          mt="10"
           onClick={() => SubmitEvent()}
         >
-          Submit
+          <Text size="xl">Submit</Text>
         </Button>
         <Link href="/reflection">
           <Button>Next</Button>
         </Link>
-      </Center>
-    </Box>
-    <Footer />
+      </Flex>
+      <Footer />
     </>
   );
 };
