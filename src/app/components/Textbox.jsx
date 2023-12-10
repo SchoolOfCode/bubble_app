@@ -13,6 +13,9 @@ export default function Textbox() {
   const toast = useToast();
 
   let [value, setValue] = useState("");
+  const [textBorder, setTextBorder] = useState("none");
+  
+  
   let handleInputChange = (e) => {
     let inputValue = e.target.value;
     setValue(inputValue);
@@ -32,8 +35,12 @@ export default function Textbox() {
               </Text>
             </Box>
           </Flex>
-        ),
-      });
+        )
+      }),
+      setTextBorder("3px solid red");
+      setTimeout(() => {
+        setTextBorder("none");
+      }, 5000);
     } else {
       console.log(value);
       const { data, error } = await supabase
@@ -83,7 +90,7 @@ export default function Textbox() {
           value={value}
           onChange={handleInputChange}
           placeholder="If you’re stuck, that’s okay start by writing about your day...what happened?"
-          border="none"
+          border={textBorder}
           size="lg"
           h="325px"
         />
