@@ -9,6 +9,7 @@ import Bubble from "../../../public/assets/Bubble.png";
 import Navbar from "../components/Navbar.jsx";
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 import { UserIdContext } from "../context/useridcontext.js";
+import Footer from "../components/Footer.jsx";
 
 const RatingButtons = () => {
   const { uuid } = useContext(UserIdContext);
@@ -67,8 +68,8 @@ const RatingButtons = () => {
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="black" p={3} bg="#F58484" borderRadius="md">
-              <Text fontSize="lg" as="em">
+            <Box color="white" p={3} bg="#4258A6" borderRadius="md">
+              <Text fontSize="xl" as="em">
                 Oops not all of them have been selected! Double-check
                 you&apos;ve picked a bubble for each question!
               </Text>
@@ -98,6 +99,7 @@ const RatingButtons = () => {
   };
 
   return (
+    <>
     <Box position="relative">
       <Navbar />
       <Flex direction="column" align="center" justify="center" h="100%">
@@ -120,10 +122,10 @@ const RatingButtons = () => {
             (rate your emotions - click on the bubbles)
           </Text>
         </Box>
-        <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }}spacingX={7}>
+        <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacingX={7}>
           <Box>
             <Box
-              bg="brand.blue"
+              bg="brand.green"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -293,7 +295,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.yellow"
+              bg="brand.purple"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -463,7 +465,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.green"
+              bg="brand.pink"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -633,7 +635,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.pink"
+              bg="brand.yellow"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -803,7 +805,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.purple"
+              bg="brand.orange"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -973,7 +975,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.green"
+              bg="brand.blue"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -1144,6 +1146,9 @@ const RatingButtons = () => {
       </Flex>
       <Center>
         <Button
+          bg="brand.purple"
+          maxW="600px"
+          boxShadow="lg"
           position="relative"
           bottom="0"
           right="0"
@@ -1156,6 +1161,8 @@ const RatingButtons = () => {
         </Link>
       </Center>
     </Box>
+    <Footer />
+    </>
   );
 };
 
