@@ -71,11 +71,11 @@ const RatingButtons = () => {
       !worriedRating
     ) {
       toast({
-        position: "top",
+        position: "middle",
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="white" p={3} bg="#4258A6" borderRadius="md">
+            <Box color="black" p={3} bg="yellow.200" borderRadius="md">
               <Text fontSize="xl" as="em">
                 Oops not all of them have been selected! Double-check
                 you&apos;ve picked a bubble for each question!
