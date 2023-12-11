@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Textbox from "../components/Textbox";
 import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 //import the data from Supabase
 //store the data as a const
@@ -23,12 +23,15 @@ async function arrayOfLogs() {
 
     return data;
   }
+  return data;
 }
 
-export default function page({data}) {
-  useEffect(() => {
-    arrayOfLogs();
-  }, []);
+export default function page() {
+    const [data, setData] = useState(null);
+    useEffect(() => {
+        arrayOfLogs().then(setData);
+      }, []);
+    
   return (
     <>
       <Navbar />
@@ -61,7 +64,7 @@ export default function page({data}) {
         </Heading>
         <Text>Press finished when you&apos;re done</Text>
       </Box>
-      <ListOfLogs data={data}/>
+      <ListOfLogs data={data} />
       <Footer />
     </>
   );

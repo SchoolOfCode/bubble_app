@@ -2,22 +2,29 @@
 
 import IndividualLog from "./IndividualLog";
 
-export default function Listoflogs(props) {
-  const { logs, deleteLog, editLog } = props;
-
+export default function ListOfLogs(props) {
+  //   const { logs, deleteLog, editLog } = props;
+//   if (props.data.length < 1) {
+//    console.log(props.data)
+//     return (
+//       <main className={styles.container}>
+//         <h2>No Logs yet! 🫢</h2>
+//       </main>
+//     );
+//   }
+console.log(`data in the ListOfLogs${props.mood}`)
   return (
-    <div>
-      {logs.map((log) => (
-        <>
-          <IndividualLog
-            key={log.id}
-            log={log}
-            deleteLog={deleteLog}
-            editLog={editLog}
-          />
-          <p>This is a list of logs</p>
-        </>
-      ))}
-    </div>
+    <main>
+      {/**
+       * Create a new empty array (this is where you'll store your React elements)
+       * Loop over the array of flash card objects. For each flashcard object:
+       *    Create a new FlashcardItem component (for the current flashcard object)
+       *    Add the newly created component instance to the array of React elements
+       */}
+      {/* {props.data.map((data) => (
+        <IndividualLog key={data.uuid} data={data} />
+      ))} */}
+      <IndividualLog />
+    </main>
   );
 }
