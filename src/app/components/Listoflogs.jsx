@@ -1,0 +1,1 @@
+//retrive the data from child logs and pass the props down to individual log
