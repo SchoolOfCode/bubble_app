@@ -23,15 +23,14 @@ async function arrayOfLogs() {
 
     return data;
   }
-  return data;
 }
 
 export default function page() {
-    const [data, setData] = useState(null);
-    useEffect(() => {
-        arrayOfLogs().then(setData);
-      }, []);
-    
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    arrayOfLogs().then(setData);
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -47,22 +46,6 @@ export default function page() {
         boxShadow="lg"
       >
         <Heading size="lg">Your Thinking Journey</Heading>
-      </Box>
-      <Box
-        maxW="600px"
-        mx="auto"
-        borderRadius="20"
-        textAlign="center"
-        bg="brand.green"
-        p="2"
-        mt="5"
-        mb="5"
-        boxShadow="lg"
-      >
-        <Heading size="md">
-          Let&apos;s write about why you&apos;re feeling this way.
-        </Heading>
-        <Text>Press finished when you&apos;re done</Text>
       </Box>
       <ListOfLogs data={data} />
       <Footer />
