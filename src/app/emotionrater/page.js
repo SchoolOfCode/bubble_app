@@ -120,7 +120,7 @@ const RatingButtons = () => {
             (rate your emotions - click on the bubbles)
           </Text>
         </Box>
-        <SimpleGrid columns={[1, 2, 2]} spacing={5} align="center">
+        <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }}spacingX={7}>
           <Box>
             <Box
               bg="brand.blue"
