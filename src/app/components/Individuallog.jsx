@@ -19,10 +19,10 @@ async function logEntryRetrieval() {
   }
 
 
-export default function Logretrieval() {
+export default function Individuallog() {
   return (
     <Box>
-      <Text>© Team 11 Ltd. Fostering mindful bubbles since 2023.</Text>
+      <Text>This a log</Text>
     </Box>
   );
 }

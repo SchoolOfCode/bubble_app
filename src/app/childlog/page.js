@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Textbox from "../components/Textbox";
-import Listoflogs from "../components/Listoflogs";
+import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
 import { useEffect } from "react";
 
@@ -13,23 +13,19 @@ import { useEffect } from "react";
 //
 
 async function arrayOfLogs() {
-  const { data, error } = await supabase
-    .from("mood")
-    .select();
+  const { data, error } = await supabase.from("mood").select();
 
   if (error) {
     console.log(error);
   }
   if (data) {
     console.log(data);
-   
-    return data
+
+    return data;
   }
 }
 
-
-
-export default function page() {
+export default function page({data}) {
   useEffect(() => {
     arrayOfLogs();
   }, []);
@@ -65,7 +61,7 @@ export default function page() {
         </Heading>
         <Text>Press finished when you&apos;re done</Text>
       </Box>
-      <Listoflogs data={data} />
+      <ListOfLogs data={data}/>
       <Footer />
     </>
   );
