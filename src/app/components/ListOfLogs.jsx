@@ -34,13 +34,25 @@ sevenDaysAgo.setDate(currentDate.getDate() - 7);
 const thirtyDaysAgo = new Date();
 thirtyDaysAgo.setDate(currentDate.getDate() - 30);
 
-if (timeRange === "last7Days") {
-  filteredArray = filteredArray.filter((item) => new Date(item.date) >= sevenDaysAgo);
-} else if (timeRange === "last30Days") {
-  filteredArray = filteredArray.filter((item) => new Date(item.date) >= thirtyDaysAgo);
-} else if (timeRange === "") {
-  filteredArray;
+switch (timeRange) {
+ case "last7Days":
+    filteredArray = filteredArray.filter((item) => new Date(item.date) >= sevenDaysAgo);
+    break;
+  case "last30Days":
+    filteredArray = filteredArray.filter((item) => new Date(item.date) >= thirtyDaysAgo);
+    break;
+  default:
+    filteredArray;
+    break;
 }
+
+// if (timeRange === "last7Days") {
+//   filteredArray = filteredArray.filter((item) => new Date(item.date) >= sevenDaysAgo);
+// } else if (timeRange === "last30Days") {
+//   filteredArray = filteredArray.filter((item) => new Date(item.date) >= thirtyDaysAgo);
+// } else if (timeRange === "") {
+//   filteredArray;
+// }
 
   return (
     <>
