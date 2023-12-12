@@ -68,14 +68,18 @@ export default function IndividualLog(props) {
       mb="5"
       boxShadow="lg"
     >
-      <Flex gap="10px" direction="row" alignItems="center">
-        <Image src={imageUrl} alt="Image-From-Supabase" width="50px" />
-
-        <Text fontSize="xl">
+      <Flex direction="row" justifyContent="space-evenly" alignItems="center">
+      <Flex>
+        <Image src={imageUrl} alt="Image-From-Supabase" maxWidth="50px" />
+      </Flex>
+      <Flex direction="column" justifyContent="center" textAlign="center" alignItems="center">
+        <Text fontSize="xl" as="b">
           {formattedDate}
-          {"  "}
+        </Text>
+        <Text fontSize="xl">
           {props.data.reflection}
         </Text>
+        </Flex>
       </Flex>
     </Box>
   );
