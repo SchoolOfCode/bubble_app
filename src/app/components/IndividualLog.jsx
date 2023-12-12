@@ -11,7 +11,7 @@ import Image from "next/image";
 //renaming commment to change file
 export default function IndividualLog(props) {
   let imageUrl;
-  let colorCard
+  let colorCard;
 
   switch (props.data.emoji) {
     case "../../../public/assets/emojis/Happy.svg":
@@ -69,16 +69,19 @@ export default function IndividualLog(props) {
       boxShadow="lg"
     >
       <Flex direction="row" justifyContent="space-evenly" alignItems="center">
-      <Flex>
-        <Image src={imageUrl} alt="Image-From-Supabase" maxWidth="50px" />
-      </Flex>
-      <Flex direction="column" justifyContent="center" textAlign="center" alignItems="center">
-        <Text fontSize="xl" as="b">
-          {formattedDate}
-        </Text>
-        <Text fontSize="xl">
-          {props.data.reflection}
-        </Text>
+        <Flex>
+          <Image src={imageUrl} alt="Image-From-Supabase" maxWidth="50px" />
+        </Flex>
+        <Flex
+          direction="column"
+          justifyContent="center"
+          textAlign="center"
+          alignItems="center"
+        >
+          <Text fontSize="xl" as="b">
+            {formattedDate}
+          </Text>
+          <Text fontSize="xl">{props.data.reflection}</Text>
         </Flex>
       </Flex>
     </Box>
