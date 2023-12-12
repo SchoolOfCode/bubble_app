@@ -8,6 +8,7 @@ import Worried from "../../../public/assets/emojis/Worried.svg";
 import Tired from "../../../public/assets/emojis/Tired2.svg";
 import Image from "next/image";
 
+//renaming commment to change file
 export default function IndividualLog(props) {
   let imageUrl;
   let colorCard
