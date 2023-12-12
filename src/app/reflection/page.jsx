@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Flex, Link } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Textbox from "../components/Textbox";
 
@@ -40,9 +40,11 @@ export default function page() {
       </Box>
       <Flex gap="10px" direction="column" alignItems="center">
         <Textbox />
-        <Button bg="brand.yellow" maxW="600px" boxShadow="lg">
-          See everything you jotted down
-        </Button>
+        <Link href="/childlog">
+          <Button bg="brand.yellow" maxW="600px" boxShadow="lg">
+            See everything you jotted down
+          </Button>
+        </Link>
       </Flex>
       <Footer />
     </>

@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import Footer from "../components/Footer";
-import Textbox from "../components/Textbox";
 import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
@@ -26,9 +25,9 @@ async function arrayOfLogs() {
 }
 
 export default function page() {
-  const [data, setData] = useState([]);
+  const [logs, setLogs] = useState([]);
   useEffect(() => {
-    arrayOfLogs().then(setData);
+    arrayOfLogs().then(setLogs);
   }, []);
 
   return (
@@ -47,7 +46,7 @@ export default function page() {
       >
         <Heading size="lg">Your Thinking Journey</Heading>
       </Box>
-      <ListOfLogs data={data} />
+      <ListOfLogs data={logs} />
       <Footer />
     </>
   );

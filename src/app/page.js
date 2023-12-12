@@ -65,17 +65,19 @@ export default function Home() {
               mt={{ base: "20px", md: "40px", lg: "30px" }}
               align="center"
             >
-              <Button
-                size={{ base: "lg", md: "lg", lg: "lg" }}
-                w={{ base: "180px", md: "250px", lg: "300px" }}
-                h={{ base: "50px", md: "100px", lg: "100px" }}
-                bg="brand.purple"
-                boxShadow="lg"
-              >
-                <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
-                  Earlier Logs
-                </Text>
-              </Button>
+              <Link href="/childlog">
+                <Button
+                  size={{ base: "lg", md: "lg", lg: "lg" }}
+                  w={{ base: "180px", md: "250px", lg: "300px" }}
+                  h={{ base: "50px", md: "100px", lg: "100px" }}
+                  bg="brand.purple"
+                  boxShadow="lg"
+                >
+                  <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
+                    Earlier Logs
+                  </Text>
+                </Button>
+              </Link>
             </Box>
           </Flex>
         </Box>
