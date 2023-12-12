@@ -1,6 +1,7 @@
 //retrieve the data from child logs and pass the props down to individual log
 
 import IndividualLog from "./IndividualLog";
+import { Spinner, Flex, Text } from "@chakra-ui/react";
 
 export default function ListOfLogs(props) {
   //   const { logs, deleteLog, editLog } = props;
@@ -8,9 +9,12 @@ export default function ListOfLogs(props) {
   console.log(`data in the ListOfLogs${props.data}`);
   if (props.data.length < 1) {
     return (
-      <main>
-        <h2>No Logs yet! 🫢</h2>
-      </main>
+      <>
+      <Flex justifyContent="center" alignItems="center" flexDirection="column">
+        <Spinner m="20" size="xl" />
+        <Text fontSize="2xl">Getting your logs...</Text>
+      </Flex>
+      </>
     );
   }
   const sortedArray = props.data.sort(
@@ -18,10 +22,10 @@ export default function ListOfLogs(props) {
   );
 
   return (
-    <main>
+    <>
       {sortedArray.map((data) => (
         <IndividualLog key={data.uuid} data={data} />
       ))}
-    </main>
+    </>
   );
 }
