@@ -7,16 +7,12 @@ import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
 
-
 //import the data from Supabase
 //store the data as a const
 //
 
 async function arrayOfLogs() {
-  
   const { data, error } = await supabase.from("mood").select();
-
-  
 
   if (error) {
     console.log(error);
@@ -30,14 +26,19 @@ async function arrayOfLogs() {
 
 export default function page() {
   const toast = useToast();
+  const id = 'single-toast';
+
   const [logs, setLogs] = useState([]);
   useEffect(() => {
     arrayOfLogs().then(setLogs);
   }, []);
 
-    setTimeout(() => {toast({
+  setTimeout(() => {
+    if (!toast.isActive(id)) {
+    toast({
+      id,
       position: "top",
-      // duration: 1000,
+      duration: 5000,
       render: () => (
         <Flex justifyContent="center" textAlign="center">
           <Box color="white" p={3} bg="#4258A6" borderRadius="md">
@@ -47,8 +48,9 @@ export default function page() {
             </Text>
           </Box>
         </Flex>
-      )})}, 2000);
-    
+      ),
+    });
+  }}, 5000);
 
   return (
     <>
