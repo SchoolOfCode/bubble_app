@@ -38,19 +38,19 @@ export default function page() {
     toast({
       id,
       position: "top",
-      duration: 5000,
+      duration: 8000,
+     isClosable: true,
       render: () => (
         <Flex justifyContent="center" textAlign="center">
-          <Box color="white" p={3} bg="#4258A6" borderRadius="md">
-            <Text fontSize="lg" as="em">
-              Oops, nothing has been filled! If you&apos;re stuck just write
-              about a positive interaction with someone instead!
+          <Box color="white" p={3} bg="purple.500" borderRadius="md">
+            <Text fontSize="xl" as="em">
+              Hey! Here's an idea... why don't you talk to a grown-up about your thinking journey!
             </Text>
           </Box>
         </Flex>
       ),
     });
-  }}, 5000);
+  }}, 8000);
 
   return (
     <>
