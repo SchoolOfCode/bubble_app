@@ -22,7 +22,7 @@ export default function Emojis() {
   async function emojiClickHandler(emoji) {
     const { data, error } = await supabase
       .from("mood")
-      .insert([{ emoji, date: new Date().toLocaleString() }])
+      .insert([{ emoji, date: new Date() }])
       .select();
 
     if (error) {
