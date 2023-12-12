@@ -68,7 +68,7 @@ export default function IndividualLog(props) {
       mb="5"
       boxShadow="lg"
     >
-      <Flex direction="row" justifyContent="space-evenly" alignItems="center">
+      <Flex direction="column" justifyContent="space-evenly" alignItems="center">
         <Flex>
           <Image src={imageUrl} alt="Image-From-Supabase" maxWidth="50px" />
         </Flex>
