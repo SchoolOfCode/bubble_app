@@ -31,6 +31,7 @@ export default function Home() {
               mt={{ base: "15px", md: "10px", lg: "10px" }}
             >
               <Box>
+              <Link href="/breathing">
                 <Button
                   size={{ base: "lg", md: "lg", lg: "lg" }}
                   w={{ base: "180px", md: "250px", lg: "300px" }}
@@ -42,6 +43,7 @@ export default function Home() {
                     Bubble Breathing
                   </Text>
                 </Button>
+                </Link> 
               </Box>
               <Box>
                 <Link href="/emojis">

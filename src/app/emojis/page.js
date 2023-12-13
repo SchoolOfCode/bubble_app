@@ -60,6 +60,7 @@ export default function Emojis() {
           <SimpleGrid columns={3} spacing={10} mx="auto">
             <Flex justifyContent="center" alignItems="center" h="100%">
               <Box cursor="pointer">
+              <Link href="/emotionrater">
                 <Image
                   src={Happy}
                   alt="Happy-Emoji"
@@ -68,6 +69,7 @@ export default function Emojis() {
                     emojiClickHandler("../../../public/assets/emojis/Happy.svg")
                   }
                 />
+                </Link> 
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
                   Happy
                 </Text>
