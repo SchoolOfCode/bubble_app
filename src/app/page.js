@@ -31,7 +31,7 @@ export default function Home() {
               mt={{ base: "15px", md: "10px", lg: "10px" }}
             >
               <Box>
-              <Link href="/breathing">
+              <Link href="/breathing" target="_self">
                 <Button
                   size={{ base: "lg", md: "lg", lg: "lg" }}
                   w={{ base: "180px", md: "250px", lg: "300px" }}
@@ -46,7 +46,7 @@ export default function Home() {
                 </Link> 
               </Box>
               <Box>
-                <Link href="/emojis">
+                <Link href="/emojis" target="_self">
                   <Button
                     size={{ base: "lg", md: "lg", lg: "lg" }}
                     w={{ base: "180px", md: "250px", lg: "300px" }}
@@ -67,7 +67,7 @@ export default function Home() {
               mt={{ base: "20px", md: "40px", lg: "30px" }}
               align="center"
             >
-              <Link href="/childlog">
+              <Link href="/childlog" target="_self">
                 <Button
                   size={{ base: "lg", md: "lg", lg: "lg" }}
                   w={{ base: "180px", md: "250px", lg: "300px" }}
