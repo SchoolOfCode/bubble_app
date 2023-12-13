@@ -73,7 +73,7 @@ export default function IndividualLog(props) {
       bg={colorCard}
       p="2"
       mt="5"
-      mb="2"
+      mb="5"
       boxShadow="lg"
     >
       <Flex
