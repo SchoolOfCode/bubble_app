@@ -12,31 +12,38 @@ import Image from "next/image";
 export default function IndividualLog(props) {
   let imageUrl;
   let colorCard;
+  let emojiName;
 
   switch (props.data.emoji) {
     case "../../../public/assets/emojis/Happy.svg":
       imageUrl = Happy;
       colorCard = "brand.green";
+      emojiName = "Happy";
       break;
     case "../../../public/assets/emojis/Sad.svg":
       imageUrl = Sad;
       colorCard = "brand.purple";
+      emojiName = "Sad";
       break;
     case "../../../public/assets/emojis/Cheeky.svg":
       imageUrl = Cheeky;
       colorCard = "brand.yellow";
+      emojiName = "Cheeky";
       break;
     case "../../../public/assets/emojis/Angry.svg":
       imageUrl = Angry;
       colorCard = "brand.pink";
+      emojiName = "Angry";
       break;
     case "../../../public/assets/emojis/Worried.svg":
       imageUrl = Worried;
       colorCard = "brand.blue";
+      emojiName = "Worried";
       break;
     case "../../../public/assets/emojis/Tired2.svg":
       imageUrl = Tired;
       colorCard = "brand.orange";
+      emojiName = "Tired";
       break;
     default:
       imageUrl = null; // Set a default image if no matching emotion is found
@@ -77,7 +84,7 @@ export default function IndividualLog(props) {
           <Image
           className="emoji-image"
             src={imageUrl}
-            alt="Emoji-image from date"
+            alt={`${emojiName} Image`}
           />
         </Flex>
         <Flex
