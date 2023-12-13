@@ -21,7 +21,7 @@ export default function page() {
         mb="5"
         boxShadow="lg"
       >
-        <Heading size="lg">Now, let&apos;s think about these feelings!</Heading>
+        <Heading as='h1' size="lg">Now, let&apos;s think about these feelings!</Heading>
       </Box>
       <Box
         maxW={[350, 600]}
@@ -34,7 +34,7 @@ export default function page() {
         mb="5"
         boxShadow="lg"
       >
-        <Heading size="md">
+        <Heading as='h2' size="md">
           Let&apos;s write about why you&apos;re feeling this way.
         </Heading>
         <Text>Press finish when you&apos;re done</Text>

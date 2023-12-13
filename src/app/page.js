@@ -86,7 +86,7 @@ export default function Home() {
             </Box>
           </Flex>
         </Box>
-        <Box bottom={{ base: "10", lg: "15" }} p="10" position="relative">
+        <Box bottom={{ base: "10", lg: "15" }} ml="5" position="relative">
           <Button
             size="lg"
             bg="brand.yellow"

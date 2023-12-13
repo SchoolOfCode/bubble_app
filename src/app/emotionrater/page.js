@@ -120,6 +120,7 @@ const RatingButtons = () => {
           p="2"
         >
           <Heading
+            as="h1"
             align="center"
             fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
           >

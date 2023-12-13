@@ -52,7 +52,7 @@ export default function Emojis() {
             mb="10"
             boxShadow="lg"
           >
-            <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
+            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
               How are you feeling?
             </Heading>
             <Text fontSize="xl">(click an emoji)</Text>
