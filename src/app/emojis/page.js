@@ -22,7 +22,7 @@ export default function Emojis() {
   async function emojiClickHandler(emoji) {
     const { data, error } = await supabase
       .from("mood")
-      .insert([{ emoji, date: new Date().toLocaleString() }])
+      .insert([{ emoji, date: new Date() }])
       .select();
 
     if (error) {
@@ -59,7 +59,7 @@ export default function Emojis() {
           </Box>
           <SimpleGrid columns={3} spacing={10} mx="auto">
             <Flex justifyContent="center" alignItems="center" h="100%">
-              <Box>
+              <Box cursor="pointer">
                 <Image
                   src={Happy}
                   alt="Happy-Emoji"

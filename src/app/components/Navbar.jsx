@@ -25,11 +25,11 @@ export default function Navbar() {
   return (
     <>
       <Flex as="nav" alignItems="center" p="10px">
-        <Box onClick={goBack} pl="20px">
+        <Box onClick={goBack} pl="20px" cursor="pointer">
             <Image src={BackButton} alt="Back Button" />
         </Box>
         {isHomeButtonVisible && (
-          <Box pl="20px" onClick={goHome}>
+          <Box pl="20px" onClick={goHome} cursor="pointer">
               <Image src={HomeIcon} alt="Home Button" />
           </Box>
         )}

@@ -7,12 +7,13 @@ import { UserIdContext } from "../context/useridcontext";
 // import useValue from "../hooks/useValue"
 
 export default function Textbox() {
-
   const { uuid } = useContext(UserIdContext);
 
   const toast = useToast();
 
   let [value, setValue] = useState("");
+  const [textBorder, setTextBorder] = useState("none");
+
   let handleInputChange = (e) => {
     let inputValue = e.target.value;
     setValue(inputValue);
@@ -25,7 +26,7 @@ export default function Textbox() {
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="black" p={3} bg="#F58484" borderRadius="md">
+            <Box color="white" p={3} bg="#4258A6" borderRadius="md">
               <Text fontSize="lg" as="em">
                 Oops, nothing has been filled! If you&apos;re stuck just write
                 about a positive interaction with someone instead!
@@ -33,7 +34,11 @@ export default function Textbox() {
             </Box>
           </Flex>
         ),
-      });
+      }),
+        setTextBorder("3px solid red");
+      setTimeout(() => {
+        setTextBorder("none");
+      }, 5000);
     } else {
       console.log(value);
       const { data, error } = await supabase
@@ -83,7 +88,7 @@ export default function Textbox() {
           value={value}
           onChange={handleInputChange}
           placeholder="If you’re stuck, that’s okay start by writing about your day...what happened?"
-          border="none"
+          border={textBorder}
           size="lg"
           h="325px"
         />

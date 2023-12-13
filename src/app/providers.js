@@ -12,6 +12,7 @@ const colors = {
     purple: "#C0B9DD",
     yellow: "#F0DAA2",
     blue: "#A2C1F0",
+    orange: "#F2CEBA",
     footer: "#dedcdc",
   },
 };

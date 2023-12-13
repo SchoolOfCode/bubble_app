@@ -1,14 +1,22 @@
 "use client";
 import supabase from "../config/supabaseClient.js";
 import { useContext, useEffect, useState } from "react";
-import { SimpleGrid, useToast, Center } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link.js";
 import { useRouter } from "next/navigation";
-import Bubble from "../../../public/assets/Bubble.svg";
 import Navbar from "../components/Navbar.jsx";
-import { Box, Button, Heading, Text, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  Text,
+  Flex,
+  SimpleGrid,
+  useToast,
+} from "@chakra-ui/react";
 import { UserIdContext } from "../context/useridcontext.js";
+import Footer from "../components/Footer.jsx";
+import Bubble from "../../../public/assets/Bubble.png";
 
 const RatingButtons = () => {
   const { uuid } = useContext(UserIdContext);
@@ -63,12 +71,12 @@ const RatingButtons = () => {
       !worriedRating
     ) {
       toast({
-        position: "top",
+        position: "middle",
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="black" p={3} bg="#F58484" borderRadius="md">
-              <Text fontSize="lg" as="em">
+            <Box color="black" p={3} bg="yellow.200" borderRadius="md">
+              <Text fontSize="xl" as="em">
                 Oops not all of them have been selected! Double-check
                 you&apos;ve picked a bubble for each question!
               </Text>
@@ -98,7 +106,7 @@ const RatingButtons = () => {
   };
 
   return (
-    <Box position="relative">
+    <>
       <Navbar />
       <Flex direction="column" align="center" justify="center" h="100%">
         <Box
@@ -120,10 +128,10 @@ const RatingButtons = () => {
             (rate your emotions - click on the bubbles)
           </Text>
         </Box>
-        <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }}spacingX={7}>
+        <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacingX={7}>
           <Box>
             <Box
-              bg="brand.blue"
+              bg="brand.green"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -152,6 +160,7 @@ const RatingButtons = () => {
                     style={{
                       filter: happinessRating !== 1 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -167,6 +176,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     1
                   </Text>
@@ -180,6 +190,7 @@ const RatingButtons = () => {
                     style={{
                       filter: happinessRating !== 2 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -195,6 +206,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     2
                   </Text>
@@ -208,6 +220,7 @@ const RatingButtons = () => {
                     style={{
                       filter: happinessRating !== 3 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -223,6 +236,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     3
                   </Text>
@@ -236,6 +250,7 @@ const RatingButtons = () => {
                     style={{
                       filter: happinessRating !== 4 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -251,6 +266,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     4
                   </Text>
@@ -264,6 +280,7 @@ const RatingButtons = () => {
                     style={{
                       filter: happinessRating !== 5 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -279,6 +296,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     5
                   </Text>
@@ -293,7 +311,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.yellow"
+              bg="brand.purple"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -322,6 +340,7 @@ const RatingButtons = () => {
                     style={{
                       filter: sadnessRating !== 1 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -337,6 +356,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     1
                   </Text>
@@ -350,6 +370,7 @@ const RatingButtons = () => {
                     style={{
                       filter: sadnessRating !== 2 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -365,6 +386,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     2
                   </Text>
@@ -378,6 +400,7 @@ const RatingButtons = () => {
                     style={{
                       filter: sadnessRating !== 3 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -393,6 +416,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     3
                   </Text>
@@ -406,6 +430,7 @@ const RatingButtons = () => {
                     style={{
                       filter: sadnessRating !== 4 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -421,6 +446,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     4
                   </Text>
@@ -434,6 +460,7 @@ const RatingButtons = () => {
                     style={{
                       filter: sadnessRating !== 5 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -449,6 +476,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     5
                   </Text>
@@ -463,7 +491,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.green"
+              bg="brand.pink"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -492,6 +520,7 @@ const RatingButtons = () => {
                     style={{
                       filter: angryRating !== 1 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -507,6 +536,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     1
                   </Text>
@@ -520,6 +550,7 @@ const RatingButtons = () => {
                     style={{
                       filter: angryRating !== 2 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -535,6 +566,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     2
                   </Text>
@@ -548,6 +580,7 @@ const RatingButtons = () => {
                     style={{
                       filter: angryRating !== 3 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -563,6 +596,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     3
                   </Text>
@@ -576,6 +610,7 @@ const RatingButtons = () => {
                     style={{
                       filter: angryRating !== 4 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -591,6 +626,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     4
                   </Text>
@@ -604,6 +640,7 @@ const RatingButtons = () => {
                     style={{
                       filter: angryRating !== 5 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -619,6 +656,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     5
                   </Text>
@@ -633,7 +671,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.pink"
+              bg="brand.yellow"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -662,6 +700,7 @@ const RatingButtons = () => {
                     style={{
                       filter: cheekyRating !== 1 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -677,6 +716,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     1
                   </Text>
@@ -690,6 +730,7 @@ const RatingButtons = () => {
                     style={{
                       filter: cheekyRating !== 2 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -705,6 +746,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     2
                   </Text>
@@ -718,6 +760,7 @@ const RatingButtons = () => {
                     style={{
                       filter: cheekyRating !== 3 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -733,6 +776,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     3
                   </Text>
@@ -746,6 +790,7 @@ const RatingButtons = () => {
                     style={{
                       filter: cheekyRating !== 4 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -761,6 +806,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     4
                   </Text>
@@ -774,6 +820,7 @@ const RatingButtons = () => {
                     style={{
                       filter: cheekyRating !== 5 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -789,6 +836,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     5
                   </Text>
@@ -803,7 +851,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.purple"
+              bg="brand.orange"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -832,6 +880,7 @@ const RatingButtons = () => {
                     style={{
                       filter: tiredRating !== 1 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -847,6 +896,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     1
                   </Text>
@@ -860,6 +910,7 @@ const RatingButtons = () => {
                     style={{
                       filter: tiredRating !== 2 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -875,6 +926,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     2
                   </Text>
@@ -888,6 +940,7 @@ const RatingButtons = () => {
                     style={{
                       filter: tiredRating !== 3 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -903,6 +956,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     3
                   </Text>
@@ -916,6 +970,7 @@ const RatingButtons = () => {
                     style={{
                       filter: tiredRating !== 4 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -931,6 +986,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     4
                   </Text>
@@ -944,6 +1000,7 @@ const RatingButtons = () => {
                     style={{
                       filter: tiredRating !== 5 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -959,6 +1016,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     5
                   </Text>
@@ -973,7 +1031,7 @@ const RatingButtons = () => {
 
           <Box>
             <Box
-              bg="brand.green"
+              bg="brand.blue"
               borderRadius="20"
               p="1rem"
               my="0.5rem"
@@ -1002,6 +1060,7 @@ const RatingButtons = () => {
                     style={{
                       filter: worriedRating !== 1 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -1017,6 +1076,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     1
                   </Text>
@@ -1030,6 +1090,7 @@ const RatingButtons = () => {
                     style={{
                       filter: worriedRating !== 2 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -1045,6 +1106,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     2
                   </Text>
@@ -1058,6 +1120,7 @@ const RatingButtons = () => {
                     style={{
                       filter: worriedRating !== 3 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -1073,6 +1136,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     3
                   </Text>
@@ -1086,6 +1150,7 @@ const RatingButtons = () => {
                     style={{
                       filter: worriedRating !== 4 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -1101,6 +1166,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     4
                   </Text>
@@ -1114,6 +1180,7 @@ const RatingButtons = () => {
                     style={{
                       filter: worriedRating !== 5 ? "opacity(50%)" : "none",
                     }}
+                    cursor="pointer"
                   />
 
                   <Text
@@ -1129,6 +1196,7 @@ const RatingButtons = () => {
                     pt={1}
                     pb={1}
                     borderRadius="md"
+                    cursor="pointer"
                   >
                     5
                   </Text>
@@ -1141,21 +1209,25 @@ const RatingButtons = () => {
             </Box>
           </Box>
         </SimpleGrid>
-      </Flex>
-      <Center>
         <Button
+          bg="brand.purple"
+          maxW="600px"
+          boxShadow="lg"
           position="relative"
           bottom="0"
           right="0"
+          size="lg"
+          mt="10"
           onClick={() => SubmitEvent()}
         >
-          Submit
+          <Text size="xl">Submit</Text>
         </Button>
         <Link href="/reflection">
           <Button>Next</Button>
         </Link>
-      </Center>
-    </Box>
+      </Flex>
+      <Footer />
+    </>
   );
 };
 
