@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Box, Heading, useToast, Flex, Text } from "@chakra-ui/react";
+import { Box, Heading, useToast, Flex, Text, CloseButton } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
@@ -34,26 +34,32 @@ export default function page() {
     arrayOfLogs().then(setLogs);
   }, []);
 
-  setTimeout(() => {
+  useEffect(() => {
+    // Show the toast when the component mounts
+    setTimeout(() => {
     if (!toast.isActive(id)) {
-      toast({
-        id,
-        position: "top",
-        duration: 8000,
-        isClosable: true,
-        render: () => (
-          <Flex justifyContent="center" textAlign="center">
-            <Box color="white" p={3} bg="purple.500" borderRadius="md">
-              <Text fontSize="xl" as="em">
-                Hey! Here's an idea... why don't you talk to a grown-up about
-                your thinking journey!
-              </Text>
-            </Box>
-          </Flex>
-        ),
-      });
+    toast({
+      id,
+      position: 'top',
+      duration: 8000,
+      render: () => (
+          <Box color="white" p={3} bg="purple.500" borderRadius="md" textAlign="center">
+          <CloseButton onClick={() => toast.close(id)} />
+          <Box>
+            <Text fontSize="xl" as="em">
+              Hey! Here's an idea... why don't you talk to a grown-up about your thinking journey!
+            </Text>
+          </Box>
+          </Box>
+      ),
+    })
+  }}, 8000)
+
+    // Clean up the toast when the component unmounts
+    return () => {
+        toast.close(id);
     }
-  }, 8000);
+  }, [toast, id]);
 
   return (
     <>

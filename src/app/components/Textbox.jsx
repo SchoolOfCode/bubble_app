@@ -92,7 +92,7 @@ export default function Textbox() {
           placeholder="If you’re stuck, that’s okay start by writing about your day...what happened?"
           border={textBorder}
           size="lg"
-          h="325px"
+          h="300px"
           _placeholder={{ color: 'gray.600' }} //placeholder color
         />
       </Box>

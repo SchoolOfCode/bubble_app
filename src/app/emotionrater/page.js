@@ -1219,12 +1219,12 @@ const RatingButtons = () => {
           mb="10px"
           onClick={() => SubmitEvent()}
         >
-          <Text size="xl">Submit</Text>
+          <Text size="xl">Next</Text>
         </Button>
-        {/* <Link href="/reflection">
-          <Button>Next</Button>
-        </Link> */}
       </Flex>
+        <Link href="/reflection">
+          <Button>Next</Button>
+        </Link>
       <Footer />
     </>
   );
