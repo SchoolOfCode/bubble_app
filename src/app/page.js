@@ -10,7 +10,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | Bubble</title>
+        <title>Bubble App. Helping children's emotions</title>
+        <meta
+          name="description"
+          content="Bubble App. Helping children's emotions"
+        />
+        <link rel="alternate" hrefLang="en" href="https://bubble-app-two.vercel.app/" />
       </Head>
       <Flex direction="column" h="100%">
         <Box mb="20">
