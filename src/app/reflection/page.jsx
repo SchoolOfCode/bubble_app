@@ -10,7 +10,7 @@ export default function page() {
     <>
       <Navbar />
       <Box
-        maxW="600px"
+        maxW={[350, 600]}
         mx="auto"
         borderRadius="20"
         textAlign="center"
@@ -23,7 +23,7 @@ export default function page() {
         <Heading size="lg">Now, let&apos;s think about these feelings!</Heading>
       </Box>
       <Box
-        maxW="600px"
+        maxW={[350, 600]}
         mx="auto"
         borderRadius="20"
         textAlign="center"

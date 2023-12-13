@@ -76,7 +76,7 @@ export default function Textbox() {
     <>
       <Box
         bg="brand.blue"
-        w="600px"
+        w={[350, 600]}
         mx="auto"
         borderRadius="20"
         textAlign="center"
