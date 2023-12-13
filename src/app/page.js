@@ -31,13 +31,14 @@ export default function Home() {
               mt={{ base: "15px", md: "10px", lg: "10px" }}
             >
               <Box>
-              <Link href="/breathing" target="_self">
+                <Link href="/breathing" target="_self">
                 <Button
                   size={{ base: "lg", md: "lg", lg: "lg" }}
                   w={{ base: "180px", md: "250px", lg: "300px" }}
                   h={{ base: "50px", md: "100px", lg: "100px" }}
                   bg="brand.pink"
                   boxShadow="lg"
+                  tabindex="-1"
                 >
                   <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                     Bubble Breathing
@@ -53,6 +54,7 @@ export default function Home() {
                     h={{ base: "50px", md: "100px", lg: "100px" }}
                     bg="brand.green"
                     boxShadow="lg"
+                    tabindex="-1"
                   >
                     <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                       Record Your Mood
@@ -74,6 +76,7 @@ export default function Home() {
                   h={{ base: "50px", md: "100px", lg: "100px" }}
                   bg="brand.purple"
                   boxShadow="lg"
+                  tabindex="-1"
                 >
                   <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                     Earlier Logs
@@ -83,7 +86,6 @@ export default function Home() {
             </Box>
           </Flex>
         </Box>
-
         <Box bottom={{ base: "10", lg: "15" }} p="10" position="relative">
           <Button
             size="lg"
@@ -92,11 +94,12 @@ export default function Home() {
             h={{ base: "40px", md: "60px", lg: "60px" }}
             leftIcon={<Image src={ShieldIcon} alt="Parent Zone Icon" />}
             boxShadow="lg"
+            tabindex="-1"
           >
             <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
               Parent Zone
             </Text>
-          </Button>
+          </Button>   
         </Box>
       </Flex>
       <Footer />

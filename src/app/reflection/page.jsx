@@ -41,7 +41,7 @@ export default function page() {
       </Box>
       <Flex gap="10px" direction="column" alignItems="center">
         <Textbox />
-        <Link href="/childlog">
+        <Link href="/childlog" target="_self">
           <Button bg="brand.yellow" maxW="600px" boxShadow="lg">
             See everything you jotted down
           </Button>

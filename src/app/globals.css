@@ -204,5 +204,10 @@ a {
   100% {
     bottom: 1080px;
     transform: translateX(-200px);
-  }
+  }         
 }
+
+/* *:focus {
+  outline: 5px solid #FFEA00;
+  outline-offset: 5px;
+} */
