@@ -17,6 +17,7 @@ import {
 import { UserIdContext } from "../context/useridcontext.js";
 import Footer from "../components/Footer.jsx";
 import Bubble from "../../../public/assets/Bubble.png";
+import "../page.module.css";
 
 const RatingButtons = () => {
   const { uuid } = useContext(UserIdContext);

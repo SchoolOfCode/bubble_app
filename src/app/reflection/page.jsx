@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { Box, Button, Heading, Text, Flex, Link } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Textbox from "../components/Textbox";
+import "../page.module.css";
 
 export default function page() {
   return (

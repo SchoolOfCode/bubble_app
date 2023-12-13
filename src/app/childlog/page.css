@@ -13,4 +13,9 @@
       /* You can also use max-width or other CSS properties for more control */
     }
   }
+  .footer {
+    position: relative;
+  left: 0;
+  bottom: 0;
+  }
   

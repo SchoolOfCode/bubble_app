@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
-import "./page.css";
+import "../page.module.css";
 
 //import the data from Supabase
 //store the data as a const
@@ -27,7 +27,7 @@ async function arrayOfLogs() {
 
 export default function page() {
   const toast = useToast();
-  const id = 'single-toast';
+  const id = "single-toast";
 
   const [logs, setLogs] = useState([]);
   useEffect(() => {
@@ -36,40 +36,59 @@ export default function page() {
 
   setTimeout(() => {
     if (!toast.isActive(id)) {
-    toast({
-      id,
-      position: "top",
-      duration: 8000,
-     isClosable: true,
-      render: () => (
-        <Flex justifyContent="center" textAlign="center">
-          <Box color="white" p={3} bg="purple.500" borderRadius="md">
-            <Text fontSize="xl" as="em">
-              Hey! Here's an idea... why don't you talk to a grown-up about your thinking journey!
-            </Text>
-          </Box>
-        </Flex>
-      ),
-    });
-  }}, 8000);
+      toast({
+        id,
+        position: "top",
+        duration: 8000,
+        isClosable: true,
+        render: () => (
+          <Flex justifyContent="center" textAlign="center">
+            <Box color="white" p={3} bg="purple.500" borderRadius="md">
+              <Text fontSize="xl" as="em">
+                Hey! Here's an idea... why don't you talk to a grown-up about
+                your thinking journey!
+              </Text>
+            </Box>
+          </Flex>
+        ),
+      });
+    }
+  }, 8000);
 
   return (
     <>
       <Navbar />
-      <Box
-        maxW={{ base: "300", md: "400", lg: "600" }}
-        mx="auto"
-        borderRadius="20"
-        textAlign="center"
-        bg="brand.pink"
-        p="2"
-        mt="10"
-        mb="5"
-        boxShadow="lg"
+      <Flex
+        direction="column"
+        align="center"
+        justify="center"
+        h="100%"
+        position="relative"
+        mb="2"
+        p="10"
       >
-        <Heading  fontSize={{ base: "2xl", md: "2xl", lg: "2xl" }}>Your Thinking Journey</Heading>
-      </Box>
-      <ListOfLogs data={logs} />
+        <Box
+          w="500px"
+          maxW={{ base: "300px", md: "800px", lg: "800px" }}
+          // mx="200px"
+          borderRadius="20"
+          textAlign="center"
+          bg="brand.pink"
+          p="2"
+          mt="10"
+          mb="5"
+          boxShadow="lg"
+          wordWrap="break-word"
+          overflow="hidden"
+        >
+          <Heading fontSize={{ base: "2xl", md: "2xl", lg: "2xl" }}>
+            Your Thinking Journey
+          </Heading>
+        </Box>
+
+        <ListOfLogs data={logs} />
+      </Flex>
+
       <Footer />
     </>
   );
