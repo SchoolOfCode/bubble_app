@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Textarea, Box, Button, useToast, Text, Flex } from "@chakra-ui/react";
+import { Textarea, Box, Button, useToast, Text, Flex, FormLabel } from "@chakra-ui/react";
 import supabase from "../config/supabaseClient";
 import { useContext } from "react";
 import { UserIdContext } from "../context/useridcontext";
@@ -84,13 +84,16 @@ export default function Textbox() {
         mb="3"
         boxShadow="lg"
       >
+      <FormLabel htmlFor="textarea" p="2">Please write in the space below:-</FormLabel>
         <Textarea
+          id="textarea"
           value={value}
           onChange={handleInputChange}
           placeholder="If you’re stuck, that’s okay start by writing about your day...what happened?"
           border={textBorder}
           size="lg"
           h="325px"
+          _placeholder={{ color: 'gray.600' }} //placeholder color
         />
       </Box>
       <Button

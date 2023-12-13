@@ -37,7 +37,7 @@ export default function page() {
         <Heading size="md">
           Let&apos;s write about why you&apos;re feeling this way.
         </Heading>
-        <Text>Press finished when you&apos;re done</Text>
+        <Text>Press finish when you&apos;re done</Text>
       </Box>
       <Flex gap="10px" direction="column" alignItems="center">
         <Textbox />
