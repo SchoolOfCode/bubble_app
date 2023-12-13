@@ -68,6 +68,7 @@ export default function Emojis() {
                   onClick={() =>
                     emojiClickHandler("../../../public/assets/emojis/Happy.svg")
                   }
+                  width={175}
                 />
                 </Link> 
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
@@ -85,6 +86,7 @@ export default function Emojis() {
                     onClick={() =>
                       emojiClickHandler("../../../public/assets/emojis/Sad.svg")
                     }
+                    width={175}
                   />
                 </Link>
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
@@ -104,6 +106,7 @@ export default function Emojis() {
                         "../../../public/assets/emojis/Cheeky.svg"
                       )
                     }
+                    width={175}
                   />
                 </Link>
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
@@ -123,6 +126,7 @@ export default function Emojis() {
                         "../../../public/assets/emojis/Angry.svg"
                       )
                     }
+                    width={175}
                   />
                 </Link>
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
@@ -142,6 +146,7 @@ export default function Emojis() {
                         "../../../public/assets/emojis/Worried.svg"
                       )
                     }
+                    width={175}
                   />
                 </Link>
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
@@ -161,6 +166,7 @@ export default function Emojis() {
                         "../../../public/assets/emojis/Tired2.svg"
                       )
                     }
+                  width={175}
                   />
                 </Link>
                 <Text mt={2} textAlign="center" color="white" fontSize="xl">
