@@ -65,8 +65,8 @@ export default function IndividualLog(props) {
 
   return (
     <Box
-      maxW={{ base: 600, md: 600, lg: 600 }}
-      mx="auto"
+      width={{ base: 300, md: 600, lg: 600 }}
+      // mx="auto"
       borderRadius="20"
       textAlign="center"
       bg={colorCard}
