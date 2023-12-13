@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
+import "./page.css";
 
 //import the data from Supabase
 //store the data as a const
@@ -56,7 +57,7 @@ export default function page() {
     <>
       <Navbar />
       <Box
-        maxW="600px"
+        maxW={{ base: "300", md: "400", lg: "600" }}
         mx="auto"
         borderRadius="20"
         textAlign="center"
@@ -66,7 +67,7 @@ export default function page() {
         mb="5"
         boxShadow="lg"
       >
-        <Heading size="lg">Your Thinking Journey</Heading>
+        <Heading  fontSize={{ base: "2xl", md: "2xl", lg: "2xl" }}>Your Thinking Journey</Heading>
       </Box>
       <ListOfLogs data={logs} />
       <Footer />

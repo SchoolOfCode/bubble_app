@@ -58,7 +58,7 @@ export default function IndividualLog(props) {
 
   return (
     <Box
-      maxW="600px"
+      maxW={{ base: 200, md: 400, lg: 600 }}
       mx="auto"
       borderRadius="20"
       textAlign="center"
@@ -68,9 +68,17 @@ export default function IndividualLog(props) {
       mb="5"
       boxShadow="lg"
     >
-      <Flex direction="column" justifyContent="space-evenly" alignItems="center">
+      <Flex
+        direction="column"
+        justifyContent="space-evenly"
+        alignItems="center"
+      >
         <Flex>
-          <Image src={imageUrl} alt="Image-From-Supabase" maxWidth="50px" />
+          <Image
+          className="emoji-image"
+            src={imageUrl}
+            alt="Emoji-image from date"
+          />
         </Flex>
         <Flex
           direction="column"
