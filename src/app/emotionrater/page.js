@@ -72,11 +72,11 @@ const RatingButtons = () => {
       !worriedRating
     ) {
       toast({
-        position: "middle",
+        position: "top",
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="black" p={3} bg="yellow.200" borderRadius="md">
+            <Box color="white" p={3} bg="purple.500" borderRadius="md">
               <Text fontSize="xl" as="em">
                 Oops not all of them have been selected! Double-check
                 you&apos;ve picked a bubble for each question!
@@ -118,6 +118,7 @@ const RatingButtons = () => {
           w={[300, 400, 500]}
           boxShadow="lg"
           p="2"
+          mt="10"
         >
           <Heading
             as="h1"
@@ -1213,20 +1214,16 @@ const RatingButtons = () => {
         </SimpleGrid>
         <Button
           bg="brand.purple"
-          maxW="600px"
           boxShadow="lg"
-          position="relative"
-          bottom="0"
-          right="0"
           size="lg"
-          mt="10"
+          mb="10px"
           onClick={() => SubmitEvent()}
         >
           <Text size="xl">Submit</Text>
         </Button>
-        <Link href="/reflection">
+        {/* <Link href="/reflection">
           <Button>Next</Button>
-        </Link>
+        </Link> */}
       </Flex>
       <Footer />
     </>

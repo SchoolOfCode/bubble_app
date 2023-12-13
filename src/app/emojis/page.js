@@ -41,7 +41,7 @@ export default function Emojis() {
     <>
       <Navbar />
       <Flex justify="center" alignItems="center">
-        <Box>
+        <Box mt="10">
           <Box
             w={[300, 400, 500]}
             mx="auto"
