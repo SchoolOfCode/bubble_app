@@ -3,21 +3,23 @@
 } */
 
 .bubble {
-  position: absolute;
-  width: 20px; /* Initial width of the bubble */
-  height: 20px; /* Initial height of the bubble */
+  width: 80px; /* Initial width of the bubble */
+  height: 80px; /* Initial height of the bubble */
   background-color: #fff; /* Bubble color */
   border-radius: 50%;
   animation: bubbleAnimation 2s infinite alternate; /* Set animation properties */
+  z-index: 3;
+  margin: auto;
+  bottom: 0;
 }
 
 @keyframes bubbleAnimation {
   from {
-    width: 20px; /* Initial width */
-    height: 20px; /* Initial height */
+    width: 80px; /* Initial width */
+    height: 80px; /* Initial height */
   }
   to {
-    width: 40px; /* Final width */
-    height: 40px; /* Final height */
+    width: 160px; /* Final width */
+    height: 160px; /* Final height */
   }
 }

@@ -1,15 +1,26 @@
 import React from "react";
-import { Text, Box } from "@chakra-ui/react";
-import style from "../breathing/page.module.css"
+import {
+  Text,
+  Box,
+  Circle,
+  AbsoluteCenter,
+  Flex,
+  Heading,
+  Center,
+  Button,
+  SimpleGrid,
+} from "@chakra-ui/react";
+import Link from "next/link";
+import style from "../breathing/page.module.css";
 
 export default function Bubble() {
-
-    return (
-        <>
-        <Box
-        maxW={[350, 600]}
+  return (
+    <>
+      <Box
+        width="80%"
+        height="70vh"
         mx="auto"
-        borderRadius="20"
+        borderRadius="20px"
         textAlign="center"
         bg="brand.pink"
         p="2"
@@ -17,17 +28,88 @@ export default function Bubble() {
         mb="5"
         boxShadow="lg"
       >
-
-
-            <Text>Here are a few reasons why Bubble Breathing is a great thing to do...
-
-1. It can help you feel more relaxed when you're feeling a bit worried or upset.
-2. It can help you concentrate if you feel distracted.
-3. Pretending you are really blowing bubbles is great for helping to keep your breathing slow and steady.
-4. The blood flow around your body is improved which makes you feel healthier. </Text>
+        <Heading paddingTop="3" as="h1" size="lg">
+          Bubble Breathing!
+        </Heading>
+      </Box>
+      <Center>
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          direction="column"
+          gap="20px"
+          position="absolute"
+          top="35%"
+        >
+          <Box
+            width="70%"
+            bg="brand.blue"
+            borderRadius="20px"
+            textAlign="center"
+            boxShadow="lg"
+            p="2"
+          >
+            <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+              Just like bubbles float away, this magical breathing helps your
+              worries and busy thoughts float away too.
+            </Text>
+          </Box>
+          <Box
+            width="70%"
+            bg="brand.yellow"
+            borderRadius="20px"
+            textAlign="center"
+            boxShadow="lg"
+            p="2"
+          >
+            <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+              In moments of distraction, Bubble Breathing becomes a magical key
+              to unlocking better concentration.
+            </Text>
+            </Box>
+            <Box
+            width="70%"
+            bg="brand.green"
+            borderRadius="20px"
+            textAlign="center"
+            boxShadow="lg"
+            p="2"
+            >
+                <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+                Imagining yourself blowing
+              bubbles adds a delightful touch to keeping your breath slow and
+              steady. 
+              <br></br>Tap Ready to begin!
+                </Text>
+            </Box>
+          <Box>
+            <Link href="/" target="_self">
+              <Button
+                bg="brand.purple"
+                boxShadow="lg"
+                size={{ base: "md", md: "lg", lg: "lg" }}
+              >
+                <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
+                  Ready
+                </Text>
+              </Button>
+            </Link>
+          </Box>
+        </Flex>
+      </Center>
+      {/* <Flex justifyContent="center" alignItems="center">
+        <Box
+          width="350px"
+          height="350px"
+          mx="auto"
+          borderRadius="20px"
+          textAlign="center"
+          bg="brand.pink"
+          boxShadow="lg"
+        >
+          <Box className={style.bubble}></Box>
         </Box>
-
-        <Box classname={style.Bubble}> </Box>
-        </>
-    );
+      </Flex> */}
+    </>
+  );
 }

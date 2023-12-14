@@ -15,7 +15,7 @@ export default function page() {
         mx="auto"
         borderRadius="20"
         textAlign="center"
-        bg="brand.pink"
+        bg="brand.purple"
         p="2"
         mt="10"
         mb="5"
