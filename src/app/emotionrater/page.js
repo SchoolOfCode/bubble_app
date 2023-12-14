@@ -76,7 +76,7 @@ const RatingButtons = () => {
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="white" p={3} bg="purple.500" borderRadius="md">
+            <Box color="white" p={3} bg="purple.400" borderRadius="md">
               <Text fontSize="xl" as="em">
                 Oops not all of them have been selected! Double-check
                 you&apos;ve picked a bubble for each question!

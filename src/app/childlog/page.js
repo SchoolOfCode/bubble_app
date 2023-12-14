@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Box, Heading, useToast, Flex, Text, CloseButton, Button } from "@chakra-ui/react";
+import { Box, Heading, useToast, Flex, Text, Button } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
@@ -44,19 +44,22 @@ export default function Page() {
         toast({
           id,
           position: 'top',
-          duration: 8000,
+          // duration: 8000,
           render: () => (
-            <Box color="white" p={3} bg="purple.500" borderRadius="md" textAlign="center">
+            <Box color="white" p={3} bg="purple.400" borderRadius="md" h={75}>
               <Box>
-                <Text fontSize="xl" as="em">
+              <Box textAlign="center">
+                <Text fontSize="lg" as="em" ml="38">
                   Hey! Here's an idea... why don't you talk to a grown-up about your thinking journey!
                 </Text>
+              </Box>
                 <Button
                   onClick={() => toast.close(id)}
-                  mt={3}
-                  ml={20}
-                  colorScheme="pink"
+                  colorScheme="purple"
                   variant="solid"
+                  size="sm"
+                  position="fixed"
+                  top="5"
                 >
                   X
                 </Button>
@@ -65,7 +68,7 @@ export default function Page() {
           ),
         });
       }
-    }, 8000);
+    }, 1000);
 
     // Clean up the timeout when the component unmounts or user navigates away
     const cleanup = () => {
