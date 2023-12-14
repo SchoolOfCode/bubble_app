@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <>
       <Flex direction="column" 
-      // h="100%"
+      h="100vh"
       >
-        <Box>
+        <Box mb="20">
           <Flex direction="column" align="center" justify="center">
             <Box>
               <Image src={Logo} priority={true} alt="Logo" />
