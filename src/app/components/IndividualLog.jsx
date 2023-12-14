@@ -70,25 +70,36 @@ export default function IndividualLog(props) {
       borderRadius="20"
       textAlign="center"
       bg={colorCard}
-      p="2"
+      p={[3, 6]}
       mt="5"
       mb="5"
       boxShadow="lg"
     >
       <Flex justifyContent="right">
         <Flex direction="row">
-          <Square >
+          <Square w={[22, 33, 33]}>
             <Image src={CalendarIcon} alt="Calendar Icon" />
           </Square>
-          <Text fontSize="xl" as="b" m="2">
+          <Text
+            fontSize={{ base: "md", md: "lg", lg: "xl" }}
+            as="b"
+            m={[0.5, 2, 2]}
+          >
             {formattedDate}
           </Text>
         </Flex>
       </Flex>
-      <Flex direction="row" justifyContent="center" alignItems="center" >
-        <Box flex="1" justifyContent="center">
+      <Flex direction="row" justifyContent="center" alignItems="center">
+        <Box
+          flex="1"
+          justifyContent="center"
+          textAlign="center"
+          alignItems="center"
+        >
           <Image
             className="emoji-image"
+            justifyContent="center"
+            pl="9"
             src={imageUrl}
             alt={`${emojiName} Image`}
           />
@@ -103,7 +114,7 @@ export default function IndividualLog(props) {
           alignItems="center"
           flex="2"
         >
-          <Text fontSize="xl">{props.data.reflection}</Text>
+          <Text fontSize={{ base: "md", md: "xl", lg: "xl" }}>{props.data.reflection}</Text>
         </Flex>
       </Flex>
     </Box>
