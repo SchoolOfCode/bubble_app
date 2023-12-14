@@ -9,7 +9,9 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <Flex direction="column" h="100%">
+      <Flex direction="column" 
+      // h="100%"
+      >
         <Box mb="20">
           <Flex direction="column" align="center" justify="center">
             <Box>

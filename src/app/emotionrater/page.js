@@ -109,7 +109,7 @@ const RatingButtons = () => {
   return (
     <>
       <Navbar />
-      <Flex direction="column" align="center" justify="center" h="100%">
+      <Flex direction="column" align="center" justify="center" h="100%" pb="50px">
         <Box
           fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
           bg="brand.blue"
