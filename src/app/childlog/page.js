@@ -94,6 +94,7 @@ export default function page() {
         align="center"
         justify="center"
         mb="5"
+        pb="10"
         >
         <Box>
           <ListOfLogs data={logs} />

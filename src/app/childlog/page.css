@@ -5,10 +5,10 @@
   
     /* Adjusting size for screens less than 400 pixels */
     @media screen and (max-width: 770px) {
-      width: 40%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
+      /* display: block; */
+      /* margin-left: auto;
+      margin-right: auto; */
       /* Adjust the width to your preference */
       /* You can also use max-width or other CSS properties for more control */
     }
