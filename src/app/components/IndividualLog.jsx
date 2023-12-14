@@ -114,7 +114,12 @@ export default function IndividualLog(props) {
           alignItems="center"
           flex="2"
         >
-          <Text fontSize={{ base: "md", md: "xl", lg: "xl" }}>{props.data.reflection}</Text>
+          <Text
+            width={{ base: 200, md: 400, lg: 400 }}
+            fontSize={{ base: "md", md: "xl", lg: "xl" }}
+          >
+            {props.data.reflection}
+          </Text>
         </Flex>
       </Flex>
     </Box>
