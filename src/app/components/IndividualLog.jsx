@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Box, Heading, Flex } from "@chakra-ui/react";
+import { Text, Box, Heading, Flex, Square } from "@chakra-ui/react";
 import Happy from "../../../public/assets/emojis/Happy.svg";
 import Sad from "../../../public/assets/emojis/Sad.svg";
 import Cheeky from "../../../public/assets/emojis/Cheeky.svg";
@@ -7,8 +7,7 @@ import Angry from "../../../public/assets/emojis/Angry.svg";
 import Worried from "../../../public/assets/emojis/Worried.svg";
 import Tired from "../../../public/assets/emojis/Tired2.svg";
 import Image from "next/image";
-
-//renaming commment to change file
+import CalendarIcon from "../../../public/assets/icons/CalendarIcon.png";
 export default function IndividualLog(props) {
   let imageUrl;
   let colorCard;
@@ -76,27 +75,34 @@ export default function IndividualLog(props) {
       mb="5"
       boxShadow="lg"
     >
-      <Flex
-        direction="column"
-        justifyContent="space-evenly"
-        alignItems="center"
-      >
-        <Flex>
+      <Flex justifyContent="right">
+        <Flex direction="row">
+          <Square >
+            <Image src={CalendarIcon} alt="Calendar Icon" />
+          </Square>
+          <Text fontSize="xl" as="b" m="2">
+            {formattedDate}
+          </Text>
+        </Flex>
+      </Flex>
+      <Flex direction="row" justifyContent="center" alignItems="center" >
+        <Box flex="1" justifyContent="center">
           <Image
-          className="emoji-image"
+            className="emoji-image"
             src={imageUrl}
             alt={`${emojiName} Image`}
           />
-        </Flex>
+          <Text fontSize="xl" as="b">
+            {emojiName}
+          </Text>
+        </Box>
         <Flex
           direction="column"
           justifyContent="center"
           textAlign="center"
           alignItems="center"
+          flex="2"
         >
-          <Text fontSize="xl" as="b">
-            {formattedDate}
-          </Text>
           <Text fontSize="xl">{props.data.reflection}</Text>
         </Flex>
       </Flex>
