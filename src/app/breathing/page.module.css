@@ -3,23 +3,75 @@
 } */
 
 .bubble {
-  width: 80px; /* Initial width of the bubble */
-  height: 80px; /* Initial height of the bubble */
-  background-color: #fff; /* Bubble color */
-  border-radius: 50%;
-  animation: bubbleAnimation 2s infinite alternate; /* Set animation properties */
+  width: 150px; /* Initial width of the bubble */
+  height: 150px; /* Initial height of the bubble */
+  background-image: url('../../../public/assets/Bubble.png');
+  background-size: cover;
+  animation: bubbleAnimation 10s infinite alternate; /* Set animation properties */
   z-index: 3;
   margin: auto;
   bottom: 0;
 }
 
 @keyframes bubbleAnimation {
-  from {
-    width: 80px; /* Initial width */
-    height: 80px; /* Initial height */
+  0% {
+    width: 150px; /* Initial width */
+    height: 150px; /* Initial height */
   }
-  to {
-    width: 160px; /* Final width */
-    height: 160px; /* Final height */
+  5% {
+    width: 150px; /* Stay at smallest size for 5% of the animation duration (4 seconds) */
+    height: 150px;
   }
+  50% {
+    width: 250px; /* Final width - reached halfway through the animation */
+    height: 250px; /* Final height - reached halfway through the animation */
+  }
+  55% {
+    width: 250px; /* Maintain size for 5% of the animation duration (pause) */
+    height: 250px;
+  }
+  95% {
+    width: 150px; /* Stay at smallest size for 5% of the animation duration (4 seconds) */
+    height: 150px;
+  }
+  100% {
+    width: 150px; /* Shrink back to initial width */
+    height: 150px; /* Shrink back to initial height */
+  }
+}
+
+@media (min-width: 450px) {
+  .bubble {
+    width: 300px; /* Adjust the width for larger screens */
+    height: 300px; /* Adjust the height for larger screens */
+    animation: bubbleAnimation 20s infinite alternate; /* Set animation properties */
+  }
+
+  @keyframes bubbleAnimation {
+    0% {
+      width: 300px; /* Adjust the width for larger screens */
+      height: 300px; /* Adjust the height for larger screens */
+    }
+    5% {
+      width: 300px; /* Adjust the width for larger screens */
+      height: 300px; /* Adjust the height for larger screens */
+    }
+    50% {
+      width: 450px; /* Larger final width for larger screens - reached halfway through the animation */
+      height: 450px; /* Larger final height for larger screens - reached halfway through the animation */
+    }
+    55% {
+      width: 450px; /* Maintain size for 5% of the animation duration (pause) */
+      height: 450px;
+    }
+    95% {
+      width: 300px; /* Stay at smallest size for 5% of the animation duration (4 seconds) */
+      height: 300px;
+    }
+    100% {
+      width: 300px; /* Shrink back to initial width */
+      height: 300px; /* Shrink back to initial height */
+    }
+  }
+  
 }

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import BubbleBreathing from "../components/Bubble";
 
 
-export default function Breathing () {
+export default function page() {
 
     return (
         <>

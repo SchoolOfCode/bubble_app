@@ -11,7 +11,6 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import style from "../breathing/page.module.css";
 
 export default function Bubble() {
   return (
@@ -78,12 +77,12 @@ export default function Bubble() {
                 <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
                 Imagining yourself blowing
               bubbles adds a delightful touch to keeping your breath slow and
-              steady. 
+              steady...
               <br></br>Tap Ready to begin!
                 </Text>
             </Box>
           <Box>
-            <Link href="/" target="_self">
+            <Link href="/exercise" target="_self">
               <Button
                 bg="brand.purple"
                 boxShadow="lg"
@@ -97,19 +96,6 @@ export default function Bubble() {
           </Box>
         </Flex>
       </Center>
-      {/* <Flex justifyContent="center" alignItems="center">
-        <Box
-          width="350px"
-          height="350px"
-          mx="auto"
-          borderRadius="20px"
-          textAlign="center"
-          bg="brand.pink"
-          boxShadow="lg"
-        >
-          <Box className={style.bubble}></Box>
-        </Box>
-      </Flex> */}
     </>
   );
 }
