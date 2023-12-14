@@ -12,7 +12,7 @@ export default function Home() {
       <Flex direction="column" 
       // h="100%"
       >
-        <Box mb="20">
+        <Box>
           <Flex direction="column" align="center" justify="center">
             <Box>
               <Image src={Logo} priority={true} alt="Logo" />
