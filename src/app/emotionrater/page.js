@@ -1350,6 +1350,7 @@ const RatingButtons = () => {
           boxShadow="lg"
           size="lg"
           mb="10px"
+          mt="10px"
           onClick={() => SubmitEvent()}
         >
           <Text size="xl">Next</Text>

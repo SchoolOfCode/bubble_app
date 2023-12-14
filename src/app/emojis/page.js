@@ -57,6 +57,7 @@ export default function Emojis() {
             </Heading>
             <Text fontSize="xl">(click an emoji)</Text>
           </Box>
+          <Box px={{ base: 4, md: 8 }} py={{ base: 4, md: 8 }}>
           <SimpleGrid columns={3} spacing={10} mx="auto">
             <Flex justifyContent="center" alignItems="center" h="100%">
               <Box cursor="pointer">
@@ -175,6 +176,7 @@ export default function Emojis() {
               </Box>
             </Flex>
           </SimpleGrid>
+          </Box>
         </Box>
         {/* <Link href="/emotionrater">
             <Button>Next</Button>
