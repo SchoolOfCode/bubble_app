@@ -70,7 +70,7 @@ export default function IndividualLog(props) {
       borderRadius="20"
       textAlign="center"
       bg={colorCard}
-      p={[3, 6]}
+      p={[2, 4, 6]}
       mt="5"
       mb="5"
       boxShadow="lg"
@@ -81,7 +81,7 @@ export default function IndividualLog(props) {
             <Image src={CalendarIcon} alt="Calendar Icon" />
           </Square>
           <Text
-            fontSize={{ base: "md", md: "lg", lg: "xl" }}
+            fontSize={{ base: "md", md: "xl", lg: "xl" }}
             as="b"
             m={[0.5, 2, 2]}
           >
