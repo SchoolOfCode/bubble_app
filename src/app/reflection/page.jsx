@@ -39,10 +39,10 @@ export default function page() {
         </Heading>
         <Text>Press finish when you&apos;re done</Text>
       </Box>
-      <Flex gap="10px" direction="column" alignItems="center">
+      <Flex gap="10px" direction="column" alignItems="center" pb="50px">
         <Textbox />
         <Link href="/childlog" target="_self">
-          <Button bg="brand.yellow" maxW="600px" boxShadow="lg">
+          <Button bg="brand.yellow" maxW="600px" boxShadow="lg" mb="10px">
             See everything you jotted down
           </Button>
         </Link>
