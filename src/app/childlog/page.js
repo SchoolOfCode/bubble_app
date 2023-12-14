@@ -45,7 +45,7 @@ export default function Page() {
         toast({
           id,
           position: 'top',
-          // duration: 8000,
+          duration: 8000,
           render: () => (
             <Box color="white" p={3} bg="purple.400" borderRadius="md" h={75}>
               <Box>
@@ -69,7 +69,7 @@ export default function Page() {
           ),
         });
       }
-    }, 1000);
+    }, 8000);
 
     // Clean up the timeout when the component unmounts or user navigates away
     const cleanup = () => {
