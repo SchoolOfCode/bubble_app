@@ -71,7 +71,7 @@ export default function page() {
         h="100%"
         position="relative"
         mb="2"
-        pb="5"
+        pb="10"
       >
         <Box
           w="500px"
