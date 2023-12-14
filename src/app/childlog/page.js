@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Box, Heading, useToast, Flex, Text, CloseButton } from "@chakra-ui/react";
+import { Box, Heading, useToast, Flex, Text, CloseButton, Button } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
@@ -47,11 +47,19 @@ export default function Page() {
           duration: 8000,
           render: () => (
             <Box color="white" p={3} bg="purple.500" borderRadius="md" textAlign="center">
-              <CloseButton onClick={() => toast.close(id)} />
               <Box>
                 <Text fontSize="xl" as="em">
                   Hey! Here's an idea... why don't you talk to a grown-up about your thinking journey!
                 </Text>
+                <Button
+                  onClick={() => toast.close(id)}
+                  mt={3}
+                  ml={20}
+                  colorScheme="pink"
+                  variant="solid"
+                >
+                  X
+                </Button>
               </Box>
             </Box>
           ),
