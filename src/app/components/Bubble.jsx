@@ -27,7 +27,7 @@ export default function Bubble() {
         mb="5"
         boxShadow="lg"
       >
-        <Heading paddingTop="3" as="h1" size="lg">
+        <Heading paddingTop="3" as="h1" size={{ base: "lg", md: "lg", lg: "xl" }}>
           Bubble Breathing!
         </Heading>
       </Box>

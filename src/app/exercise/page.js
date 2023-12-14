@@ -26,7 +26,6 @@ function page() {
         bg="brand.pink"
         p="2"
         mt="10"
-        mb="5"
         boxShadow="lg"
         css={{
           "@media (max-height: 720px)": {
@@ -34,10 +33,10 @@ function page() {
           },
         }}
       >
-        <Heading paddingTop="3" as="h1" size="lg">
+        <Heading paddingTop="3" as="h1" size={{ base: "lg", md: "lg", lg: "xl" }}>
           Bubble Breathing!
         </Heading>
-        <Box className={style.bubble} position="relative" top="10"></Box>
+        <Box className={style.bubble} position="relative"></Box>
       </Box>
       <Footer />
     </>
