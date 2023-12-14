@@ -7,6 +7,7 @@ import ListOfLogs from "../components/ListOfLogs";
 import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
 import "../page.module.css";
+import "./page.css";
 
 //import the data from Supabase
 //store the data as a const
@@ -65,28 +66,32 @@ export default function page() {
         h="100%"
         position="relative"
         mb="2"
-        p="10"
+        p="20"
       >
         <Box
           w="500px"
           maxW={{ base: "300px", md: "800px", lg: "800px" }}
-          // mx="200px"
+          mx="200px"
           borderRadius="20"
           textAlign="center"
           bg="brand.pink"
-          p="2"
-          mt="10"
-          mb="5"
+          p="2"       
           boxShadow="lg"
-          wordWrap="break-word"
-          overflow="hidden"
         >
           <Heading fontSize={{ base: "2xl", md: "2xl", lg: "2xl" }}>
             Your Thinking Journey
           </Heading>
         </Box>
-
-        <ListOfLogs data={logs} />
+      </Flex>
+      <Flex
+        direction="column"
+        align="center"
+        justify="center"
+        mb="5"
+        >
+        <Box>
+          <ListOfLogs data={logs} />
+        </Box>
       </Flex>
 
       <Footer />
