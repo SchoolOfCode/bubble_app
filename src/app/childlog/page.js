@@ -25,40 +25,52 @@ async function arrayOfLogs() {
   }
 }
 
-export default function page() {
+export default function Page() {
   const toast = useToast();
-  const id = "single-toast";
-
+  const id = 'single-toast';
   const [logs, setLogs] = useState([]);
+
   useEffect(() => {
     arrayOfLogs().then(setLogs);
   }, []);
 
   useEffect(() => {
-    // Show the toast when the component mounts
-    setTimeout(() => {
-    if (!toast.isActive(id)) {
-    toast({
-      id,
-      position: 'top',
-      duration: 8000,
-      render: () => (
-          <Box color="white" p={3} bg="purple.500" borderRadius="md" textAlign="center">
-          <CloseButton onClick={() => toast.close(id)} />
-          <Box>
-            <Text fontSize="xl" as="em">
-              Hey! Here's an idea... why don't you talk to a grown-up about your thinking journey!
-            </Text>
-          </Box>
-          </Box>
-      ),
-    })
-  }}, 8000)
+    // Initialize a variable to store the timeout ID
+    let timeoutId;
 
-    // Clean up the toast when the component unmounts
+    // Show the toast when the component mounts
+    timeoutId = setTimeout(() => {
+      if (!toast.isActive(id)) {
+        toast({
+          id,
+          position: 'top',
+          duration: 8000,
+          render: () => (
+            <Box color="white" p={3} bg="purple.500" borderRadius="md" textAlign="center">
+              <CloseButton onClick={() => toast.close(id)} />
+              <Box>
+                <Text fontSize="xl" as="em">
+                  Hey! Here's an idea... why don't you talk to a grown-up about your thinking journey!
+                </Text>
+              </Box>
+            </Box>
+          ),
+        });
+      }
+    }, 8000);
+
+    // Clean up the timeout when the component unmounts or user navigates away
+    const cleanup = () => {
+      clearTimeout(timeoutId);
+      toast.close(id);
+    };
+
+    window.addEventListener('beforeunload', cleanup);
+
     return () => {
-        toast.close(id);
-    }
+      cleanup();
+      window.removeEventListener('beforeunload', cleanup);
+    };
   }, [toast, id]);
 
   return (
