@@ -67,8 +67,6 @@ export default function IndividualLog(props) {
     <Box
       width={{ base: 300, md: 600, lg: 600 }}
       mx="auto"
-      width={{ base: 250
-        , md: 600, lg: 600 }}
       // mx="auto"
       borderRadius="20"
       textAlign="center"
