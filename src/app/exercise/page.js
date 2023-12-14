@@ -14,7 +14,8 @@ import {
 } from "@chakra-ui/react";
 
 function page() {
-  return (
+ 
+return (
     <>
       <Navbar />
       <Box
@@ -29,18 +30,21 @@ function page() {
         boxShadow="lg"
         css={{
           "@media (max-height: 720px)": {
-            height: "70vh",
+            height: "65vh",
           },
         }}
       >
-        <Heading paddingTop="3" as="h1" size={{ base: "lg", md: "lg", lg: "xl" }}>
+        <Heading paddingTop="3" paddingBottom="5" as="h1" size={{ base: "xl", md: "xl", lg: "2xl" }}>
           Bubble Breathing!
         </Heading>
+            <Text fontSize={{ base: "xl", md: "4xl", lg: "4xl" }}>
+            Breathe In 
+            </Text>
         <Box className={style.bubble} position="relative"></Box>
-      </Box>
+        </Box>
       <Footer />
     </>
-  );
+  )
 }
 
 export default page;
