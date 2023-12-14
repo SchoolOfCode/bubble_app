@@ -9,9 +9,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <Flex direction="column" h="100vh">
-        <Box mb="20">
-          <Flex direction="column" align="center" justify="center">
+      <Flex direction="column" align="center" justify="center">
             <Box>
               <Image src={Logo} priority={true} alt="Logo" />
             </Box>
@@ -27,14 +25,14 @@ export default function Home() {
 
             <SimpleGrid
               columns={2}
-              spacing={{ base: "5", md: "8", lg: "10" }}
-              mt={{ base: "15px", md: "10px", lg: "10px" }}
+              spacing={{ base: "3", md: "8", lg: "10" }}
+              mt={{ base: "50px", md: "10px", lg: "10px" }}
             >
               <Box>
                 <Link href="/breathing" target="_self">
                 <Button
                   size={{ base: "lg", md: "lg", lg: "lg" }}
-                  w={{ base: "180px", md: "250px", lg: "300px" }}
+                  w={{ base: "175px", md: "250px", lg: "300px" }}
                   h={{ base: "50px", md: "100px", lg: "100px" }}
                   bg="brand.pink"
                   boxShadow="lg"
@@ -50,7 +48,7 @@ export default function Home() {
                 <Link href="/emojis" target="_self">
                   <Button
                     size={{ base: "lg", md: "lg", lg: "lg" }}
-                    w={{ base: "180px", md: "250px", lg: "300px" }}
+                    w={{ base: "175px", md: "250px", lg: "300px" }}
                     h={{ base: "50px", md: "100px", lg: "100px" }}
                     bg="brand.green"
                     boxShadow="lg"
@@ -63,7 +61,6 @@ export default function Home() {
                 </Link>
               </Box>
             </SimpleGrid>
-
             <Box
               minW="268px"
               mt={{ base: "20px", md: "40px", lg: "30px" }}
@@ -85,13 +82,14 @@ export default function Home() {
               </Link>
             </Box>
           </Flex>
-        </Box>
-        <Box bottom={{ base: "10", lg: "15" }} ml="5" position="relative">
+        <Box bottom={{ base: "10"}} ml="5" position="absolute">
           <Button
             size="lg"
             bg="brand.yellow"
             w={{ base: "200px", md: "230px", lg: "250px" }}
             h={{ base: "40px", md: "60px", lg: "60px" }}
+            left={{ base: "0", md: "5", lg: "10" }}
+            bottom={{ base: "10"}}
             leftIcon={<Image src={ShieldIcon} alt="Parent Zone Icon" />}
             boxShadow="lg"
             tabindex="-1"
@@ -101,7 +99,6 @@ export default function Home() {
             </Text>
           </Button>   
         </Box>
-      </Flex>
       <Footer />
     </>
   );
