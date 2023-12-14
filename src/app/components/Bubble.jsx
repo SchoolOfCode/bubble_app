@@ -1,9 +1,11 @@
 import React from "react";
 import { Text, Box } from "@chakra-ui/react";
+import style from "../breathing/page.module.css"
 
 export default function Bubble() {
 
     return (
+        <>
         <Box
         maxW={[350, 600]}
         mx="auto"
@@ -15,6 +17,8 @@ export default function Bubble() {
         mb="5"
         boxShadow="lg"
       >
+
+
             <Text>Here are a few reasons why Bubble Breathing is a great thing to do...
 
 1. It can help you feel more relaxed when you're feeling a bit worried or upset.
@@ -22,5 +26,8 @@ export default function Bubble() {
 3. Pretending you are really blowing bubbles is great for helping to keep your breathing slow and steady.
 4. The blood flow around your body is improved which makes you feel healthier. </Text>
         </Box>
+
+        <Box classname={style.Bubble}> </Box>
+        </>
     );
 }
