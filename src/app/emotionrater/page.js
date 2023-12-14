@@ -76,7 +76,7 @@ const RatingButtons = () => {
         duration: 5000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
-            <Box color="white" p={3} bg="purple.500" borderRadius="md">
+            <Box color="white" p={3} bg="purple.400" borderRadius="md">
               <Text fontSize="xl" as="em">
                 Oops not all of them have been selected! Double-check
                 you&apos;ve picked a bubble for each question!
@@ -109,7 +109,13 @@ const RatingButtons = () => {
   return (
     <>
       <Navbar />
-      <Flex direction="column" align="center" justify="center" h="100%" pb="35px">
+      <Flex
+        direction="column"
+        align="center"
+        justify="center"
+        h="100%"
+        pb="50px"
+      >
         <Box
           fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
           bg="brand.blue"
@@ -143,14 +149,19 @@ const RatingButtons = () => {
             >
               <Heading
                 align="center"
-                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
                 mb="10px"
               >
                 How happy do you feel?
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm">
+                  <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        alignSelf: "center",
+                      },
+                }}>
                     Not Happy
                   </Text>
                 </Box>
@@ -175,11 +186,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={happinessRating === 1 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     1
                   </Text>
@@ -205,11 +218,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={happinessRating === 2 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     2
                   </Text>
@@ -235,11 +250,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={happinessRating === 3 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     3
                   </Text>
@@ -265,11 +282,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={happinessRating === 4 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     4
                   </Text>
@@ -295,17 +314,24 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={happinessRating === 5 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     5
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm">
+                <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        marginLeft: "3px",
+                      },
+                }}>
                   Very Happy
                 </Text>
               </Box>
@@ -323,15 +349,21 @@ const RatingButtons = () => {
             >
               <Heading
                 align="center"
-                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
                 mb="10px"
               >
                 How sad do you feel?
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm">
-                    Not <br></br> Sad
+                  <Text textAlign="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        alignSelf: "flex-start",
+                      },
+                }}>
+                    Not <br></br>
+                    Sad
                   </Text>
                 </Box>
                 <Box position="relative" display="inline-block">
@@ -355,11 +387,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={sadnessRating === 1 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     1
                   </Text>
@@ -385,11 +419,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={sadnessRating === 2 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     2
                   </Text>
@@ -415,11 +451,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={sadnessRating === 3 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     3
                   </Text>
@@ -445,11 +483,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={sadnessRating === 4 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     4
                   </Text>
@@ -475,17 +515,24 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={sadnessRating === 5 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     5
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm">
+                <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        marginLeft: "3px",
+                      },
+                }}>
                   Very Sad
                 </Text>
               </Box>
@@ -503,14 +550,19 @@ const RatingButtons = () => {
             >
               <Heading
                 align="center"
-                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
                 mb="10px"
               >
                 How angry do you feel?
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm">
+                  <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        alignSelf: "flex-start",
+                      },
+                }}>
                     Not Angry
                   </Text>
                 </Box>
@@ -535,11 +587,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={angryRating === 1 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     1
                   </Text>
@@ -565,11 +619,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={angryRating === 2 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     2
                   </Text>
@@ -595,11 +651,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={angryRating === 3 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     3
                   </Text>
@@ -625,11 +683,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={angryRating === 4 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     4
                   </Text>
@@ -655,17 +715,24 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={angryRating === 5 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     5
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm">
+                <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        marginLeft: "3px",
+                      },
+                }}>
                   Very Angry
                 </Text>
               </Box>
@@ -683,14 +750,19 @@ const RatingButtons = () => {
             >
               <Heading
                 align="center"
-                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
                 mb="10px"
               >
                 How cheeky do you feel?
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm">
+                  <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        alignSelf: "flex-start",
+                      },
+                }}>
                     Not Cheeky
                   </Text>
                 </Box>
@@ -715,11 +787,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={cheekyRating === 1 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     1
                   </Text>
@@ -745,11 +819,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={cheekyRating === 2 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     2
                   </Text>
@@ -775,11 +851,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={cheekyRating === 3 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     3
                   </Text>
@@ -805,11 +883,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={cheekyRating === 4 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     4
                   </Text>
@@ -835,17 +915,23 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={cheekyRating === 5 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     5
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm">
+                <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                      },
+                }}>
                   Very Cheeky
                 </Text>
               </Box>
@@ -863,15 +949,25 @@ const RatingButtons = () => {
             >
               <Heading
                 align="center"
-                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
                 mb="10px"
               >
                 How tired do you feel?
               </Heading>
               <Box display="flex" justifyContent="space-between">
-                <Box display="flex">
-                  <Text align="center" w="65px" size="sm">
-                    Not Tired
+                <Box display="flex" css={{
+                      "@media (max-width: 480px)": {
+                        marginBottom: "10px",
+                      },
+                }}
+                >
+                  <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        alignSelf: "flex-start",
+                      },
+                }}>
+                    Not <br></br> Tired
                   </Text>
                 </Box>
                 <Box position="relative" display="inline-block">
@@ -895,11 +991,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={tiredRating === 1 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     1
                   </Text>
@@ -925,11 +1023,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={tiredRating === 2 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     2
                   </Text>
@@ -955,11 +1055,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={tiredRating === 3 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     3
                   </Text>
@@ -985,11 +1087,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={tiredRating === 4 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     4
                   </Text>
@@ -1015,17 +1119,24 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={tiredRating === 5 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     5
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm">
+                <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        marginLeft: "3px",
+                      },
+                }}>
                   Very Tired
                 </Text>
               </Box>
@@ -1043,14 +1154,20 @@ const RatingButtons = () => {
             >
               <Heading
                 align="center"
-                fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
+                fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
                 mb="10px"
               >
                 How worried do you feel?
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm">
+                  <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        alignSelf: "flex-start",
+                      },
+                  }}
+                  >
                     Not Worried
                   </Text>
                 </Box>
@@ -1075,11 +1192,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={worriedRating === 1 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     1
                   </Text>
@@ -1105,11 +1224,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={worriedRating === 2 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     2
                   </Text>
@@ -1135,11 +1256,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={worriedRating === 3 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     3
                   </Text>
@@ -1165,11 +1288,13 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={worriedRating === 4 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
-                    borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     4
                   </Text>
@@ -1195,17 +1320,25 @@ const RatingButtons = () => {
                     fontSize="lg"
                     fontWeight="bold"
                     color={worriedRating === 5 ? "black" : "grey"}
-                    p={4}
-                    pt={1}
-                    pb={1}
                     borderRadius="md"
                     cursor="pointer"
+                    css={{
+                      "@media (max-width: 480px)": {
+                        top: "18px",
+                        fontSize: "18px",
+                      },
+                    }}
                   >
                     5
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm">
+                <Text align="center" w="65px" size="sm" css={{
+                      "@media (max-width: 480px)": {
+                        fontSize: "13px",
+                        marginLeft: "3px",
+                      },
+                }}>
                   Very Worried
                 </Text>
               </Box>
@@ -1217,14 +1350,15 @@ const RatingButtons = () => {
           boxShadow="lg"
           size="lg"
           mb="10px"
+          mt="10px"
           onClick={() => SubmitEvent()}
         >
           <Text size="xl">Next</Text>
         </Button>
       </Flex>
-        <Link href="/reflection">
-          <Button>Next</Button>
-        </Link>
+      <Link href="/reflection">
+        <Button>Next</Button>
+      </Link>
       <Footer />
     </>
   );

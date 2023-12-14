@@ -1,0 +1,23 @@
+/* .bubble-container {
+  position: relative;
+} */
+
+.bubble {
+  position: absolute;
+  width: 20px; /* Initial width of the bubble */
+  height: 20px; /* Initial height of the bubble */
+  background-color: #fff; /* Bubble color */
+  border-radius: 50%;
+  animation: bubbleAnimation 2s infinite alternate; /* Set animation properties */
+}
+
+@keyframes bubbleAnimation {
+  from {
+    width: 20px; /* Initial width */
+    height: 20px; /* Initial height */
+  }
+  to {
+    width: 40px; /* Final width */
+    height: 40px; /* Final height */
+  }
+}
