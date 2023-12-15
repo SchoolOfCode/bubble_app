@@ -14,6 +14,7 @@ import Footer from "../components/Footer.jsx";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { UserIdContext } from "../context/useridcontext.js";
+import HeadingComponent from "../components/HeadingComponent.jsx";
 
 export default function Emojis() {
   const { setUuid } = useContext(UserIdContext);
@@ -42,21 +43,7 @@ export default function Emojis() {
       <Navbar />
       <Flex justify="center" alignItems="center">
         <Box mt="10">
-          <Box
-            w={[300, 400, 500]}
-            mx="auto"
-            borderRadius="20"
-            textAlign="center"
-            bg="brand.green"
-            p="2"
-            mb="10"
-            boxShadow="lg"
-          >
-            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
-              How are you feeling?
-            </Heading>
-            <Text fontSize="xl">(click an emoji)</Text>
-          </Box>
+          <HeadingComponent />
           <Box px={{ base: 4, md: 8 }} py={{ base: 4, md: 8 }}>
             <SimpleGrid columns={3} spacing={10} mx="auto">
               <Flex justifyContent="center" alignItems="center" h="100%">

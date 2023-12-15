@@ -5,24 +5,28 @@ import { Box, Button, Heading, Text, Flex, Link } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Textbox from "../components/Textbox";
 import "../page.module.css";
+import HeadingComponent from "../components/HeadingComponent";
 
 export default function page() {
   return (
     <>
       <Navbar />
-      <Box
+      <HeadingComponent />
+      {/* <Box
         maxW={[350, 600]}
         mx="auto"
         borderRadius="20"
         textAlign="center"
-        bg="brand.pink"
+        bg="brand.purple"
         p="2"
         mt="10"
         mb="5"
         boxShadow="lg"
       >
-        <Heading as='h1' size="lg">Now, let&apos;s think about these feelings!</Heading>
-      </Box>
+        <Heading as="h1" size="lg">
+          Now, let&apos;s think about these feelings!
+        </Heading>
+      </Box> */}
       <Box
         maxW={[350, 600]}
         mx="auto"
@@ -34,8 +38,8 @@ export default function page() {
         mb="5"
         boxShadow="lg"
       >
-        <Heading as='h2' size="md">
-          Let&apos;s write about why you&apos;re feeling this way.
+        <Heading as="h2" size="md">
+          Write about why you&apos;re feeling this way.
         </Heading>
         <Text>Press finish when you&apos;re done</Text>
       </Box>
