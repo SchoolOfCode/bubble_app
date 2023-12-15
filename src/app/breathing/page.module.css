@@ -7,7 +7,7 @@
   height: 150px; /* Initial height of the bubble */
   background-image: url('../../../public/assets/Bubble.png');
   background-size: cover;
-  animation: bubbleAnimation 16s infinite; /* Set animation properties */
+  animation: bubbleAnimation 16s 2; /* Set animation properties */
   z-index: 3;
   margin: auto;
   bottom: 0;
@@ -57,3 +57,21 @@
     }
   }
 }
+
+/* .breathingtext {
+  animation: breathing-animation 8s infinite; } /* Adjust the duration as needed  */
+
+/* @keyframes breathing-animation {
+  0%, 100% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+} */
