@@ -36,7 +36,7 @@ export default function Home() {
                   h={{ base: "50px", md: "100px", lg: "100px" }}
                   bg="brand.pink"
                   boxShadow="lg"
-                  tabindex="-1"
+                  tabIndex="-1"
                 >
                   <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                     Bubble Breathing
@@ -52,7 +52,7 @@ export default function Home() {
                     h={{ base: "50px", md: "100px", lg: "100px" }}
                     bg="brand.green"
                     boxShadow="lg"
-                    tabindex="-1"
+                    tabIndex="-1"
                   >
                     <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                       Record Your Mood
@@ -73,7 +73,7 @@ export default function Home() {
                   h={{ base: "50px", md: "100px", lg: "100px" }}
                   bg="brand.purple"
                   boxShadow="lg"
-                  tabindex="-1"
+                  tabIndex="-1"
                 >
                   <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                     Earlier Logs
@@ -92,7 +92,7 @@ export default function Home() {
             bottom={{ base: "10"}}
             leftIcon={<Image src={ShieldIcon} alt="Parent Zone Icon" />}
             boxShadow="lg"
-            tabindex="-1"
+            tabIndex="-1"
           >
             <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
               Parent Zone
