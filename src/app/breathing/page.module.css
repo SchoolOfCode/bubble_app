@@ -1,0 +1,144 @@
+/* .bubble-container {
+  position: relative;
+} */
+
+.bubble {
+  position: relative; /* Ensure the pseudo-elements are positioned relative to this */
+  width: 150px;
+  height: 150px;
+  background-image: url('../../../public/assets/Bubble.png');
+  background-size: cover;
+  animation: bubbleAnimation 16s 2; /* Set animation properties */
+  z-index: 3;
+  margin: auto;
+  bottom: 0;
+}
+
+.bubble::before,
+.bubble::after {
+  content: "";
+  position: static;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Set text color */
+  font-size: 16px; /* Set text font size */
+  text-align: center;
+}
+
+.bubble::before {
+  width: 100%;
+  height: 100%;
+  animation: textAnimationBefore 16s infinite;
+}
+
+.bubble::after {
+  width: 100%;
+  height: 100%;
+  animation: textAnimationAfter 16s infinite;
+}
+
+@keyframes bubbleAnimation {
+  0%, 100% {
+    width: 150px;
+    height: 150px;
+  }
+  25% {
+    width: 150px;
+    height: 150px;
+  }
+  50% {
+    width: 250px;
+    height: 250px;
+  }
+  75% {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes textAnimationBefore {
+  0%, 25% {
+    content: ""; /* Change the text for each stage on larger screens */
+  }
+  26%, 50% {
+    content: " breathe in"; /* Change the text for each stage on larger screens */
+  }
+  55%, 100% {
+    content: "hold..."; /* Change the text for each stage on larger screens */
+  }
+  100%{
+    content: "breath out "; /* Change the text for each stage on larger screens */
+  }
+}
+
+@keyframes textAnimationAfter {
+  0%, 25% {
+    content: ""; /* Change the text for each stage */
+  }
+  50%, 75% {
+    content: ""; /* Change the text for each stage */
+  }
+  100% {
+    content: ""; /* Change the text for each stage */
+  }
+}
+
+@media (min-width: 450px) {
+  .bubble {
+    width: 300px;
+    height: 300px;
+  }
+
+  .bubble::before,
+  .bubble::after {
+    font-size: 24px; /* Adjust text font size for larger screens */
+  }
+
+  @keyframes bubbleAnimation {
+    0%, 100% {
+      width: 300px;
+      height: 300px;
+    }
+    25% {
+      width: 300px;
+      height: 300px;
+    }
+    50% {
+      width: 450px;
+      height: 450px;
+    }
+    75% {
+      width: 450px;
+      height: 450px;
+    }
+  }
+
+  @keyframes textAnimationBefore {
+    0%, 25% {
+      content: ""; /* Change the text for each stage on larger screens */
+    }
+    26%, 50% {
+      content: " breathe in"; /* Change the text for each stage on larger screens */
+    }
+    55%, 100% {
+      content: "hold..."; /* Change the text for each stage on larger screens */
+    }
+    100% {
+      content: "breath out "; /* Change the text for each stage on larger screens */
+    }
+  }
+
+  
+  @keyframes textAnimationAfter {
+    0%, 25% {
+      content: ""; /* Change the text for each stage on larger screens */
+    }
+    50%, 75% {
+      content: ""; /* Change the text for each stage on larger screens */
+    }
+    90% {
+      content: ""; /* Change the text for each stage on larger screens */
+    }
+  }
+}
