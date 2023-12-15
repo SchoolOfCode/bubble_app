@@ -8,7 +8,7 @@
   height: 150px;
   background-image: url('../../../public/assets/Bubble.png');
   background-size: cover;
-  animation: bubbleAnimation 16s infinite;
+  animation: bubbleAnimation 16s 2; /* Set animation properties */
   z-index: 3;
   margin: auto;
   bottom: 0;
