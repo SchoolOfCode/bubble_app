@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import style from "../breathing/page.module.css";
+import HeadingComponent from "../components/HeadingComponent";
 import {
   Box,
   Button,
@@ -61,6 +62,7 @@ return (
     {animationComplete ? (
       <>
       <Navbar />
+      <HeadingComponent />
       <Box
         width="80%"
         height="75vh"
@@ -129,6 +131,7 @@ return (
     ) : (
       <>
       <Navbar />
+      <HeadingComponent />
       <Box
         width="80%"
         height="75vh"
@@ -145,7 +148,7 @@ return (
           },
         }}
       >
-        <Heading paddingTop="3" paddingBottom="5" as="h1" size={{ base: "xl", md: "xl", lg: "2xl" }}>
+        {/* <Heading paddingTop="3" paddingBottom="5" as="h1" size={{ base: "xl", md: "xl", lg: "2xl" }}>
           Bubble Breathing!
         </Heading>
             <Text className={style.breathingtext} fontSize={{ base: "xl", md: "4xl", lg: "4xl" }}>
@@ -155,8 +158,6 @@ return (
       </Box>
         </Box>
       <Footer />
-      </>
-    )}
     </>
   )
 }

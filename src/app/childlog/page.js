@@ -8,6 +8,7 @@ import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
 import "../page.module.css";
 import "./page.css";
+import HeadingComponent from "../components/HeadingComponent";
 
 //import the data from Supabase
 //store the data as a const
@@ -28,7 +29,7 @@ async function arrayOfLogs() {
 
 export default function Page() {
   const toast = useToast();
-  const id = 'single-toast';
+  const id = "single-toast";
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
@@ -44,16 +45,17 @@ export default function Page() {
       if (!toast.isActive(id)) {
         toast({
           id,
-          position: 'top',
+          position: "top",
           duration: 8000,
           render: () => (
             <Box color="white" p={3} bg="purple.400" borderRadius="md" h={75}>
               <Box>
-              <Box textAlign="center">
-                <Text fontSize="lg" as="em" ml="38">
-                  Hey! Here's an idea... why don't you talk to a grown-up about your thinking journey!
-                </Text>
-              </Box>
+                <Box textAlign="center">
+                  <Text fontSize="lg" as="em" ml="38">
+                    Hey! Here's an idea... why don't you talk to a grown-up
+                    about your thinking journey!
+                  </Text>
+                </Box>
                 <Button
                   onClick={() => toast.close(id)}
                   colorScheme="purple"
@@ -77,11 +79,11 @@ export default function Page() {
       toast.close(id);
     };
 
-    window.addEventListener('beforeunload', cleanup);
+    window.addEventListener("beforeunload", cleanup);
 
     return () => {
       cleanup();
-      window.removeEventListener('beforeunload', cleanup);
+      window.removeEventListener("beforeunload", cleanup);
     };
   }, [toast, id]);
 
@@ -97,28 +99,9 @@ export default function Page() {
         mb="2"
         p="5"
       >
-        <Box
-          w="500px"
-          maxW={{ base: "300px", md: "800px", lg: "800px" }}
-          mx="200px"
-          borderRadius="20"
-          textAlign="center"
-          bg="brand.pink"
-          p="2"       
-          boxShadow="lg"
-        >
-          <Heading fontSize={{ base: "2xl", md: "2xl", lg: "2xl" }}>
-            Your Thinking Journey
-          </Heading>
-        </Box>
+        <HeadingComponent />
       </Flex>
-      <Flex
-        direction="column"
-        align="center"
-        justify="center"
-        mb="5"
-        pb="10"
-        >
+      <Flex direction="column" align="center" justify="center" mb="5" pb="10">
         <Box>
           <ListOfLogs data={logs} />
         </Box>

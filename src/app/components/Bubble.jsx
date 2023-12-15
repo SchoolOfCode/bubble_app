@@ -16,7 +16,7 @@ export default function Bubble() {
   return (
     <>
       <Box
-        width="80%"
+        width="60%"
         height="70vh"
         mx="auto"
         borderRadius="20px"
@@ -26,11 +26,7 @@ export default function Bubble() {
         mt="10"
         mb="5"
         boxShadow="lg"
-      >
-        <Heading paddingTop="3" as="h1" size={{ base: "lg", md: "lg", lg: "xl" }}>
-          Bubble Breathing!
-        </Heading>
-      </Box>
+      ></Box>
       <Center>
         <Flex
           justifyContent="center"
@@ -65,22 +61,20 @@ export default function Bubble() {
               In moments of distraction, Bubble Breathing becomes a magical key
               to unlocking better concentration.
             </Text>
-            </Box>
-            <Box
+          </Box>
+          <Box
             width="70%"
             bg="brand.green"
             borderRadius="20px"
             textAlign="center"
             boxShadow="lg"
             p="2"
-            >
-                <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
-                Imagining yourself blowing
-              bubbles adds a delightful touch to keeping your breath slow and
-              steady...
+          >
+            <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+              Just imagine yourself blowing bubbles...
               <br></br>Tap Ready to begin!
-                </Text>
-            </Box>
+            </Text>
+          </Box>
           <Box>
             <Link href="/exercise" target="_self">
               <Button

@@ -1,5 +1,6 @@
 "use client";
 import supabase from "../config/supabaseClient.js";
+import HeadingComponent from "../components/HeadingComponent.jsx";
 import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link.js";
@@ -116,7 +117,8 @@ const RatingButtons = () => {
         h="100%"
         pb="50px"
       >
-        <Box
+        <HeadingComponent />
+        {/* <Box
           fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
           bg="brand.blue"
           borderRadius="20"
@@ -136,7 +138,7 @@ const RatingButtons = () => {
           <Text fontSize="xl" align="center">
             (rate your emotions - click on the bubbles)
           </Text>
-        </Box>
+        </Box> */}
         <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacingX={7}>
           <Box>
             <Box
@@ -156,12 +158,17 @@ const RatingButtons = () => {
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm" css={{
+                  <Text
+                    align="center"
+                    w="65px"
+                    size="sm"
+                    css={{
                       "@media (max-width: 480px)": {
                         fontSize: "13px",
                         alignSelf: "center",
                       },
-                }}>
+                    }}
+                  >
                     Not Happy
                   </Text>
                 </Box>
@@ -326,12 +333,17 @@ const RatingButtons = () => {
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm" css={{
-                      "@media (max-width: 480px)": {
-                        fontSize: "13px",
-                        marginLeft: "3px",
-                      },
-                }}>
+                <Text
+                  align="center"
+                  w="65px"
+                  size="sm"
+                  css={{
+                    "@media (max-width: 480px)": {
+                      fontSize: "13px",
+                      marginLeft: "3px",
+                    },
+                  }}
+                >
                   Very Happy
                 </Text>
               </Box>
@@ -356,12 +368,17 @@ const RatingButtons = () => {
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text textAlign="center" w="65px" size="sm" css={{
+                  <Text
+                    textAlign="center"
+                    w="65px"
+                    size="sm"
+                    css={{
                       "@media (max-width: 480px)": {
                         fontSize: "13px",
                         alignSelf: "flex-start",
                       },
-                }}>
+                    }}
+                  >
                     Not <br></br>
                     Sad
                   </Text>
@@ -527,12 +544,17 @@ const RatingButtons = () => {
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm" css={{
-                      "@media (max-width: 480px)": {
-                        fontSize: "13px",
-                        marginLeft: "3px",
-                      },
-                }}>
+                <Text
+                  align="center"
+                  w="65px"
+                  size="sm"
+                  css={{
+                    "@media (max-width: 480px)": {
+                      fontSize: "13px",
+                      marginLeft: "3px",
+                    },
+                  }}
+                >
                   Very Sad
                 </Text>
               </Box>
@@ -557,12 +579,17 @@ const RatingButtons = () => {
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm" css={{
+                  <Text
+                    align="center"
+                    w="65px"
+                    size="sm"
+                    css={{
                       "@media (max-width: 480px)": {
                         fontSize: "13px",
                         alignSelf: "flex-start",
                       },
-                }}>
+                    }}
+                  >
                     Not Angry
                   </Text>
                 </Box>
@@ -727,12 +754,17 @@ const RatingButtons = () => {
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm" css={{
-                      "@media (max-width: 480px)": {
-                        fontSize: "13px",
-                        marginLeft: "3px",
-                      },
-                }}>
+                <Text
+                  align="center"
+                  w="65px"
+                  size="sm"
+                  css={{
+                    "@media (max-width: 480px)": {
+                      fontSize: "13px",
+                      marginLeft: "3px",
+                    },
+                  }}
+                >
                   Very Angry
                 </Text>
               </Box>
@@ -757,12 +789,17 @@ const RatingButtons = () => {
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm" css={{
+                  <Text
+                    align="center"
+                    w="65px"
+                    size="sm"
+                    css={{
                       "@media (max-width: 480px)": {
                         fontSize: "13px",
                         alignSelf: "flex-start",
                       },
-                }}>
+                    }}
+                  >
                     Not Cheeky
                   </Text>
                 </Box>
@@ -927,11 +964,16 @@ const RatingButtons = () => {
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm" css={{
-                      "@media (max-width: 480px)": {
-                        fontSize: "13px",
-                      },
-                }}>
+                <Text
+                  align="center"
+                  w="65px"
+                  size="sm"
+                  css={{
+                    "@media (max-width: 480px)": {
+                      fontSize: "13px",
+                    },
+                  }}
+                >
                   Very Cheeky
                 </Text>
               </Box>
@@ -955,18 +997,25 @@ const RatingButtons = () => {
                 How tired do you feel?
               </Heading>
               <Box display="flex" justifyContent="space-between">
-                <Box display="flex" css={{
-                      "@media (max-width: 480px)": {
-                        marginBottom: "10px",
-                      },
-                }}
+                <Box
+                  display="flex"
+                  css={{
+                    "@media (max-width: 480px)": {
+                      marginBottom: "10px",
+                    },
+                  }}
                 >
-                  <Text align="center" w="65px" size="sm" css={{
+                  <Text
+                    align="center"
+                    w="65px"
+                    size="sm"
+                    css={{
                       "@media (max-width: 480px)": {
                         fontSize: "13px",
                         alignSelf: "flex-start",
                       },
-                }}>
+                    }}
+                  >
                     Not <br></br> Tired
                   </Text>
                 </Box>
@@ -1131,12 +1180,17 @@ const RatingButtons = () => {
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm" css={{
-                      "@media (max-width: 480px)": {
-                        fontSize: "13px",
-                        marginLeft: "3px",
-                      },
-                }}>
+                <Text
+                  align="center"
+                  w="65px"
+                  size="sm"
+                  css={{
+                    "@media (max-width: 480px)": {
+                      fontSize: "13px",
+                      marginLeft: "3px",
+                    },
+                  }}
+                >
                   Very Tired
                 </Text>
               </Box>
@@ -1161,12 +1215,16 @@ const RatingButtons = () => {
               </Heading>
               <Box display="flex" justifyContent="space-between">
                 <Box display="flex">
-                  <Text align="center" w="65px" size="sm" css={{
+                  <Text
+                    align="center"
+                    w="65px"
+                    size="sm"
+                    css={{
                       "@media (max-width: 480px)": {
                         fontSize: "13px",
                         alignSelf: "flex-start",
                       },
-                  }}
+                    }}
                   >
                     Not Worried
                   </Text>
@@ -1333,12 +1391,17 @@ const RatingButtons = () => {
                   </Text>
                 </Box>
 
-                <Text align="center" w="65px" size="sm" css={{
-                      "@media (max-width: 480px)": {
-                        fontSize: "13px",
-                        marginLeft: "3px",
-                      },
-                }}>
+                <Text
+                  align="center"
+                  w="65px"
+                  size="sm"
+                  css={{
+                    "@media (max-width: 480px)": {
+                      fontSize: "13px",
+                      marginLeft: "3px",
+                    },
+                  }}
+                >
                   Very Worried
                 </Text>
               </Box>
