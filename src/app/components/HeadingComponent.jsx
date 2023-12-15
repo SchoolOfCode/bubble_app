@@ -40,6 +40,12 @@ export default function HeadingComponent() {
       color: "brand.pink",
       pathKeyword: "childlog",
     },
+    {
+      id: 6,
+      title: "Bubble Breathing",
+      color: "brand.pink",
+      pathKeyword: "exercise",
+    },
   ];
 
   // Find the heading data based on the current route
