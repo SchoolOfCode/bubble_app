@@ -41,7 +41,7 @@ export default function Emojis() {
     <>
       <Navbar />
       <Flex justify="center" alignItems="center">
-        <Box mt="10" >
+        <Box mt="10">
           <Box
             w={[300, 400, 500]}
             mx="auto"
@@ -58,124 +58,128 @@ export default function Emojis() {
             <Text fontSize="xl">(click an emoji)</Text>
           </Box>
           <Box px={{ base: 4, md: 8 }} py={{ base: 4, md: 8 }}>
-          <SimpleGrid columns={3} spacing={10} mx="auto">
-            <Flex justifyContent="center" alignItems="center" h="100%">
-              <Box cursor="pointer">
-              <Link href="/emotionrater" target="_self">
-                <Image
-                  src={Happy}
-                  alt="Happy-Emoji"
-                  priority
-                  onClick={() =>
-                    emojiClickHandler("../../../public/assets/emojis/Happy.svg")
-                  }
-                  width={175}
-                />
-                </Link> 
-                <Text mt={2} textAlign="center" color="white" fontSize="xl">
-                  Happy
-                </Text>
-              </Box>
-            </Flex>
-            <Flex justifyContent="center" alignItems="center" h="100%">
-              <Box>
-                <Link href="/emotionrater" target="_self">
-                  <Image
-                    src={Sad}
-                    alt="Sad-Emoji"
-                    priority
-                    onClick={() =>
-                      emojiClickHandler("../../../public/assets/emojis/Sad.svg")
-                    }
-                    width={175}
-                  />
-                </Link>
-                <Text mt={2} textAlign="center" color="white" fontSize="xl">
-                  Sad
-                </Text>
-              </Box>
-            </Flex>
-            <Flex justifyContent="center" alignItems="center" h="100%">
-              <Box>
-                <Link href="/emotionrater" target="_self">
-                  <Image
-                    src={Cheeky}
-                    alt="Cheeky-Emoji"
-                    priority
-                    onClick={() =>
-                      emojiClickHandler(
-                        "../../../public/assets/emojis/Cheeky.svg"
-                      )
-                    }
-                    width={175}
-                  />
-                </Link>
-                <Text mt={2} textAlign="center" color="white" fontSize="xl">
-                  Cheeky
-                </Text>
-              </Box>
-            </Flex>
-            <Flex justifyContent="center" alignItems="center" h="100%">
-              <Box>
-                <Link href="/emotionrater" target="_self">
-                  <Image
-                    src={Angry}
-                    alt="Angry-Emoji"
-                    priority
-                    onClick={() =>
-                      emojiClickHandler(
-                        "../../../public/assets/emojis/Angry.svg"
-                      )
-                    }
-                    width={175}
-                  />
-                </Link>
-                <Text mt={2} textAlign="center" color="white" fontSize="xl">
-                  Angry
-                </Text>
-              </Box>
-            </Flex>
-            <Flex justifyContent="center" alignItems="center" h="100%">
-              <Box>
-                <Link href="/emotionrater" target="_self">
-                  <Image
-                    src={Worried}
-                    alt="Worried-Emoji"
-                    priority
-                    onClick={() =>
-                      emojiClickHandler(
-                        "../../../public/assets/emojis/Worried.svg"
-                      )
-                    }
-                    width={175}
-                  />
-                </Link>
-                <Text mt={2} textAlign="center" color="white" fontSize="xl">
-                  Worried
-                </Text>
-              </Box>
-            </Flex>
-            <Flex justify="flex-start" alignItems="flex-start" h="100%">
-              <Box>
-                <Link href="/emotionrater" target="_self">
-                  <Image
-                    src={Tired}
-                    alt="Tired-Emoji"
-                    priority
-                    onClick={() =>
-                      emojiClickHandler(
-                        "../../../public/assets/emojis/Tired2.svg"
-                      )
-                    }
-                  width={175}
-                  />
-                </Link>
-                <Text mt={2} textAlign="center" color="white" fontSize="xl">
-                  Tired
-                </Text>
-              </Box>
-            </Flex>
-          </SimpleGrid>
+            <SimpleGrid columns={3} spacing={10} mx="auto">
+              <Flex justifyContent="center" alignItems="center" h="100%">
+                <Box cursor="pointer">
+                  <Link href="/emotionrater" target="_self">
+                    <Image
+                      src={Happy}
+                      alt="Happy-Emoji"
+                      priority
+                      onClick={() =>
+                        emojiClickHandler(
+                          "../../../public/assets/emojis/Happy.svg"
+                        )
+                      }
+                      width={175}
+                    />
+                  </Link>
+                  <Text mt={2} textAlign="center" color="white" fontSize="xl">
+                    Happy
+                  </Text>
+                </Box>
+              </Flex>
+              <Flex justifyContent="center" alignItems="center" h="100%">
+                <Box>
+                  <Link href="/emotionrater" target="_self">
+                    <Image
+                      src={Sad}
+                      alt="Sad-Emoji"
+                      priority
+                      onClick={() =>
+                        emojiClickHandler(
+                          "../../../public/assets/emojis/Sad.svg"
+                        )
+                      }
+                      width={175}
+                    />
+                  </Link>
+                  <Text mt={2} textAlign="center" color="white" fontSize="xl">
+                    Sad
+                  </Text>
+                </Box>
+              </Flex>
+              <Flex justifyContent="center" alignItems="center" h="100%">
+                <Box>
+                  <Link href="/emotionrater" target="_self">
+                    <Image
+                      src={Cheeky}
+                      alt="Cheeky-Emoji"
+                      priority
+                      onClick={() =>
+                        emojiClickHandler(
+                          "../../../public/assets/emojis/Cheeky.svg"
+                        )
+                      }
+                      width={175}
+                    />
+                  </Link>
+                  <Text mt={2} textAlign="center" color="white" fontSize="xl">
+                    Cheeky
+                  </Text>
+                </Box>
+              </Flex>
+              <Flex justifyContent="center" alignItems="center" h="100%">
+                <Box>
+                  <Link href="/emotionrater" target="_self">
+                    <Image
+                      src={Angry}
+                      alt="Angry-Emoji"
+                      priority
+                      onClick={() =>
+                        emojiClickHandler(
+                          "../../../public/assets/emojis/Angry.svg"
+                        )
+                      }
+                      width={175}
+                    />
+                  </Link>
+                  <Text mt={2} textAlign="center" color="white" fontSize="xl">
+                    Angry
+                  </Text>
+                </Box>
+              </Flex>
+              <Flex justifyContent="center" alignItems="center" h="100%">
+                <Box>
+                  <Link href="/emotionrater" target="_self">
+                    <Image
+                      src={Worried}
+                      alt="Worried-Emoji"
+                      priority
+                      onClick={() =>
+                        emojiClickHandler(
+                          "../../../public/assets/emojis/Worried.svg"
+                        )
+                      }
+                      width={175}
+                    />
+                  </Link>
+                  <Text mt={2} textAlign="center" color="white" fontSize="xl">
+                    Worried
+                  </Text>
+                </Box>
+              </Flex>
+              <Flex justify="flex-start" alignItems="flex-start" h="100%">
+                <Box>
+                  <Link href="/emotionrater" target="_self">
+                    <Image
+                      src={Tired}
+                      alt="Tired-Emoji"
+                      priority
+                      onClick={() =>
+                        emojiClickHandler(
+                          "../../../public/assets/emojis/Tired2.svg"
+                        )
+                      }
+                      width={175}
+                    />
+                  </Link>
+                  <Text mt={2} textAlign="center" color="white" fontSize="xl">
+                    Tired
+                  </Text>
+                </Box>
+              </Flex>
+            </SimpleGrid>
           </Box>
         </Box>
         {/* <Link href="/emotionrater">

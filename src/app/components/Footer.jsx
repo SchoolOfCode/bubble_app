@@ -4,7 +4,7 @@ import { Text, Box, Flex } from "@chakra-ui/react";
 export default function Footer() {
   return (
     <Flex
-    // className="footer"
+      // className="footer"
       justifyContent="center"
       alignItems="center"
       textAlign="center"
@@ -15,10 +15,9 @@ export default function Footer() {
       width="100%"
       padding="5px"
     >
-    <Box
-    >
-      <Text >© Team 11 Ltd. Fostering mindful bubbles since 2023.</Text>
-    </Box>
+      <Box>
+        <Text>© Team 11 Ltd. Fostering mindful bubbles since 2023.</Text>
+      </Box>
     </Flex>
   );
 }
