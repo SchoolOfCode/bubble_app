@@ -35,11 +35,11 @@ export default function BubbleBody() {
               </Text>
             </Link>
           </Button>
-          <Button
+          <Button 
           bg="brand.blue"
           boxShadow="lg"
           size="lg">
-            <Link href="/exercise" target="_self">
+            <Link href="/breathing" target="_self">
               <Text fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 Do it Again!
               </Text>

@@ -40,9 +40,29 @@ return (
       <>
       <Navbar />
       <HeadingComponent />
-      <BackgroundBox />
-      <Box onAnimationEnd={handleAnimationEnd} className={style.bubble} position="absolute">
+      {/* <BackgroundBox /> */}
+      <Box
+          width={[300, 400, 600]}
+          height={[325, 400, 500]}
+          mx="auto"
+          borderRadius="20px"
+          textAlign="center"
+          bg="brand.pink"
+          p="2"
+          mt="10"
+          boxShadow="lg"
+          zIndex={-1}
+          // css={{
+          //   "@media (max-height: 720px)": {
+          //     height: "60vh",
+          //   },
+          // }}
+        >
+      <Box className={style.textcontainer}>
       </Box>
+      <Box onAnimationEnd={handleAnimationEnd} className={style.bubble} >
+      </Box>
+        </Box>
       <Footer />
     </>
   )

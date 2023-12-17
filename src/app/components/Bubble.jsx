@@ -16,7 +16,7 @@ import BackgroundBox from "./BackgroundBox";
 export default function Bubble() {
   return (
     <>
-    {/* <BackgroundBox /> */}
+      {/* <BackgroundBox /> */}
       <Center>
         <Flex
           justifyContent="center"
@@ -27,7 +27,7 @@ export default function Bubble() {
           top="35%"
         >
           <Box
-            width="70%"
+            width={[300, 400, 600]}
             bg="brand.blue"
             borderRadius="20px"
             textAlign="center"
@@ -40,7 +40,7 @@ export default function Bubble() {
             </Text>
           </Box>
           <Box
-            width="70%"
+            width={[300, 400, 600]}
             bg="brand.yellow"
             borderRadius="20px"
             textAlign="center"
@@ -53,7 +53,7 @@ export default function Bubble() {
             </Text>
           </Box>
           <Box
-            width="70%"
+            width={[300, 400, 600]}
             bg="brand.green"
             borderRadius="20px"
             textAlign="center"
