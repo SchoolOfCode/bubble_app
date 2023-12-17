@@ -46,6 +46,12 @@ export default function HeadingComponent() {
       color: "brand.pink",
       pathKeyword: "exercise",
     },
+    {
+      id: 7,
+      title: "Reflection History",
+      color: "brand.yellow",
+      pathKeyword: "parentzone",
+    },
   ];
 
   // Find the heading data based on the current route

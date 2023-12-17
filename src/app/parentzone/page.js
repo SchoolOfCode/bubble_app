@@ -47,12 +47,18 @@ export default function Page() {
           position: "top",
           duration: 8000,
           render: () => (
-            <Box color="white" p={3} bg="purple.400" borderRadius="md" h={{ base: "100px", md: "75px"}}>
+            <Box
+              color="white"
+              p={3}
+              bg="purple.400"
+              borderRadius="md"
+              h={{ base: "100px", md: "75px" }}
+            >
               <Box>
                 <Box textAlign="center">
                   <Text fontSize="lg" as="em" ml="38">
                     Hey! Here's an idea... why don't you talk to a grown-up
-                    about your thinking  journey!
+                    about your thinking journey!
                   </Text>
                 </Box>
                 <Button
