@@ -118,14 +118,18 @@ export default function IndividualLog(props) {
             width={{ base: 200, md: 400, lg: 400 }}
             fontSize={{ base: "md", md: "xl", lg: "xl" }}
           >
-            {props.data.reflection}
+          {props.data.reflection === null
+              ? "No thinking journey entry made!"
+              : props.data.reflection}
           </Text>
           <Text
             width={{ base: 200, md: 400, lg: 400 }}
             fontSize={{ base: "md", md: "xl", lg: "xl" }}
             as="em"
           >
-            Happy: {props.data.happy} Sad: {props.data.sad} Angry: {props.data.angry} <br></br>  Worried: {props.data.worried}  Cheeky: {props.data.cheeky} Tired: {props.data.tired}
+            {props.data.happy === null
+              ? "Dive deeper section wasn't filled in!"
+              : `Happy: ${props.data.happy} Sad: ${props.data.sad} Angry: ${props.data.angry} Worried: ${props.data.worried} Cheeky: ${props.data.cheeky} Tired: ${props.data.tired}`}
           </Text>
         </Flex>
       </Flex>
