@@ -55,7 +55,7 @@
 
 @keyframes textAnimationBefore {
   0%, 25% {
-    content: " And big, deep breaths..."; /* Change the text for each stage on larger screens */
+    content: " Big, deep breaths..."; /* Change the text for each stage on larger screens */
   }
   26%, 50% {
     content: "Breathe In"; /* Change the text for each stage on larger screens */
@@ -85,7 +85,7 @@
 
 /* @keyframes textAnimationBefore {
   0%, 25% {
-    content: ""; /* Change the text for each stage on larger screens
+    content: ""; /* Change the text for each stage on larger screens 
   }
   26%, 50% {
     content: "Breathe In"; /* Change the text for each stage on larger screens 
@@ -98,15 +98,15 @@
   }
 }
 
-@keyframes textAnimationAfter {
+ @keyframes textAnimationAfter {
   0%, 25% {
-    content: ""; /* Change the text for each stage
+    content: ""; /* Change the text for each stage 
   }
   50%, 75% {
-    content: ""; /* Change the text for each stage
+    content: ""; /* Change the text for each stage 
   }
   100% {
-    content: ""; /* Change the text for each stage
+    content: ""; /* Change the text for each stage 
   }
 } */
 
