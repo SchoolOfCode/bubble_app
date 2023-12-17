@@ -50,7 +50,7 @@ export default function Page() {
             <Box
               color="white"
               p={3}
-              bg="purple.400"
+              bg="blue.400"
               borderRadius="md"
               h={{ base: "100px", md: "75px" }}
             >
@@ -63,7 +63,7 @@ export default function Page() {
                 </Box>
                 <Button
                   onClick={() => toast.close(id)}
-                  colorScheme="purple"
+                  colorScheme="blue"
                   variant="solid"
                   size="sm"
                   position="fixed"
