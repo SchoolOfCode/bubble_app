@@ -83,6 +83,7 @@ export default function Home() {
             </Box>
           </Flex>
         <Box bottom={{ base: "10"}} ml="5" position="absolute">
+        <Link href="/parentzone" target="_self">
           <Button
             size="lg"
             bg="brand.yellow"
@@ -98,6 +99,7 @@ export default function Home() {
               Parent Zone
             </Text>
           </Button>   
+        </Link>
         </Box>
       <Footer />
     </>

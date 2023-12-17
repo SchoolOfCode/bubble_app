@@ -3,11 +3,10 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Box, Heading, useToast, Flex, Text, Button } from "@chakra-ui/react";
 import Footer from "../components/Footer";
-import ListOfLogs from "../components/ListOfLogs";
+import ListOfParentLogs from "../components/ListOfParentLogs";
 import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
 import "../page.module.css";
-import "./page.css";
 import HeadingComponent from "../components/HeadingComponent";
 
 //import the data from Supabase
@@ -103,7 +102,7 @@ export default function Page() {
       </Flex>
       <Flex direction="column" align="center" justify="center" mb="5" pb="10">
         <Box>
-          <ListOfLogs data={logs} />
+          <ListOfParentLogs data={logs} />
         </Box>
       </Flex>
       <Footer />
