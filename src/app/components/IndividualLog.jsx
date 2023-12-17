@@ -118,7 +118,9 @@ export default function IndividualLog(props) {
             width={{ base: 200, md: 400, lg: 400 }}
             fontSize={{ base: "md", md: "xl", lg: "xl" }}
           >
-            {props.data.reflection}
+          {props.data.reflection === null
+              ? "Only picked an emoji!"
+              : props.data.reflection}
           </Text>
         </Flex>
       </Flex>

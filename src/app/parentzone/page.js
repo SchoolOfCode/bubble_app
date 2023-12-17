@@ -57,8 +57,8 @@ export default function Page() {
               <Box>
                 <Box textAlign="center">
                   <Text fontSize="lg" as="em" ml="38">
-                    Hey! Here's an idea... why don't you talk to a grown-up
-                    about your thinking journey!
+                    Hey! Here's an idea... why don't you talk to your little one
+                    about their thinking journey!
                   </Text>
                 </Box>
                 <Button
