@@ -41,9 +41,8 @@ export default function Emojis() {
     //need to display the 6 emoji images in a grid - chakra ui grid
     <>
       <Navbar />
-      <Flex justify="center" alignItems="center">
-        <Box mt="10">
-          <HeadingComponent />
+      <Flex justify="center" alignItems="center" direction="column">
+        <HeadingComponent />
           <Box px={{ base: 4, md: 8 }} py={{ base: 4, md: 8 }}>
             <SimpleGrid columns={3} spacing={10} mx="auto">
               <Flex justifyContent="center" alignItems="center" h="100%">
@@ -168,7 +167,6 @@ export default function Emojis() {
               </Flex>
             </SimpleGrid>
           </Box>
-        </Box>
         {/* <Link href="/emotionrater">
             <Button>Next</Button>
           </Link> */}

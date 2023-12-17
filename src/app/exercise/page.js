@@ -15,6 +15,7 @@ import {
   AbsoluteCenter,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import BackgroundBox from "../components/BackgroundBox";
 
 function page() {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -31,22 +32,6 @@ return (
       <>
       <Navbar />
       <HeadingComponent />
-      <Box
-        width="80%"
-        height="70vh"
-        mx="auto"
-        borderRadius="20px"
-        textAlign="center"
-        bg="brand.pink"
-        p="2"
-        mt="10"
-        boxShadow="lg"
-        css={{
-          "@media (max-height: 720px)": {
-            height: "60vh",
-          },
-        }}
-      >
         <Center>
         <Flex
           justifyContent="center"
@@ -57,14 +42,14 @@ return (
           top="35%"
         >
           <Box
-            width="70%"
+            width={[300, 400, 600]}
             bg="brand.yellow"
             borderRadius="20px"
             textAlign="center"
             boxShadow="lg"
             p="2"
           >
-            <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+            <Text fontSize={{ base: "md", md: "lg", lg: "xl" }}>
             Well done you are one step closer to feeling happier & calm! Why don't you record your mood now? Or better yet, talk to someone about your day!
             </Text>
           </Box>
@@ -73,7 +58,7 @@ return (
           boxShadow="lg"
           size="lg">
             <Link href="/emojis" target="_self">
-              <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+              <Text fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 Record Mood
               </Text>
             </Link>
@@ -83,39 +68,22 @@ return (
           boxShadow="lg"
           size="lg">
             <Link href="/exercise" target="_self">
-              <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+              <Text fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 Do it Again!
               </Text>
             </Link>
           </Button>
             </Flex>
             </Center>
-            </Box>
       <Footer />
       </>
     ) : (
       <>
       <Navbar />
       <HeadingComponent />
-      <Box
-        width="80%"
-        height="70vh"
-        mx="auto"
-        borderRadius="20px"
-        textAlign="center"
-        bg="brand.pink"
-        p="2"
-        mt="10"
-        boxShadow="lg"
-        css={{
-          "@media (max-height: 720px)": {
-            height: "60vh",
-          },
-        }}
-      >
-      <Box onAnimationEnd={handleAnimationEnd} className={style.bubble} position="relative">
+      <BackgroundBox />
+      <Box onAnimationEnd={handleAnimationEnd} className={style.bubble} position="absolute">
       </Box>
-        </Box>
       <Footer />
     </>
   )
