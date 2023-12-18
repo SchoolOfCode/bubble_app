@@ -12,6 +12,7 @@ import {
   TabPanel,
   Box,
   SimpleGrid,
+  Heading,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
@@ -357,7 +358,7 @@ export default function ListOfLogs(props) {
           </TabList>
         </Tabs>
       </Flex>
-      <Flex justifyContent="center" textAlign="center" flexDirection="column">
+      <Flex justifyContent="center" textAlign="center">
         <Box
           width={[300, 400, 600]}
           bg="brand.orange"
@@ -367,13 +368,12 @@ export default function ListOfLogs(props) {
           mt="5"
           p="2"
         >
-          <Text fontSize="lg" as="b" p="3">
+          <Heading fontSize="lg" as="h3" p="3">
             Average Mood Scores
-          </Text>
-          {/* <Text as="em" fontSize="md">
-          This is from the dive deeper section of the app. It shows the average
-          mood scores for the time period selected above.
-        </Text> */}
+          </Heading>
+          <Text as="em" fontSize="sm">
+          This is from the &apos;dive deeper&apos; section of the app. This shows the average scores for the time period selected above.
+        </Text>
           <SimpleGrid columns={2} p="3">
             <Text>Happy: {averageHappyScore.toFixed(1)}</Text>
             <Text>Sad: {averageSadScore.toFixed(1)}</Text>
