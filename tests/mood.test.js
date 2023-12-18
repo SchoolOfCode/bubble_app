@@ -186,22 +186,46 @@ test("Rob's user journey - reflection page", async ({ page }) => {
     .locator("div")
     .filter({ hasText: /^Please write in the space below:-$/ });
   await expect(textBox).toBeVisible();
-  const placeholderText = page.getByPlaceholder("If you’re stuck, that’s okay");
 
   const finishButton = page.getByRole("button", { name: "Finish" });
   await expect(finishButton).toBeVisible();
   await finishButton.click();
   const toastPopUp = page.getByRole("emphasis");
   await expect(toastPopUp).toHaveText(/Oops, nothing has been filled/);
-  const hasBorder = await div.evaluate(() => {
-    const element = document.getByPlaceholder("If you’re stuck, that’s okay");
+});
 
-    const computedStyle = window.getComputedStyle(element);
-    return computedStyle.getPropertyValue("3px solid red");
-  });
-  await expect(hasBorder).toBe(true);
+test("Rob's user journey - reflection submission", async ({ page }) => {
+  //trying to locate the div that the border wraps
+  //   const div = page.getByRole('textbox'); // Replace 'div-selector' with your actual selector
 
-  //  await expect(placeholderText).toHaveText("");
-  //  await placeholderText.fill("I love Monday, it's my favourite day, and I love American spelling.");
-  //   await expect(placeholderText).toHaveValue("I love Monday, it's my favourite day, and I love American spelling.");
+  // const hasRedBorder = await div.evaluate((element) => {
+  //   const computedStyle = window.getComputedStyle(element);
+  //   return computedStyle.getPropertyValue('border-color');
+  //   // return borderColor === 'red';
+  // });
+  // console.log(hasRedBorder);
+
+  //   const styledColor = await div.evaluate((el) => getComputedStyle(el).border);
+  //   console.log(styledColor);
+  //   expect(styledColor == hasRedBorder).toBe(true);
+
+  // await expect(hasRedBorder).toBe("rgb(255, 0, 0)" || "rgb(246, 1, 2)" || "rgb(226, 4, 6)");
+  await page.goto("http://localhost:3000/reflection");
+
+  const placeholderText = page.getByRole("textbox");
+
+  await expect(placeholderText).toHaveText("");
+  await placeholderText.fill(
+    "I love Monday, it's my favourite day, and I love American spelling."
+  );
+  await expect(placeholderText).toHaveValue(
+    "I love Monday, it's my favourite day, and I love American spelling."
+  );
+  const finishButton = page.getByRole("button", { name: "Finish" });
+  await expect(finishButton).toBeVisible();
+  await finishButton.click();
+  // const emptyTextArea = getByTestId("textarea");
+  // await expect (placeholderText).toHaveText("");
+  const completeLogPopUp = page.getByRole("emphasis");
+  await expect(completeLogPopUp).toHaveText(/That's been saved/);
 });
