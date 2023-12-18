@@ -224,8 +224,18 @@ test("Rob's user journey - reflection submission", async ({ page }) => {
   const finishButton = page.getByRole("button", { name: "Finish" });
   await expect(finishButton).toBeVisible();
   await finishButton.click();
-  // const emptyTextArea = getByTestId("textarea");
-  // await expect (placeholderText).toHaveText("");
-  const completeLogPopUp = page.getByRole("emphasis");
-  await expect(completeLogPopUp).toHaveText(/That's been saved/);
+  const emptyTextArea = page.getByRole("textbox");
+  await expect(emptyTextArea).toHaveText("");
+  const earlierLogsButton = page.getByRole("button", {
+    name: "See everything you jotted down",
+  });
+  await expect(earlierLogsButton).toBeVisible();
+  // await page.waitForFunction(() => {
+  //   const toastPopUp = document.querySelector('[role="emphasis"]');
+  //   return (
+  //     toastPopUp &&
+  //     toastPopUp.textContent.includes("Oops, nothing has been filled")
+  //   );
+  // });
+  // expect(toastPopUp).toHaveText("/Oops, nothing has been filled/");
 });
