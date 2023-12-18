@@ -11,6 +11,18 @@ export const MoodDataProvider = ({ children }) => {
   const [cheekyData, setCheekyData] = useState(null);
   const [worriedData, setWorriedData] = useState(null);
   const [angryData, setAngryData] = useState(null);
+  const [weekhappyData, setWeekHappyData] = useState(null);
+  const [weeksadData, setWeekSadData] = useState(null);
+  const [weektiredData, setWeekTiredData] = useState(null);
+  const [weekcheekyData, setWeekCheekyData] = useState(null);
+  const [weekworriedData, setWeekWorriedData] = useState(null);
+  const [weekangryData, setWeekAngryData] = useState(null);
+  const [monthhappyData, setMonthHappyData] = useState(null);
+  const [monthsadData, setMonthSadData] = useState(null);
+  const [monthtiredData, setMonthTiredData] = useState(null);
+  const [monthcheekyData, setMonthCheekyData] = useState(null);
+  const [monthworriedData, setMonthWorriedData] = useState(null);
+  const [monthangryData, setMonthAngryData] = useState(null);
   const [logs, setLogs] = useState([]);
 
   // Provide mood states through the context provider
@@ -31,6 +43,30 @@ export const MoodDataProvider = ({ children }) => {
         setAngryData,
         logs,
         setLogs,
+        weekhappyData,
+        setWeekHappyData,
+        weeksadData,
+        setWeekSadData,
+        weektiredData,
+        setWeekTiredData,
+        weekcheekyData,
+        setWeekCheekyData,
+        weekworriedData,
+        setWeekWorriedData,
+        weekangryData,
+        setWeekAngryData,
+        monthhappyData,
+        setMonthHappyData,
+        monthsadData,
+        setMonthSadData,
+        monthtiredData,
+        setMonthTiredData,
+        monthcheekyData,
+        setMonthCheekyData,
+        monthworriedData,
+        setMonthWorriedData,
+        monthangryData,
+        setMonthAngryData,
       }}
     >
       {children}

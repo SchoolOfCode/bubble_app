@@ -18,7 +18,7 @@ import { useContext, useState } from "react";
 import { MoodDataContext } from "../context/dataforchartscontext.js";
 
 export default function ListOfLogs() {
-  const { setHappyData, setSadData, setTiredData, setCheekyData, setWorriedData, setAngryData, logs } = useContext(MoodDataContext);
+  const { setHappyData, setSadData, setTiredData, setCheekyData, setWorriedData, setAngryData, logs, setMonthHappyData, setMonthSadData, setMonthTiredData, setMonthCheekyData, setMonthWorriedData, setMonthAngryData, setWeekHappyData, setWeekSadData, setWeekTiredData, setWeekCheekyData, setWeekWorriedData, setWeekAngryData } = useContext(MoodDataContext);
   const [timeRange, setTimeRange] = useState("");
 
   const originalArray = logs;
@@ -75,6 +75,7 @@ export default function ListOfLogs() {
             ) / filteredHappyArrayLast7Days.length
           : 0;
       console.log(filteredHappyArrayLast7Days.length); // checking it filters out null entries
+      setWeekHappyData(averageHappyScore);
       //sad data
       const filteredSadArrayLast7Days = filteredArray
         .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -84,6 +85,7 @@ export default function ListOfLogs() {
           ? filteredSadArrayLast7Days.reduce((sum, item) => sum + item.sad, 0) /
             filteredSadArrayLast7Days.length
           : 0;
+      setWeekSadData(averageSadScore);
       //angry data
       const filteredAngryArrayLast7Days = filteredArray
         .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -95,6 +97,7 @@ export default function ListOfLogs() {
               0
             ) / filteredAngryArrayLast7Days.length
           : 0;
+      setWeekAngryData(averageAngryScore);
       //worried data
       const filteredWorriedArrayLast7Days = filteredArray
         .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -106,6 +109,7 @@ export default function ListOfLogs() {
               0
             ) / filteredWorriedArrayLast7Days.length
           : 0;
+      setWeekWorriedData(averageWorriedScore);
       //cheeky data
       const filteredCheekyArrayLast7Days = filteredArray
         .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -117,6 +121,7 @@ export default function ListOfLogs() {
               0
             ) / filteredCheekyArrayLast7Days.length
           : 0;
+      setWeekCheekyData(averageCheekyScore);
       //tired data
       const filteredTiredArrayLast7Days = filteredArray
         .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -128,6 +133,7 @@ export default function ListOfLogs() {
               0
             ) / filteredTiredArrayLast7Days.length
           : 0;
+      setWeekTiredData(averageTiredScore);
       break;
     case "last30Days":
       filteredArray = filteredArray.filter(
@@ -144,6 +150,7 @@ export default function ListOfLogs() {
               0
             ) / filteredHappyArrayLast30Days.length
           : 0;
+      setMonthHappyData(averageHappyScore);
       //sad data
       const filteredSadArrayLast30Days = filteredArray
         .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -155,6 +162,7 @@ export default function ListOfLogs() {
               0
             ) / filteredSadArrayLast30Days.length
           : 0;
+      setMonthSadData(averageSadScore);
       //angry data
       const filteredAngryArrayLast30Days = filteredArray
         .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -166,6 +174,8 @@ export default function ListOfLogs() {
               0
             ) / filteredAngryArrayLast30Days.length
           : 0;
+      setMonthAngryData(averageAngryScore);
+      console.log(averageAngryScore);
       //worried data
       const filteredWorriedArrayLast30Days = filteredArray
         .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -177,6 +187,7 @@ export default function ListOfLogs() {
               0
             ) / filteredWorriedArrayLast30Days.length
           : 0;
+      setMonthWorriedData(averageWorriedScore);
       //cheeky data
       const filteredCheekyArrayLast30Days = filteredArray
         .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -188,6 +199,7 @@ export default function ListOfLogs() {
               0
             ) / filteredCheekyArrayLast30Days.length
           : 0;
+      setMonthCheekyData(averageCheekyScore);
       //tired data
       const filteredTiredArrayLast30Days = filteredArray
         .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -200,6 +212,7 @@ export default function ListOfLogs() {
             ) / filteredTiredArrayLast30Days.length
           : 0;
       console.log(filteredTiredArrayLast30Days.length);
+      setMonthTiredData(averageTiredScore.toFixed(1));
       break;
     default:
       filteredArray;
