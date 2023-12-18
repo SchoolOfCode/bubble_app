@@ -140,8 +140,9 @@ export default function ListOfLogs(props) {
       averageHappyScore =
         filteredHappyArrayLast7Days.length > 0
           ? filteredHappyArrayLast7Days.reduce(
-              (sum, item) => sum + item.happy, 0) / 
-              filteredHappyArrayLast7Days.length
+              (sum, item) => sum + item.happy,
+              0
+            ) / filteredHappyArrayLast7Days.length
           : 0;
       console.log(filteredHappyArrayLast7Days.length); // checking it filters out null entries
       //sad data
@@ -174,7 +175,7 @@ export default function ListOfLogs(props) {
               (sum, item) => sum + item.worried,
               0
             ) / filteredWorriedArrayLast7Days.length
-          : 0;  
+          : 0;
       //cheeky data
       const filteredCheekyArrayLast7Days = filteredArray
         .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -219,8 +220,10 @@ export default function ListOfLogs(props) {
         .filter((item) => item.sad !== undefined && item.sad !== null);
       averageSadScore =
         filteredSadArrayLast30Days.length > 0
-          ? filteredSadArrayLast30Days.reduce((sum, item) => sum + item.sad, 0) /
-            filteredSadArrayLast30Days.length
+          ? filteredSadArrayLast30Days.reduce(
+              (sum, item) => sum + item.sad,
+              0
+            ) / filteredSadArrayLast30Days.length
           : 0;
       //angry data
       const filteredAngryArrayLast30Days = filteredArray
@@ -266,7 +269,7 @@ export default function ListOfLogs(props) {
               0
             ) / filteredTiredArrayLast30Days.length
           : 0;
-      console.log(filteredTiredArrayLast30Days.length)
+      console.log(filteredTiredArrayLast30Days.length);
       break;
     default:
       filteredArray;
@@ -277,8 +280,10 @@ export default function ListOfLogs(props) {
       console.log(allHappyDatafilteredArray.length); // checking it filters out null entries
       averageHappyScore =
         allHappyDatafilteredArray.length > 0
-          ? allHappyDatafilteredArray.reduce((sum, item) => sum + item.happy, 0) /
-            allHappyDatafilteredArray.length
+          ? allHappyDatafilteredArray.reduce(
+              (sum, item) => sum + item.happy,
+              0
+            ) / allHappyDatafilteredArray.length
           : 0;
       //all sad data
       const allSadDatafilteredArray = filteredArray.filter(
@@ -295,8 +300,10 @@ export default function ListOfLogs(props) {
       );
       averageAngryScore =
         allAngryDatafilteredArray.length > 0
-          ? allAngryDatafilteredArray.reduce((sum, item) => sum + item.angry, 0) /
-            allAngryDatafilteredArray.length
+          ? allAngryDatafilteredArray.reduce(
+              (sum, item) => sum + item.angry,
+              0
+            ) / allAngryDatafilteredArray.length
           : 0;
       //all cheeky data
       const allCheekyDatafilteredArray = filteredArray.filter(
@@ -304,8 +311,10 @@ export default function ListOfLogs(props) {
       );
       averageCheekyScore =
         allCheekyDatafilteredArray.length > 0
-          ? allCheekyDatafilteredArray.reduce((sum, item) => sum + item.cheeky, 0) /
-            allCheekyDatafilteredArray.length
+          ? allCheekyDatafilteredArray.reduce(
+              (sum, item) => sum + item.cheeky,
+              0
+            ) / allCheekyDatafilteredArray.length
           : 0;
       // all tired data
       const allTiredDatafilteredArray = filteredArray.filter(
@@ -313,8 +322,10 @@ export default function ListOfLogs(props) {
       );
       averageTiredScore =
         allTiredDatafilteredArray.length > 0
-          ? allTiredDatafilteredArray.reduce((sum, item) => sum + item.tired, 0) /
-            allTiredDatafilteredArray.length
+          ? allTiredDatafilteredArray.reduce(
+              (sum, item) => sum + item.tired,
+              0
+            ) / allTiredDatafilteredArray.length
           : 0;
       //all worried data
       const allWorriedDatafilteredArray = filteredArray.filter(
@@ -322,8 +333,10 @@ export default function ListOfLogs(props) {
       );
       averageWorriedScore =
         allWorriedDatafilteredArray.length > 0
-          ? allWorriedDatafilteredArray.reduce((sum, item) => sum + item.worried, 0) /
-            allWorriedDatafilteredArray.length
+          ? allWorriedDatafilteredArray.reduce(
+              (sum, item) => sum + item.worried,
+              0
+            ) / allWorriedDatafilteredArray.length
           : 0;
   }
 
@@ -345,30 +358,31 @@ export default function ListOfLogs(props) {
         </Tabs>
       </Flex>
       <Flex justifyContent="center" textAlign="center" flexDirection="column">
-      <Box width={[300, 400, 600]}
-            bg="brand.orange"
-            borderRadius="20px"
-            textAlign="center"
-            boxShadow="lg"
-            mt="5"
-            p="2"
-            >
-        <Text fontSize="lg" as="b" p="3">
-          Average Mood Scores
-        </Text>
-        {/* <Text as="em" fontSize="md">
+        <Box
+          width={[300, 400, 600]}
+          bg="brand.orange"
+          borderRadius="20px"
+          textAlign="center"
+          boxShadow="lg"
+          mt="5"
+          p="2"
+        >
+          <Text fontSize="lg" as="b" p="3">
+            Average Mood Scores
+          </Text>
+          {/* <Text as="em" fontSize="md">
           This is from the dive deeper section of the app. It shows the average
           mood scores for the time period selected above.
         </Text> */}
-      <SimpleGrid columns={2} p="3">
-      <Text>Happy: {averageHappyScore.toFixed(1)}</Text>
-      <Text>Sad: {averageSadScore.toFixed(1)}</Text>
-      <Text>Angry: {averageAngryScore.toFixed(1)}</Text>
-      <Text>Worried: {averageWorriedScore.toFixed(1)}</Text>
-      <Text>Cheeky: {averageCheekyScore.toFixed(1)}</Text>
-      <Text>Tired: {averageTiredScore.toFixed(1)}</Text>
-      </SimpleGrid>
-      </Box>
+          <SimpleGrid columns={2} p="3">
+            <Text>Happy: {averageHappyScore.toFixed(1)}</Text>
+            <Text>Sad: {averageSadScore.toFixed(1)}</Text>
+            <Text>Angry: {averageAngryScore.toFixed(1)}</Text>
+            <Text>Worried: {averageWorriedScore.toFixed(1)}</Text>
+            <Text>Cheeky: {averageCheekyScore.toFixed(1)}</Text>
+            <Text>Tired: {averageTiredScore.toFixed(1)}</Text>
+          </SimpleGrid>
+        </Box>
       </Flex>
       {filteredArray.map((data) => (
         <IndividualParentLog key={data.uuid} data={data} />
