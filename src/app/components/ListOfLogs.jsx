@@ -8,9 +8,7 @@ import {
   Button,
   Tabs,
   TabList,
-  TabPanels,
   Tab,
-  TabPanel,
   Box,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -64,14 +62,6 @@ export default function ListOfLogs(props) {
       filteredArray;
       break;
   }
-
-  // if (timeRange === "last7Days") {
-  //   filteredArray = filteredArray.filter((item) => new Date(item.date) >= sevenDaysAgo);
-  // } else if (timeRange === "last30Days") {
-  //   filteredArray = filteredArray.filter((item) => new Date(item.date) >= thirtyDaysAgo);
-  // } else if (timeRange === "") {
-  //   filteredArray;
-  // }
 
   return (
     <>

@@ -8,6 +8,18 @@ bottom: 0;
     width: 60%;
   }
 }
+
+.piechart {
+width: 400px;
+height: 400px;
+}
+
+@media (max-width: 425px) {
+  .piechart{
+    width: 250px;
+    height: 250px;
+  }
+}
 /* .main {
   display: flex;
   flex-direction: column;
