@@ -117,6 +117,7 @@ export default function IndividualLog(props) {
           <Text
             width={{ base: 200, md: 400, lg: 400 }}
             fontSize={{ base: "md", md: "xl", lg: "xl" }}
+            paddingBottom="2"
           >
           {props.data.reflection === null
               ? "No thinking journey entry made!"
