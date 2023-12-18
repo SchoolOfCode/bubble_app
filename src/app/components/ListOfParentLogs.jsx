@@ -12,15 +12,44 @@ import {
   TabPanel,
   Box,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ListOfLogs(props) {
   //   const { logs, deleteLog, editLog } = props;
   const [timeRange, setTimeRange] = useState("");
+  const [averageHappy, setAverageHappy] = useState(0);
+  const [averageSad, setAverageSad] = useState(0);
 
   const originalArray = props.data;
   console.log(props.data);
   console.log(`data in the ListOfLogs${props.data}`);
+
+  useEffect(() => {
+    calculateAverages(filteredArray);
+  }, [filteredArray, timeRange]);
+
+  const calculateAverages = (logs) => {
+    if (!logs || logs.length === 0) {
+      setAverageHappy(0);
+      setAverageSad(0);
+      return;
+    }
+
+    const count = logs.length;
+
+    const sum = logs.reduce(
+      (acc, log) => {
+        acc.happy += log.happy;
+        acc.sad += log.sad;
+        return acc;
+      },
+      { happy: 0, sad: 0 }
+    );
+
+    setAverageHappy(Math.round(sum.happy / count));
+    setAverageSad(Math.round(sum.sad / count));
+  };
+
   if (originalArray.length < 1) {
     return (
       <>
@@ -89,6 +118,8 @@ export default function ListOfLogs(props) {
           </TabList>
         </Tabs>
       </Flex>
+      <Text>Average Happy: {averageHappy.toFixed(0)}</Text>
+      <Text>Average Sad: {averageSad.toFixed(0)}</Text>
       {filteredArray.map((data) => (
         <IndividualParentLog key={data.uuid} data={data} />
       ))}
