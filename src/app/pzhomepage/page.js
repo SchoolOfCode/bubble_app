@@ -26,7 +26,7 @@ export default function Page() {
             boxShadow="lg"
           >
             <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
-              Child's Logs
+              Reflection History
             </Text>
           </Button>
         </Link>
@@ -39,7 +39,7 @@ export default function Page() {
             boxShadow="lg"
           >
             <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
-              Child's Charts
+              Reflection Analytics
             </Text>
           </Button>
         </Link>

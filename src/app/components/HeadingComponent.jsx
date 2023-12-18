@@ -55,13 +55,13 @@ export default function HeadingComponent() {
     {
       id: 8,
       title: "Reflection History",
-      color: "brand.yellow",
+      color: "brand.purple",
       pathKeyword: "parentzonelogs",
     },
     {
       id: 9,
       title: "Reflection Analytics",
-      color: "brand.yellow",
+      color: "brand.green",
       pathKeyword: "parentcharts",
     },
   ];
