@@ -5,7 +5,7 @@ export default function BackgroundBox() {
   return (
         <Box
           width={[300, 400, 600]}
-          height={[325, 400, 600]}
+          height={[325, 400, 510]}
           mx="auto"
           borderRadius="20px"
           textAlign="center"
