@@ -21,14 +21,21 @@ test("landing page has title, logo and button options", async ({ page }) => {
   await expect(footer).toBeVisible();
 });
 
-test("Rob's user journey", async ({ page }) => {
+test("Rob's user journey - homepage", async ({ page }) => {
   await page.goto("http://localhost:3000");
 
   let recordMood = page.getByRole("button", { name: "Record Your Mood" });
   await expect(recordMood).toBeVisible();
   await recordMood.click();
+
+
   await page.goto("http://localhost:3000/emojis");
   await expect(page).toHaveURL("http://localhost:3000/emojis");
+});
+
+test("Rob's user journey - emoji page", async ({ page }) => {
+  await page.goto("http://localhost:3000/emojis");
+
   let headingEmoji = page.getByRole("heading", {
     name: "How are you feeling?",
   });
@@ -48,8 +55,50 @@ test("Rob's user journey", async ({ page }) => {
   await emojiHappy.click();
   await page.goto("http://localhost:3000/emotionrater");
   await expect(page).toHaveURL("http://localhost:3000/emotionrater");
+});
+
+  test("Rob's user journey - emotion rater cards", async ({ page }) => {
+    await page.goto("http://localhost:3000/emotionrater");
   let headingRater = page.getByRole("heading", {
     name: "Let's dive deeper...",
   });
   await expect(headingRater).toHaveText(/Let\'s dive deeper.../);
+
+  const happyCard = page.getByRole('heading', { name: 'How happy do you feel?' })
+  await expect(happyCard).toHaveText(/happy/);
+  const sadCard = page.getByRole('heading', { name: 'How sad do you feel?' })
+  await expect(sadCard).toHaveText(/sad/);
+  const cheekyCard = page.getByRole('heading', { name: 'How cheeky do you feel?' })
+  await expect(cheekyCard).toHaveText(/cheeky/);
+  const angryCard = page.getByRole('heading', { name: 'How angry do you feel?' })
+  await expect(angryCard).toHaveText(/angry/);
+  const worriedCard = page.getByRole('heading', { name: 'How worried do you feel?' })
+  await expect(worriedCard).toHaveText(/worried/);
+  const tiredCard = page.getByRole('heading', { name: 'How tired do you feel?' })
+  await expect(tiredCard).toHaveText(/tired/);
 });
+
+test("Rob's user journey - emotion card text", async ({ page }) => {
+  await page.goto("http://localhost:3000/emotionrater");
+
+const cardNotText = page.getByText('Not Happy')
+await expect(cardNotText).toHaveText('Not Happy');
+const cardVeryText = page.getByText('Very Happy')
+await expect(cardVeryText).toHaveText('Very Happy');
+});
+
+test("Rob's user journey - emotion card bubbles", async ({ page }) => {
+  await page.goto("http://localhost:3000/emotionrater");
+
+const bubbleOne = page.locator('div').filter({ hasText: /^Not Cheeky12345Very Cheeky$/ }).getByRole('img').first()
+await expect(bubbleOne).toBeVisible();
+const bubbleTwo = page.locator('div').filter({ hasText: /^Not Cheeky12345Very Cheeky$/ }).getByRole('img').nth(1)
+await expect(bubbleTwo).toBeVisible();
+const bubbleThree = page.locator('div').filter({ hasText: /^Not Cheeky12345Very Cheeky$/ }).getByRole('img').nth(2)
+await expect(bubbleThree).toBeVisible();
+const bubbleFour = page.locator('div').filter({ hasText: /^Not Cheeky12345Very Cheeky$/ }).getByRole('img').nth(3)
+await expect(bubbleFour).toBeVisible();
+const bubbleFive = page.locator('div').filter({ hasText: /^Not Cheeky12345Very Cheeky$/ }).getByRole('img').nth(4)  
+await expect(bubbleFive).toBeVisible();
+});
+
