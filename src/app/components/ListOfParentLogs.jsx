@@ -14,14 +14,14 @@ import {
   SimpleGrid,
   Heading,
 } from "@chakra-ui/react";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { MoodDataContext } from "../context/dataforchartscontext.js";
 
-export default function ListOfLogs(props) {
-  const { setHappyData, setSadData, setTiredData, setCheekyData, setWorriedData, setAngryData } = useContext(MoodDataContext);
+export default function ListOfLogs() {
+  const { setHappyData, setSadData, setTiredData, setCheekyData, setWorriedData, setAngryData, logs } = useContext(MoodDataContext);
   const [timeRange, setTimeRange] = useState("");
 
-  const originalArray = props.data;
+  const originalArray = logs;
 
   if (originalArray.length < 1) {
     return (

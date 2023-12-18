@@ -11,6 +11,7 @@ export const MoodDataProvider = ({ children }) => {
   const [cheekyData, setCheekyData] = useState(null);
   const [worriedData, setWorriedData] = useState(null);
   const [angryData, setAngryData] = useState(null);
+  const [logs, setLogs] = useState([]);
 
   // Provide mood states through the context provider
   return (
@@ -28,6 +29,8 @@ export const MoodDataProvider = ({ children }) => {
         setWorriedData,
         angryData,
         setAngryData,
+        logs,
+        setLogs,
       }}
     >
       {children}

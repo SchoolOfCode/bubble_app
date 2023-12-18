@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "../components/Navbar";
 import { Box, Heading, useToast, Flex, Text, Button } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import ListOfParentLogs from "../components/ListOfParentLogs";
 import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
+import { MoodDataContext } from "../context/dataforchartscontext";
 import "../page.module.css";
 import HeadingComponent from "../components/HeadingComponent";
 
@@ -27,9 +28,11 @@ async function arrayOfLogs() {
 }
 
 export default function Page() {
+
+  const { logs, setLogs } = useContext(MoodDataContext);
   const toast = useToast();
   const id = "single-toast";
-  const [logs, setLogs] = useState([]);
+
 
   useEffect(() => {
     arrayOfLogs().then(setLogs);
@@ -107,7 +110,7 @@ export default function Page() {
       </Flex>
       <Flex direction="column" align="center" justify="center" mb="5" pb="10">
         <Box>
-          <ListOfParentLogs data={logs} />
+          <ListOfParentLogs />
         </Box>
       </Flex>
       <Footer />

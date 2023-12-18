@@ -3,15 +3,15 @@ import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { MoodDataContext } from '../context/dataforchartscontext';
-import { useContext } from 'react';
-import { Center, Box, Tabs, Tab, TabList, Flex, Text } from '@chakra-ui/react';
+import { useContext, useState } from 'react';
+import { Center, Box, Tabs, Tab, TabList, Flex, Text, Spinner } from '@chakra-ui/react';
 import style from "../page.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function TestChart() {
-
-const { happyData, sadData, tiredData, cheekyData, worriedData, angryData } = useContext(MoodDataContext);
+    
+const { happyData, sadData, tiredData, cheekyData, worriedData, angryData, logs } = useContext(MoodDataContext);
 
 const data = {
   labels: ['Happy', 'Sad', 'Cheeky', 'Tired', 'Worried', 'Angry'],
@@ -49,7 +49,7 @@ const options = {
       },
       maintainAspectRatio: false, // Set to false to allow custom height and width
 };
-  
+
 return (
     <>
     <Flex justifyContent="center" gap="10">
