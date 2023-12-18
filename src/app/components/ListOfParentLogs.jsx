@@ -19,6 +19,10 @@ export default function ListOfLogs(props) {
   const [timeRange, setTimeRange] = useState("");
   const [averageHappy, setAverageHappy] = useState(0);
   const [averageSad, setAverageSad] = useState(0);
+  const [averageAngry, setAverageAngry] = useState(0);
+  const [averageWorried, setAverageWorried] = useState(0);
+  const [averageCheeky, setAverageCheeky] = useState(0);
+  const [averageTired, setAverageTired] = useState(0);
 
   const originalArray = props.data;
   console.log(props.data);
@@ -32,6 +36,10 @@ export default function ListOfLogs(props) {
     if (!logs || logs.length === 0) {
       setAverageHappy(0);
       setAverageSad(0);
+      setAverageAngry(0);
+      setAverageWorried(0);
+      setAverageCheeky(0);
+      setAverageTired(0);
       return;
     }
 
@@ -41,13 +49,21 @@ export default function ListOfLogs(props) {
       (acc, log) => {
         acc.happy += log.happy;
         acc.sad += log.sad;
+        acc.angry += log.angry;
+        acc.worried += log.worried;
+        acc.cheeky += log.cheeky;
+        acc.tired += log.tired;
         return acc;
       },
-      { happy: 0, sad: 0 }
+      { happy: 0, sad: 0, angry: 0, worried: 0, cheeky: 0, tired: 0 }
     );
 
-    setAverageHappy(Math.round(sum.happy / count));
-    setAverageSad(Math.round(sum.sad / count));
+    setAverageHappy(sum.happy / count);
+    setAverageSad(sum.sad / count);
+    setAverageAngry(sum.angry / count);
+    setAverageWorried(sum.worried / count);
+    setAverageCheeky(sum.cheeky / count);
+    setAverageTired(sum.tired / count);
   };
 
   if (originalArray.length < 1) {
@@ -118,8 +134,12 @@ export default function ListOfLogs(props) {
           </TabList>
         </Tabs>
       </Flex>
-      <Text>Average Happy: {averageHappy.toFixed(0)}</Text>
-      <Text>Average Sad: {averageSad.toFixed(0)}</Text>
+      <Text>Average Happy: {averageHappy.toFixed(1)}</Text>
+      <Text>Average Sad: {averageSad.toFixed(1)}</Text>
+      <Text>Average Angry: {averageAngry.toFixed(1)}</Text>
+      <Text>Average Worried: {averageWorried.toFixed(1)}</Text>
+      <Text>Average Cheeky: {averageCheeky.toFixed(1)}</Text>
+      <Text>Average Tired: {averageTired.toFixed(1)}</Text>
       {filteredArray.map((data) => (
         <IndividualParentLog key={data.uuid} data={data} />
       ))}
