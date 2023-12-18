@@ -15,10 +15,10 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { useContext, useEffect, useState } from "react";
-import { AverageDataContext } from "../context/dataforchartscontext.js";
+import { MoodDataContext } from "../context/dataforchartscontext.js";
 
 export default function ListOfLogs(props) {
-  const { setAverageData } = useContext(AverageDataContext);
+  const { setHappyData, setSadData, setTiredData, setCheekyData, setWorriedData, setAngryData } = useContext(MoodDataContext);
   const [timeRange, setTimeRange] = useState("");
 
   const originalArray = props.data;
@@ -215,7 +215,7 @@ export default function ListOfLogs(props) {
               0
             ) / allHappyDatafilteredArray.length
           : 0;
-      setAverageData(averageHappyScore);
+      setHappyData(averageHappyScore);
       console.log(averageHappyScore);
       //all sad data
       const allSadDatafilteredArray = filteredArray.filter(
@@ -226,6 +226,7 @@ export default function ListOfLogs(props) {
           ? allSadDatafilteredArray.reduce((sum, item) => sum + item.sad, 0) /
             allSadDatafilteredArray.length
           : 0;
+      setSadData(averageSadScore);
       //all angry data
       const allAngryDatafilteredArray = filteredArray.filter(
         (item) => item.angry !== undefined && item.angry !== null
@@ -237,6 +238,7 @@ export default function ListOfLogs(props) {
               0
             ) / allAngryDatafilteredArray.length
           : 0;
+      setAngryData(averageAngryScore);
       //all cheeky data
       const allCheekyDatafilteredArray = filteredArray.filter(
         (item) => item.cheeky !== undefined && item.cheeky !== null
@@ -248,6 +250,7 @@ export default function ListOfLogs(props) {
               0
             ) / allCheekyDatafilteredArray.length
           : 0;
+      setCheekyData(averageCheekyScore);
       // all tired data
       const allTiredDatafilteredArray = filteredArray.filter(
         (item) => item.tired !== undefined && item.tired !== null
@@ -259,6 +262,7 @@ export default function ListOfLogs(props) {
               0
             ) / allTiredDatafilteredArray.length
           : 0;
+      setTiredData(averageTiredScore);
       //all worried data
       const allWorriedDatafilteredArray = filteredArray.filter(
         (item) => item.worried !== undefined && item.worried !== null
@@ -270,6 +274,7 @@ export default function ListOfLogs(props) {
               0
             ) / allWorriedDatafilteredArray.length
           : 0;
+      setWorriedData(averageWorriedScore);
   }
 
   return (
