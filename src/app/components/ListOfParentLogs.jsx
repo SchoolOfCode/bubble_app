@@ -14,85 +14,14 @@ import {
   SimpleGrid,
   Heading,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AverageDataContext } from "../context/dataforchartscontext.js";
 
 export default function ListOfLogs(props) {
-  //   const { logs, deleteLog, editLog } = props;
+  const { setAverageData } = useContext(AverageDataContext);
   const [timeRange, setTimeRange] = useState("");
-  // const [averageHappy, setAverageHappy] = useState(0);
-  // const [averageSad, setAverageSad] = useState(0);
-  // const [averageAngry, setAverageAngry] = useState(0);
-  // const [averageWorried, setAverageWorried] = useState(0);
-  // const [averageCheeky, setAverageCheeky] = useState(0);
-  // const [averageTired, setAverageTired] = useState(0);
 
   const originalArray = props.data;
-  // console.log(props.data);
-  // console.log(`data in the ListOfLogs${props.data}`);
-
-  // useEffect(() => {
-  //   calculateAverages(filteredArray);
-  // }, [filteredArray, timeRange]);
-
-  // const filterLogsByEmotion = (logs, emotion) => {
-  //   return logs.filter(
-  //     (log) => log[emotion] !== undefined && log[emotion] !== null
-  //   );
-  // };
-
-  // const calculateAverages = (logs) => {
-  //   if (!logs || logs.length === 0) {
-  //     setAverageHappy(0);
-  //     setAverageSad(0);
-  //     setAverageAngry(0);
-  //     setAverageWorried(0);
-  //     setAverageCheeky(0);
-  //     setAverageTired(0);
-  //     return;
-  //   }
-
-  //   const emotions = ["happy", "sad", "angry", "worried", "cheeky", "tired"];
-
-  //   emotions.forEach((emotion) => {
-  //     const filteredLogs = filterLogsByEmotion(logs, emotion);
-
-  //     const count = filteredLogs.length;
-
-  //     const sum = filteredLogs.reduce(
-  //       (acc, log) => {
-  //         acc[emotion] += log[emotion];
-  //         return acc;
-  //       },
-  //       { [emotion]: 0 }
-  //     );
-
-  //     const average = count > 0 ? sum[emotion] / count : 0;
-
-  //     switch (emotion) {
-  //       case "happy":
-  //         setAverageHappy(average);
-  //         break;
-  //       case "sad":
-  //         setAverageSad(average);
-  //         break;
-  //       case "angry":
-  //         setAverageAngry(average);
-  //         break;
-  //       case "worried":
-  //         setAverageWorried(average);
-  //         break;
-  //       case "cheeky":
-  //         setAverageCheeky(average);
-  //         break;
-  //       case "tired":
-  //         setAverageTired(average);
-  //         break;
-  //       // Handle additional emotions if needed
-  //       default:
-  //         break;
-  //     }
-  //   });
-  // };
 
   if (originalArray.length < 1) {
     return (
@@ -286,6 +215,8 @@ export default function ListOfLogs(props) {
               0
             ) / allHappyDatafilteredArray.length
           : 0;
+      setAverageData(averageHappyScore);
+      console.log(averageHappyScore);
       //all sad data
       const allSadDatafilteredArray = filteredArray.filter(
         (item) => item.sad !== undefined && item.sad !== null

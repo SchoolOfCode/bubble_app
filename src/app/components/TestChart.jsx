@@ -2,15 +2,22 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import { AverageDataContext } from '../context/dataforchartscontext';
+import { useContext } from 'react';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const data = {
+export function TestChart() {
+
+const { averageData } = useContext(AverageDataContext);
+console.log(averageData);
+
+const data = {
   labels: ['Happy', 'Sad', 'Cheeky', 'Tired', 'Worried', 'Angry'],
   datasets: [
     {
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      data: [averageData],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -32,6 +39,6 @@ export const data = {
   ],
 };
 
-export function TestChart() {
+
   return <Pie data={data} />;
 }
