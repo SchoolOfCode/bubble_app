@@ -48,9 +48,21 @@ export default function HeadingComponent() {
     },
     {
       id: 7,
-      title: "Reflection History",
+      title: "Parent Zone",
       color: "brand.yellow",
-      pathKeyword: "parentzone",
+      pathKeyword: "pzhomepage",
+    },
+    {
+      id: 8,
+      title: "Reflection History",
+      color: "brand.purple",
+      pathKeyword: "parentzonelogs",
+    },
+    {
+      id: 9,
+      title: "Mood Analytics",
+      color: "brand.green",
+      pathKeyword: "parentcharts",
     },
   ];
 

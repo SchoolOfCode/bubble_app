@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "../components/Navbar";
 import { Box, Heading, useToast, Flex, Text, Button } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import ListOfParentLogs from "../components/ListOfParentLogs";
-import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
+import { MoodDataContext } from "../context/dataforchartscontext";
 import "../page.module.css";
 import HeadingComponent from "../components/HeadingComponent";
 
@@ -13,27 +13,10 @@ import HeadingComponent from "../components/HeadingComponent";
 //store the data as a const
 //
 
-async function arrayOfLogs() {
-  const { data, error } = await supabase.from("mood").select();
-
-  if (error) {
-    console.log(error);
-  }
-  if (data) {
-    console.log(data);
-
-    return data;
-  }
-}
-
 export default function Page() {
+
   const toast = useToast();
   const id = "single-toast";
-  const [logs, setLogs] = useState([]);
-
-  useEffect(() => {
-    arrayOfLogs().then(setLogs);
-  }, []);
 
   useEffect(() => {
     // Initialize a variable to store the timeout ID
@@ -52,13 +35,12 @@ export default function Page() {
               p={3}
               bg="blue.400"
               borderRadius="md"
-              h={{ base: "100px", md: "75px" }}
+              h={{ base: "125px", md: "75px" }}
             >
               <Box>
                 <Box textAlign="center">
                   <Text fontSize="lg" as="em" ml="38">
-                    Hey! Here's an idea... why don't you talk to your little one
-                    about their thinking journey!
+                    This is a great conversation starter! Why don't you talk to your little one about their thinking journey!
                   </Text>
                 </Box>
                 <Button
@@ -108,7 +90,7 @@ export default function Page() {
       </Flex>
       <Flex direction="column" align="center" justify="center" mb="5" pb="10">
         <Box>
-          <ListOfParentLogs data={logs} />
+          <ListOfParentLogs />
         </Box>
       </Flex>
       <Footer />

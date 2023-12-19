@@ -1,5 +1,6 @@
 import { Providers } from "./providers";
 import { UserIdProvider } from "./context/useridcontext"; 
+import { MoodDataProvider } from "./context/dataforchartscontext";
 import "../app/globals.css";
 
 const metadata = {
@@ -35,9 +36,11 @@ export default function RootLayout({ children }) {
           </div>
         </section>
         <Providers>
+        <MoodDataProvider>
         <UserIdProvider>
         {children}
         </UserIdProvider>
+        </MoodDataProvider>
         </Providers>
       </body>
     </html>
