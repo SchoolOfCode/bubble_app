@@ -1,6 +1,6 @@
 "use client"
 import React, { useContext, useState, useEffect } from 'react';
-import { Box, Center, Flex, Text, Tab, Tabs, Spinner, TabList } from '@chakra-ui/react';
+import { Box, Center, Flex, Text, Tab, Tabs, Spinner, TabList, SimpleGrid, Heading } from '@chakra-ui/react';
 import { MoodDataContext } from '../context/dataforchartscontext';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
@@ -396,8 +396,9 @@ export function TestChart({ originalArray }) {
 
   return (
     <>
+    <Flex justifyContent="center" gap="5">
       <Tabs variant="soft-rounded" colorScheme="green" paddingTop={10}>
-        <Flex justifyContent="center" gap="5" flexDirection="row">
+        <TabList>
           <Tab onClick={() => handleTabClick("all")}>
             <Text>All</Text>
           </Tab>
@@ -407,8 +408,30 @@ export function TestChart({ originalArray }) {
           <Tab onClick={() => handleTabClick("last 30 Days")}>
             <Text>Last 30 days</Text>
           </Tab>
-        </Flex>
+        </TabList>
       </Tabs>
+    </Flex>
+      <Flex justifyContent="center" textAlign="center">
+        <Box
+          width={[300, 400, 600]}
+          bg="brand.orange"
+          borderRadius="20px"
+          textAlign="center"
+          boxShadow="lg"
+          mt="5"
+          pb="2"
+          pl="2"
+          pr="2"
+        >
+          <Heading fontSize="md" as="h2" p="3">
+            Average Mood Scores
+          </Heading>
+          <Text as="em" fontSize="sm">
+            This is from the &apos;dive deeper&apos; section of the app. This
+            shows the average scores for the time period selected above.
+          </Text>
+        </Box>
+      </Flex>
       <Center>
         <Box paddingTop={5}>
           <Pie data={chartData} options={options} width={300} height={300} />

@@ -60,7 +60,7 @@ export default function HeadingComponent() {
     },
     {
       id: 9,
-      title: "Reflection Analytics",
+      title: "Mood Analytics",
       color: "brand.green",
       pathKeyword: "parentcharts",
     },
