@@ -29,7 +29,7 @@ async function arrayOfLogs() {
 
 export default function Page() {
 
-  const { logs, setLogs } = useContext(MoodDataContext);
+  const { setLogs } = useContext(MoodDataContext);
   const toast = useToast();
   const id = "single-toast";
 
@@ -55,7 +55,7 @@ export default function Page() {
               p={3}
               bg="blue.400"
               borderRadius="md"
-              h={{ base: "100px", md: "75px" }}
+              h={{ base: "125px", md: "75px" }}
             >
               <Box>
                 <Box textAlign="center">
