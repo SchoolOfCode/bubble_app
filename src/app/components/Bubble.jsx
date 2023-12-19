@@ -23,8 +23,6 @@ export default function Bubble() {
           alignItems="center"
           direction="column"
           gap="20px"
-          position="absolute"
-          top="35%"
         >
           <Box
             width={[300, 400, 600]}
