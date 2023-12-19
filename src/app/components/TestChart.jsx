@@ -10,7 +10,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function TestChart({ originalArray }) {
 
-  const isSmallScreen = window.innerWidth <= 375;
+  const isSmallScreen = window.innerHeight <= 780;
   
   const {
     setHappyData,
@@ -449,7 +449,7 @@ export function TestChart({ originalArray }) {
       <Center>
         <Box paddingTop={5} >
         {isSmallScreen ? (
-            <Pie data={chartData} options={options} width={150} height={150} />
+            <Pie data={chartData} options={options} width={170} height={170} />
           ) : (
             <Pie data={chartData} options={options} width={300} height={300} />
           )}
