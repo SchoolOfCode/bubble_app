@@ -10,7 +10,7 @@ export default function HeadingCard({ title, color, desc }) {
       mx="auto"
       boxShadow="lg"
       textAlign="center"
-      mt={10}
+      mt={5}
       w={[300, 400, 600]}
     >
       <Heading size="lg">{title}</Heading>
