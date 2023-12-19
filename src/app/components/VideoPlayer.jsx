@@ -1,16 +1,23 @@
-import React from 'react';
-import videoFile from '../../../public/assets/BBdemo.mp4';
+"use client";
+import React from "react";
+import ReactPlayer from "react-player";
+import { Box, Flex } from "@chakra-ui/react";
 
 const VideoPlayer = () => {
   return (
     <div>
-      <h1>Bubble Breather Video</h1>
-      <video width="640" height="360" controls>
-        <source src={videoFile} type="video/mp4" />
-        
-      </video>
+      <Box zIndex={1} mb="20px">
+        <Flex justify="center" alignItems="center">
+          <ReactPlayer
+            url="https://youtu.be/FpUNhx1IFec"
+            controls
+            width="600px"
+            height="300px"
+          />
+        </Flex>
+      </Box>
     </div>
   );
-}
+};
 
 export default VideoPlayer;

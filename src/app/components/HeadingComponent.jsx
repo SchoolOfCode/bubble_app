@@ -61,7 +61,7 @@ export default function HeadingComponent() {
 
   // Render the found heading or null if not found
   return (
-    <Box>
+    <Box mb="20px">
       {currentHeading && (
         <HeadingCard
           key={currentHeading.id}
