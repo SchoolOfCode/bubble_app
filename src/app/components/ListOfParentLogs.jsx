@@ -14,36 +14,51 @@ import {
   SimpleGrid,
   Heading,
 } from "@chakra-ui/react";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { MoodDataContext } from "../context/dataforchartscontext.js";
+import supabase from "../config/supabaseClient";
+
+async function arrayOfLogs() {
+  const { data, error } = await supabase.from('mood').select();
+
+  if (error) {
+    console.log(error);
+    return null; // Return null or handle the error as needed
+  }
+
+  if (data) {
+    console.log(data);
+    return data;
+  }
+
+  return null;
+}
 
 export default function ListOfLogs() {
   const {
-    setHappyData,
-    setSadData,
-    setTiredData,
-    setCheekyData,
-    setWorriedData,
-    setAngryData,
     logs,
-    setMonthHappyData,
-    setMonthSadData,
-    setMonthTiredData,
-    setMonthCheekyData,
-    setMonthWorriedData,
-    setMonthAngryData,
-    setWeekHappyData,
-    setWeekSadData,
-    setWeekTiredData,
-    setWeekCheekyData,
-    setWeekWorriedData,
-    setWeekAngryData,
+    setLogs
   } = useContext(MoodDataContext);
   const [timeRange, setTimeRange] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const logsData = await arrayOfLogs();
+
+      if (logsData) {
+        setLogs(logsData);
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [setLogs]);
+
 
   const originalArray = logs;
 
-  if (originalArray.length < 1) {
+  if (isLoading) {
     return (
       <>
         <Flex
