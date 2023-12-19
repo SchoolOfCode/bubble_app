@@ -1,13 +1,17 @@
 "use client"
 import React, { useContext, useState, useEffect } from 'react';
-import { Box, Center, Flex, Text, Tab, Tabs, Spinner, TabList, SimpleGrid, Heading } from '@chakra-ui/react';
+import { Box, Center, Flex, Text, Tab, Tabs, Spinner, TabList, SimpleGrid, Heading, useMediaQuery } from '@chakra-ui/react';
 import { MoodDataContext } from '../context/dataforchartscontext';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import "../page.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function TestChart({ originalArray }) {
+
+  const isSmallScreen = window.innerWidth <= 375;
+  
   const {
     setHappyData,
     setSadData,
@@ -58,8 +62,9 @@ export function TestChart({ originalArray }) {
         display: true,
         position: 'top',
         labels: {
-            color: "black",
-        }
+          color: 'black',
+          boxWidth: 10,
+        },
       },
     },
     maintainAspectRatio: false,
@@ -430,13 +435,27 @@ export function TestChart({ originalArray }) {
             This is from the &apos;dive deeper&apos; section of the app. This
             shows the average scores for the time period selected above.
           </Text>
-        </Box>
+          {/* <SimpleGrid columns={2} p="3">
+            <Text>Happy: {happyData.toFixed(1)}</Text>
+            <Text>Sad: {sadData.toFixed(1)}</Text>
+            <Text>Angry: {angryData.toFixed(1)}</Text>
+            <Text>Worried: {worriedData.toFixed(1)}</Text>
+            <Text>Cheeky: {cheekyData.toFixed(1)}</Text>
+            <Text>Tired: {tiredData.toFixed(1)}</Text>
+          </SimpleGrid> */}
+        </Box> 
       </Flex>
+      <Flex justifyContent="center" alignItems="center">
       <Center>
-        <Box paddingTop={5}>
-          <Pie data={chartData} options={options} width={300} height={300} />
+        <Box paddingTop={5} >
+        {isSmallScreen ? (
+            <Pie data={chartData} options={options} width={150} height={150} />
+          ) : (
+            <Pie data={chartData} options={options} width={300} height={300} />
+          )}
         </Box>
       </Center>
+      </Flex>
     </>
   );
 }
