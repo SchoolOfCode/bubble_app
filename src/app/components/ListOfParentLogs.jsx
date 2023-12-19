@@ -34,7 +34,7 @@ async function arrayOfLogs() {
   return null;
 }
 
-export default function ListOfLogs() {
+export default function ListOfParentLogs() {
   const {
     logs,
     setLogs

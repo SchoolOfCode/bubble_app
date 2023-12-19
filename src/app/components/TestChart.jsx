@@ -7,7 +7,7 @@ import { Pie } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export function TestChart() {
+export function TestChart({ originalArray }) {
   const {
     setHappyData,
     setSadData,
@@ -45,7 +45,6 @@ export function TestChart() {
     monthcheekyData,
     monthworriedData,
     monthangryData,
-    logs
   } = useContext(MoodDataContext);
 
   const [selectedTab, setSelectedTab] = useState("all");
@@ -88,15 +87,11 @@ export function TestChart() {
       },
     },
     maintainAspectRatio: false,
-    responsive: true,
   };
 
   useEffect(() => {
     updateDataForTab(selectedTab);
   }, [selectedTab]);
-
-  const originalArray = logs;
-  console.log(logs);
 
   if (originalArray.length < 1) {
     return (
