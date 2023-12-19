@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import { Box, Heading, useToast, Flex, Text, Button } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import ListOfParentLogs from "../components/ListOfParentLogs";
-import supabase from "../config/supabaseClient.js";
 import { useEffect, useState } from "react";
 import { MoodDataContext } from "../context/dataforchartscontext";
 import "../page.module.css";
@@ -14,29 +13,10 @@ import HeadingComponent from "../components/HeadingComponent";
 //store the data as a const
 //
 
-async function arrayOfLogs() {
-  const { data, error } = await supabase.from("mood").select();
-
-  if (error) {
-    console.log(error);
-  }
-  if (data) {
-    console.log(data);
-
-    return data;
-  }
-}
-
 export default function Page() {
 
-  const { setLogs } = useContext(MoodDataContext);
   const toast = useToast();
   const id = "single-toast";
-
-
-  useEffect(() => {
-    arrayOfLogs().then(setLogs);
-  }, []);
 
   useEffect(() => {
     // Initialize a variable to store the timeout ID
