@@ -15,36 +15,12 @@ export function TestChart({ originalArray }) {
     setTiredData,
     setWorriedData,
     setAngryData,
-    setWeekHappyData,
-    setWeekSadData,
-    setWeekTiredData,
-    setWeekCheekyData,
-    setWeekWorriedData,
-    setWeekAngryData,
-    setMonthHappyData,
-    setMonthSadData,
-    setMonthTiredData,
-    setMonthCheekyData,
-    setMonthWorriedData,
-    setMonthAngryData,
     happyData,
     sadData,
     cheekyData,
     tiredData,
     worriedData,
     angryData,
-    weekhappyData,
-    weeksadData,
-    weektiredData,
-    weekcheekyData,
-    weekworriedData,
-    weekangryData,
-    monthhappyData,
-    monthsadData,
-    monthtiredData,
-    monthcheekyData,
-    monthworriedData,
-    monthangryData,
   } = useContext(MoodDataContext);
 
   const [selectedTab, setSelectedTab] = useState("all");
@@ -148,7 +124,7 @@ export function TestChart({ originalArray }) {
               ) / filteredHappyArrayLast7Days.length
             : 0;
         console.log(filteredHappyArrayLast7Days.length); // checking it filters out null entries
-        setWeekHappyData(averageHappyScore);
+        setHappyData(averageHappyScore);
         //sad data
         const filteredSadArrayLast7Days = filteredArray
           .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -158,7 +134,7 @@ export function TestChart({ originalArray }) {
             ? filteredSadArrayLast7Days.reduce((sum, item) => sum + item.sad, 0) /
               filteredSadArrayLast7Days.length
             : 0;
-        setWeekSadData(averageSadScore);
+        setSadData(averageSadScore);
         //angry data
         const filteredAngryArrayLast7Days = filteredArray
           .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -170,7 +146,7 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredAngryArrayLast7Days.length
             : 0;
-        setWeekAngryData(averageAngryScore);
+        setAngryData(averageAngryScore);
         //worried data
         const filteredWorriedArrayLast7Days = filteredArray
           .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -182,7 +158,7 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredWorriedArrayLast7Days.length
             : 0;
-        setWeekWorriedData(averageWorriedScore);
+        setWorriedData(averageWorriedScore);
         //cheeky data
         const filteredCheekyArrayLast7Days = filteredArray
           .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -194,7 +170,7 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredCheekyArrayLast7Days.length
             : 0;
-        setWeekCheekyData(averageCheekyScore);
+        setCheekyData(averageCheekyScore);
         //tired data
         const filteredTiredArrayLast7Days = filteredArray
           .filter((item) => new Date(item.date) >= sevenDaysAgo)
@@ -206,8 +182,8 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredTiredArrayLast7Days.length
             : 0;
-        setWeekTiredData(averageTiredScore);
-        newData = [weekhappyData, weeksadData, weekcheekyData, weektiredData, weekworriedData, weekangryData];
+        setTiredData(averageTiredScore);
+        newData = [happyData, sadData, cheekyData, tiredData, worriedData, angryData];
         break;
       case "last 30 Days":
         filteredArray = filteredArray.filter(
@@ -224,7 +200,7 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredHappyArrayLast30Days.length
             : 0;
-        setMonthHappyData(averageHappyScore);
+        setHappyData(averageHappyScore);
         //sad data
         const filteredSadArrayLast30Days = filteredArray
           .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -236,7 +212,7 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredSadArrayLast30Days.length
             : 0;
-        setMonthSadData(averageSadScore);
+        setSadData(averageSadScore);
         //angry data
         const filteredAngryArrayLast30Days = filteredArray
           .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -248,7 +224,7 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredAngryArrayLast30Days.length
             : 0;
-        setMonthAngryData(averageAngryScore);
+        setAngryData(averageAngryScore);
         console.log(averageAngryScore);
         //worried data
         const filteredWorriedArrayLast30Days = filteredArray
@@ -261,7 +237,7 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredWorriedArrayLast30Days.length
             : 0;
-        setMonthWorriedData(averageWorriedScore);
+        setWorriedData(averageWorriedScore);
         //cheeky data
         const filteredCheekyArrayLast30Days = filteredArray
           .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -273,7 +249,7 @@ export function TestChart({ originalArray }) {
                 0
               ) / filteredCheekyArrayLast30Days.length
             : 0;
-        setMonthCheekyData(averageCheekyScore);
+        setCheekyData(averageCheekyScore);
         //tired data
         const filteredTiredArrayLast30Days = filteredArray
           .filter((item) => new Date(item.date) >= thirtyDaysAgo)
@@ -286,8 +262,8 @@ export function TestChart({ originalArray }) {
               ) / filteredTiredArrayLast30Days.length
             : 0;
         console.log(filteredTiredArrayLast30Days.length);
-        setMonthTiredData(averageTiredScore.toFixed(1));
-        newData = [monthhappyData, monthsadData, monthcheekyData, monthtiredData, monthworriedData, monthangryData];
+        setTiredData(averageTiredScore.toFixed(1));
+        newData = [happyData, sadData, cheekyData, tiredData, worriedData, angryData];
         break;
       default:
         filteredArray;
