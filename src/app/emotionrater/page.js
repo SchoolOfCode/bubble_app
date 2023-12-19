@@ -1419,9 +1419,6 @@ const RatingButtons = () => {
           <Text size="xl">Next</Text>
         </Button>
       </Flex>
-      <Link href="/reflection">
-        <Button>Next</Button>
-      </Link>
       <Footer />
     </>
   );

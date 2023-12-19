@@ -22,7 +22,7 @@ export default function Bubble() {
           justifyContent="center"
           alignItems="center"
           direction="column"
-          gap="20px"
+          gap="15px"
         >
           <Box
             width={[300, 400, 600]}
@@ -69,6 +69,7 @@ export default function Bubble() {
                 bg="brand.purple"
                 boxShadow="lg"
                 size={{ base: "md", md: "lg", lg: "lg" }}
+                mb={12}
               >
                 <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                   Ready
