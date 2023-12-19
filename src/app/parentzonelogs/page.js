@@ -33,9 +33,9 @@ export default function Page() {
             <Box
               color="white"
               p={3}
-              bg="blue.400"
+              bg="blue.600"
               borderRadius="md"
-              h={{ base: "125px", md: "75px" }}
+              h={{ base: "120px", md: "75px" }}
             >
               <Box>
                 <Box textAlign="center">
@@ -45,7 +45,7 @@ export default function Page() {
                 </Box>
                 <Button
                   onClick={() => toast.close(id)}
-                  colorScheme="blue"
+                  colorScheme="facebook"
                   variant="solid"
                   size="sm"
                   position="fixed"
