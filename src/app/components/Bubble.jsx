@@ -11,33 +11,21 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import BackgroundBox from "./BackgroundBox";
 
 export default function Bubble() {
   return (
     <>
-      <Box
-        width="60%"
-        height="70vh"
-        mx="auto"
-        borderRadius="20px"
-        textAlign="center"
-        bg="brand.pink"
-        p="2"
-        mt="10"
-        mb="5"
-        boxShadow="lg"
-      ></Box>
+      {/* <BackgroundBox /> */}
       <Center>
         <Flex
           justifyContent="center"
           alignItems="center"
           direction="column"
           gap="20px"
-          position="absolute"
-          top="35%"
         >
           <Box
-            width="70%"
+            width={[300, 400, 600]}
             bg="brand.blue"
             borderRadius="20px"
             textAlign="center"
@@ -50,7 +38,7 @@ export default function Bubble() {
             </Text>
           </Box>
           <Box
-            width="70%"
+            width={[300, 400, 600]}
             bg="brand.yellow"
             borderRadius="20px"
             textAlign="center"
@@ -63,7 +51,7 @@ export default function Bubble() {
             </Text>
           </Box>
           <Box
-            width="70%"
+            width={[300, 400, 600]}
             bg="brand.green"
             borderRadius="20px"
             textAlign="center"

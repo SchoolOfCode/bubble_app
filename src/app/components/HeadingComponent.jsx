@@ -46,6 +46,24 @@ export default function HeadingComponent() {
       color: "brand.pink",
       pathKeyword: "exercise",
     },
+    {
+      id: 7,
+      title: "Parent Zone",
+      color: "brand.yellow",
+      pathKeyword: "pzhomepage",
+    },
+    {
+      id: 8,
+      title: "Reflection History",
+      color: "brand.purple",
+      pathKeyword: "parentzonelogs",
+    },
+    {
+      id: 9,
+      title: "Mood Analytics",
+      color: "brand.green",
+      pathKeyword: "parentcharts",
+    },
   ];
 
   // Find the heading data based on the current route
@@ -55,7 +73,7 @@ export default function HeadingComponent() {
 
   // Render the found heading or null if not found
   return (
-    <Box>
+    <Box mb="20px">
       {currentHeading && (
         <HeadingCard
           key={currentHeading.id}

@@ -15,6 +15,8 @@ import {
   AbsoluteCenter,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import BackgroundBox from "../components/BackgroundBox";
+import BubbleBody from "../components/BubbleBody";
 
 function page() {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -31,89 +33,34 @@ return (
       <>
       <Navbar />
       <HeadingComponent />
-      <Box
-        width="80%"
-        height="70vh"
-        mx="auto"
-        borderRadius="20px"
-        textAlign="center"
-        bg="brand.pink"
-        p="2"
-        mt="10"
-        boxShadow="lg"
-        css={{
-          "@media (max-height: 720px)": {
-            height: "60vh",
-          },
-        }}
-      >
-        <Center>
-        <Flex
-          justifyContent="center"
-          alignItems="center"
-          direction="column"
-          gap="20px"
-          position="absolute"
-          top="35%"
-        >
-          <Box
-            width="70%"
-            bg="brand.yellow"
-            borderRadius="20px"
-            textAlign="center"
-            boxShadow="lg"
-            p="2"
-          >
-            <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
-            Well done you are one step closer to feeling happier & calm! Why don't you record your mood now? Or better yet, talk to someone about your day!
-            </Text>
-          </Box>
-          <Button 
-          bg="brand.purple"
-          boxShadow="lg"
-          size="lg">
-            <Link href="/emojis" target="_self">
-              <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
-                Record Mood
-              </Text>
-            </Link>
-          </Button>
-          <Button
-          bg="brand.blue"
-          boxShadow="lg"
-          size="lg">
-            <Link href="/exercise" target="_self">
-              <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
-                Do it Again!
-              </Text>
-            </Link>
-          </Button>
-            </Flex>
-            </Center>
-            </Box>
+      <BubbleBody />
       <Footer />
       </>
     ) : (
       <>
       <Navbar />
       <HeadingComponent />
+      {/* <BackgroundBox /> */}
       <Box
-        width="80%"
-        height="70vh"
-        mx="auto"
-        borderRadius="20px"
-        textAlign="center"
-        bg="brand.pink"
-        p="2"
-        mt="10"
-        boxShadow="lg"
-        css={{
-          "@media (max-height: 720px)": {
-            height: "60vh",
-          },
-        }}
-      >
-      <Box onAnimationEnd={handleAnimationEnd} className={style.bubble} position="relative">
+          width={[300, 400, 600]}
+          height={[325, 400, 510]}
+          mx="auto"
+          borderRadius="20px"
+          textAlign="center"
+          bg="brand.pink"
+          p="2"
+          mt="10"
+          boxShadow="lg"
+          zIndex={-1}
+          // css={{
+          //   "@media (max-height: 720px)": {
+          //     height: "60vh",
+          //   },
+          // }}
+        >
+      <Box className={style.textcontainer}>
+      </Box>
+      <Box onAnimationEnd={handleAnimationEnd} className={style.bubble} >
       </Box>
         </Box>
       <Footer />
