@@ -18,7 +18,27 @@ import { useContext, useState } from "react";
 import { MoodDataContext } from "../context/dataforchartscontext.js";
 
 export default function ListOfLogs() {
-  const { setHappyData, setSadData, setTiredData, setCheekyData, setWorriedData, setAngryData, logs, setMonthHappyData, setMonthSadData, setMonthTiredData, setMonthCheekyData, setMonthWorriedData, setMonthAngryData, setWeekHappyData, setWeekSadData, setWeekTiredData, setWeekCheekyData, setWeekWorriedData, setWeekAngryData } = useContext(MoodDataContext);
+  const {
+    setHappyData,
+    setSadData,
+    setTiredData,
+    setCheekyData,
+    setWorriedData,
+    setAngryData,
+    logs,
+    setMonthHappyData,
+    setMonthSadData,
+    setMonthTiredData,
+    setMonthCheekyData,
+    setMonthWorriedData,
+    setMonthAngryData,
+    setWeekHappyData,
+    setWeekSadData,
+    setWeekTiredData,
+    setWeekCheekyData,
+    setWeekWorriedData,
+    setWeekAngryData,
+  } = useContext(MoodDataContext);
   const [timeRange, setTimeRange] = useState("");
 
   const originalArray = logs;
@@ -321,8 +341,9 @@ export default function ListOfLogs() {
             Average Mood Scores
           </Heading>
           <Text as="em" fontSize="sm">
-          This is from the &apos;dive deeper&apos; section of the app. This shows the average scores for the time period selected above.
-        </Text>
+            This is from the &apos;dive deeper&apos; section of the app. This
+            shows the average scores for the time period selected above.
+          </Text>
           <SimpleGrid columns={2} p="3">
             <Text>Happy: {averageHappyScore.toFixed(1)}</Text>
             <Text>Sad: {averageSadScore.toFixed(1)}</Text>
