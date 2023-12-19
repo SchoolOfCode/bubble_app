@@ -54,7 +54,7 @@ export default function Textbox() {
         console.log("this has worked, check supabase");
         toast({
           position: "top",
-          duration: 30000,
+          duration: 3000,
           render: () => (
             <Flex justifyContent="center" textAlign="center">
               <Box color="black" p={3} bg="#C2F2BA" borderRadius="md">

@@ -150,7 +150,7 @@ test("Rob's user journey - clicking bubbles on emotionrater page", async ({
   await expect(toastPopUp).toHaveText(
     /Oops not all of them have been selected!/
   );
-  //clicking 5 buttons
+  //clicking 6 buttons
   await page.locator("div:nth-child(6) > .chakra-text").first().click();
   await page
     .locator(".css-bl9vji > .css-gg4vpm > div:nth-child(5) > .chakra-text")
@@ -195,23 +195,38 @@ test("Rob's user journey - reflection page", async ({ page }) => {
 });
 
 test("Rob's user journey - reflection submission", async ({ page }) => {
-  //trying to locate the div that the border wraps
-  //   const div = page.getByRole('textbox'); // Replace 'div-selector' with your actual selector
-
-  // const hasRedBorder = await div.evaluate((element) => {
-  //   const computedStyle = window.getComputedStyle(element);
-  //   return computedStyle.getPropertyValue('border-color');
-  //   // return borderColor === 'red';
-  // });
-  // console.log(hasRedBorder);
-
-  //   const styledColor = await div.evaluate((el) => getComputedStyle(el).border);
-  //   console.log(styledColor);
-  //   expect(styledColor == hasRedBorder).toBe(true);
-
-  // await expect(hasRedBorder).toBe("rgb(255, 0, 0)" || "rgb(246, 1, 2)" || "rgb(226, 4, 6)");
+  await page.goto("http://localhost:3000/emojis");
+  let emojiHappy = page.getByRole("link", { name: "Happy-Emoji" });
+  await emojiHappy.click();
+  await page.goto("http://localhost:3000/emotionrater");
+  await expect(page).toHaveURL("http://localhost:3000/emotionrater");
+  await page.locator("div:nth-child(6) > .chakra-text").first().click();
+  await page
+    .locator(".css-bl9vji > .css-gg4vpm > div:nth-child(5) > .chakra-text")
+    .click();
+  await page
+    .locator(".css-1bzsqmt > .css-gg4vpm > div:nth-child(3) > .chakra-text")
+    .click();
+  await page
+    .locator(".css-1jm08q2 > .css-gg4vpm > div:nth-child(2) > .chakra-text")
+    .click();
+  await page
+    .locator(".css-1nxdxdl > .css-gg4vpm > div:nth-child(3) > .chakra-text")
+    .click();
+  await page
+    .locator(".css-1ijyrq9 > .css-gg4vpm > div:nth-child(4) > .chakra-text")
+    .click();
+  const nextButton = page
+    .locator("div")
+    .filter({
+      hasText:
+        "Let's dive deeper...(rate your emotions - click on the bubbles)How happy do you",
+    })
+    .getByRole("button");
+  await expect(nextButton).toBeVisible();
+  await nextButton.click();
   await page.goto("http://localhost:3000/reflection");
-
+  await expect(page).toHaveURL("http://localhost:3000/reflection");
   const placeholderText = page.getByRole("textbox");
 
   await expect(placeholderText).toHaveText("");
@@ -230,12 +245,4 @@ test("Rob's user journey - reflection submission", async ({ page }) => {
     name: "See everything you jotted down",
   });
   await expect(earlierLogsButton).toBeVisible();
-  // await page.waitForFunction(() => {
-  //   const toastPopUp = document.querySelector('[role="emphasis"]');
-  //   return (
-  //     toastPopUp &&
-  //     toastPopUp.textContent.includes("Oops, nothing has been filled")
-  //   );
-  // });
-  // expect(toastPopUp).toHaveText("/Oops, nothing has been filled/");
 });
