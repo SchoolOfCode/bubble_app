@@ -122,8 +122,8 @@ export function TestChart() {
         </Flex>
       </Tabs>
       <Center>
-        <Box paddingTop={10}>
-          <Pie data={chartData} options={options}/>
+        <Box paddingTop={5}>
+          <Pie data={chartData} options={options} width={300} height={300} />
         </Box>
       </Center>
     </>

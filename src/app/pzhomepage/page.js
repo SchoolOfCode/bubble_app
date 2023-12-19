@@ -16,6 +16,7 @@ export default function Page() {
         direction="row"
         mt="20"
         gap="10"
+        flexDirection={{ base: "column", md: "row", lg: "row" }}
       >
         <Link href="/parentzonelogs" target="_self">
           <Button
