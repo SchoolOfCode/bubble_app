@@ -51,7 +51,7 @@ const { logs, setLogs } = useContext(MoodDataContext);
           position: "top",
           duration: 8000,
           render: () => (
-            <Box color="white" p={3} bg="purple.400" borderRadius="md" h={{ base: "100px", md: "75px"}}>
+            <Box color="white" p={3} bg="purple.700" borderRadius="md" h={{ base: "100px", md: "75px"}}>
               <Box>
                 <Box textAlign="center">
                   <Text fontSize="lg" as="em" ml="38">
