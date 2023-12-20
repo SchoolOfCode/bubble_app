@@ -13,7 +13,7 @@ export default function page() {
       <Navbar />
       <HeadingComponent />
       <Box
-        maxW={[350, 600]}
+        maxW={[300, 400, 600]}
         mx="auto"
         borderRadius="20"
         textAlign="center"
@@ -31,7 +31,7 @@ export default function page() {
       <Flex gap="10px" direction="column" alignItems="center" pb="50px">
         <Textbox />
         <Link href="/childlog" target="_self">
-          <Button bg="brand.yellow" maxW="600px" boxShadow="lg" mb="10px">
+          <Button bg="brand.yellow" size="lg" boxShadow="lg" mb="10px">
             See everything you jotted down
           </Button>
         </Link>

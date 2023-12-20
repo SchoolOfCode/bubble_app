@@ -84,7 +84,7 @@ export default function Textbox() {
     <>
       <Box
         bg="brand.blue"
-        w={[350, 600]}
+        maxW={[300, 400, 600]}
         mx="auto"
         borderRadius="20"
         textAlign="center"
@@ -108,7 +108,7 @@ export default function Textbox() {
       </Box>
       <Button
         bg="brand.purple"
-        maxW="600px"
+        size="lg"
         boxShadow="lg"
         onClick={() => {
           sendDataToDB(value);
