@@ -29,7 +29,7 @@ export default function Navbar() {
             <Image src={BackButton} alt="Back Button" />
         </Box>
         {isHomeButtonVisible && (
-          <Box pl="20px" onClick={goHome} cursor="pointer">
+          <Box pl="30px" onClick={goHome} cursor="pointer">
               <Image src={HomeIcon} alt="Home Button" />
           </Box>
         )}

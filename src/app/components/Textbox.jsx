@@ -12,15 +12,19 @@ import {
 import supabase from "../config/supabaseClient";
 import { useContext } from "react";
 import { UserIdContext } from "../context/useridcontext";
+import { useRouter } from "next/navigation";
 // import useValue from "../hooks/useValue"
 
 export default function Textbox() {
   const { uuid } = useContext(UserIdContext);
 
   const toast = useToast();
+  const router = useRouter();
+  const id = "single-toast";
 
   let [value, setValue] = useState("");
   const [textBorder, setTextBorder] = useState("none");
+  const [isDataSent, setIsDataSent] = useState(false);
 
   let handleInputChange = (e) => {
     let inputValue = e.target.value;
@@ -42,8 +46,8 @@ export default function Textbox() {
             </Box>
           </Flex>
         ),
-      }),
-        setTextBorder("3px solid red");
+      });
+      setTextBorder("3px solid red");
       setTimeout(() => {
         setTextBorder("none");
       }, 6000);
@@ -60,23 +64,29 @@ export default function Textbox() {
       }
       if (data) {
         console.log("this has worked, check supabase");
-        toast({
-          position: "top",
-          duration: 6000,
-          render: () => (
-            <Flex justifyContent="center" textAlign="center">
-              <Box color="black" p={3} bg="#C2F2BA" borderRadius="md">
-                <Text fontSize="lg" as="em">
-                  That&apos;s been saved, thanks for filling that out! Have you
-                  tried bubble breathing?
-                </Text>
-              </Box>
-            </Flex>
-          ),
-        });
-      }
+        if (!toast.isActive(id)) {
+          toast({
+            id,
+            position: "top",
+            duration: 6000,
+            render: () => (
+              <Flex justifyContent="center" textAlign="center">
+                <Box color="black" p={3} bg="#C2F2BA" borderRadius="md">
+                  <Text fontSize="lg" as="em">
+                    That&apos;s been saved, thanks for filling that out! Have you
+                    tried bubble breathing?
+                  </Text>
+                </Box>
+              </Flex>
+            ),
+          });
+        }
 
-      setValue("");
+        setIsDataSent(true);
+        // setValue("");
+        // await delay(6000);
+        // router.push("/childlog");
+      }
     }
   }
 
@@ -92,30 +102,38 @@ export default function Textbox() {
         mb="3"
         boxShadow="lg"
       >
-        <FormLabel htmlFor="textarea" p="2">
-          Please write in the space below:
-        </FormLabel>
-        <Textarea
-          id="textarea"
-          value={value}
-          onChange={handleInputChange}
-          placeholder="If you’re stuck, that’s okay start by writing about your day...what happened?"
-          border={textBorder}
-          size="lg"
-          h="300px"
-          _placeholder={{ color: "gray.600" }} //placeholder color
-        />
+        {isDataSent ? (
+          <Text fontSize="lg" p="4">
+            You're all done!
+          </Text>
+        ) : (
+          <>
+            <FormLabel htmlFor="textarea" p="2">
+              Please write in the space below:
+            </FormLabel>
+            <Textarea
+              id="textarea"
+              value={value}
+              onChange={handleInputChange}
+              placeholder="If you’re stuck, that’s okay start by writing about your day...what happened?"
+              border={textBorder}
+              size="lg"
+              h="250px"
+              _placeholder={{ color: "gray.600" }} //placeholder color
+            />
+          </>
+        )}
       </Box>
-      <Button
-        bg="brand.purple"
-        size={{ base: "md", md: "md", lg: "lg" }}
-        boxShadow="lg"
-        onClick={() => {
-          sendDataToDB(value);
-        }}
-      >
-        Finish
-      </Button>
+        <Button
+          bg="brand.purple"
+          size={{ base: "md", md: "md", lg: "lg" }}
+          boxShadow="lg"
+          onClick={() => {
+            sendDataToDB(value);
+          }}
+        >
+          Finish
+        </Button>
     </>
   );
 }
