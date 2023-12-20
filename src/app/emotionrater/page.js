@@ -74,7 +74,7 @@ const RatingButtons = () => {
     ) {
       toast({
         position: "top",
-        duration: 5000,
+        duration: 6000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
             <Box color="white" p={3} bg="#4258A6" borderRadius="md">
