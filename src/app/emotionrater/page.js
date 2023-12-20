@@ -162,6 +162,7 @@ const RatingButtons = () => {
                     align="center"
                     w="65px"
                     size="sm"
+                    fontWeight="bold"
                     css={{
                       "@media (max-width: 480px)": {
                         fontSize: "13px",
@@ -356,6 +357,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -391,6 +393,7 @@ const RatingButtons = () => {
                   <Text
                     textAlign="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -587,6 +590,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -622,6 +626,7 @@ const RatingButtons = () => {
                   <Text
                     align="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -817,6 +822,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -852,6 +858,7 @@ const RatingButtons = () => {
                   <Text
                     align="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -1047,6 +1054,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -1088,6 +1096,7 @@ const RatingButtons = () => {
                   <Text
                     align="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -1283,6 +1292,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -1318,6 +1328,7 @@ const RatingButtons = () => {
                   <Text
                     align="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -1514,6 +1525,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
