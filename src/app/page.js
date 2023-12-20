@@ -24,15 +24,14 @@ export default function Home() {
 
         <SimpleGrid
           columns={2}
-          spacing={{ base: "3", md: "8", lg: "10" }}
-          mt={{ base: "50px", md: "10px", lg: "10px" }}
+          spacing={{ base: "3", md: "5", lg: "8" }}
+          mt={{ base: "50px", md: "10px", lg: "5px" }}
         >
-          <Box>
             <Link href="/breathing" target="_self">
               <Button
-                size={{ base: "lg", md: "lg", lg: "lg" }}
+                // size={{ base: "lg", md: "lg", lg: "lg" }}
                 w={{ base: "175px", md: "250px", lg: "300px" }}
-                h={{ base: "50px", md: "100px", lg: "100px" }}
+                h={{ base: "50px", md: "75px", lg: "75px" }}
                 bg="brand.pink"
                 boxShadow="lg"
                 tabIndex="-1"
@@ -42,13 +41,12 @@ export default function Home() {
                 </Text>
               </Button>
             </Link>
-          </Box>
-          <Box>
+          {/* <Box> */}
             <Link href="/emojis" target="_self">
               <Button
-                size={{ base: "lg", md: "lg", lg: "lg" }}
+                // size={{ base: "md", md: "md", lg: "md" }}
                 w={{ base: "175px", md: "250px", lg: "300px" }}
-                h={{ base: "50px", md: "100px", lg: "100px" }}
+                h={{ base: "50px", md: "75px", lg: "75px" }}
                 bg="brand.green"
                 boxShadow="lg"
                 tabIndex="-1"
@@ -58,28 +56,29 @@ export default function Home() {
                 </Text>
               </Button>
             </Link>
-          </Box>
+          {/* </Box> */}
         </SimpleGrid>
-        <Box
-          minW="268px"
+        {/* <Box
+          // minW="268px"
           mt={{ base: "20px", md: "40px", lg: "30px" }}
           align="center"
-        >
+        > */}
           <Link href="/childlog" target="_self">
             <Button
               size={{ base: "lg", md: "lg", lg: "lg" }}
               w={{ base: "180px", md: "250px", lg: "300px" }}
-              h={{ base: "50px", md: "100px", lg: "100px" }}
+              h={{ base: "50px", md: "75px", lg: "75px" }}
               bg="brand.purple"
               boxShadow="lg"
               tabIndex="-1"
+              mt="20px"
             >
               <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                 Earlier Logs
               </Text>
             </Button>
           </Link>
-        </Box>
+        {/* </Box> */}
       </Flex>
       <Box bottom={{ base: "10" }} ml="5" position="absolute">
         <Link href="/pzhomepage" target="_self">
