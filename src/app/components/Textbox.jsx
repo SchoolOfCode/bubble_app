@@ -31,7 +31,7 @@ export default function Textbox() {
     if (!value) {
       toast({
         position: "top",
-        duration: 5000,
+        duration: 6000,
         render: () => (
           <Flex justifyContent="center" textAlign="center">
             <Box color="white" p={3} bg="#4258A6" borderRadius="md">
@@ -46,7 +46,7 @@ export default function Textbox() {
         setTextBorder("3px solid red");
       setTimeout(() => {
         setTextBorder("none");
-      }, 5000);
+      }, 6000);
     } else {
       console.log(value);
       const { data, error } = await supabase
@@ -62,7 +62,7 @@ export default function Textbox() {
         console.log("this has worked, check supabase");
         toast({
           position: "top",
-          duration: 3000,
+          duration: 6000,
           render: () => (
             <Flex justifyContent="center" textAlign="center">
               <Box color="black" p={3} bg="#C2F2BA" borderRadius="md">
@@ -84,7 +84,7 @@ export default function Textbox() {
     <>
       <Box
         bg="brand.blue"
-        w={[350, 600]}
+        w={[300, 400, 600]}
         mx="auto"
         borderRadius="20"
         textAlign="center"
@@ -108,7 +108,7 @@ export default function Textbox() {
       </Box>
       <Button
         bg="brand.purple"
-        maxW="600px"
+        size={{ base: "md", md: "md", lg: "lg" }}
         boxShadow="lg"
         onClick={() => {
           sendDataToDB(value);
