@@ -46,7 +46,7 @@ export default function Textbox() {
         setTextBorder("3px solid red");
       setTimeout(() => {
         setTextBorder("none");
-      }, 5000);
+      }, 6000);
     } else {
       console.log(value);
       const { data, error } = await supabase
@@ -84,7 +84,7 @@ export default function Textbox() {
     <>
       <Box
         bg="brand.blue"
-        maxW={[300, 400, 600]}
+        w={[300, 400, 600]}
         mx="auto"
         borderRadius="20"
         textAlign="center"
@@ -108,7 +108,7 @@ export default function Textbox() {
       </Box>
       <Button
         bg="brand.purple"
-        size="lg"
+        size={{ base: "md", md: "md", lg: "lg" }}
         boxShadow="lg"
         onClick={() => {
           sendDataToDB(value);
