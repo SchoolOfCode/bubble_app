@@ -1,19 +1,30 @@
 "use client";
 import React from "react";
 import ReactPlayer from "react-player";
-import { Box, Flex, Button, ChakraProvider, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, ModalFooter, useDisclosure } from "@chakra-ui/react";
-
+import {
+  Box,
+  Flex,
+  Button,
+  ChakraProvider,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+  ModalFooter,
+  useDisclosure,
+} from "@chakra-ui/react";
 
 const VideoPlayer = () => {
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-     <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Bubble Breating Video</ModalHeader>
+          <ModalHeader>Bubble Breathing Video</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Box zIndex={1} mb="20px" w="100%" h="400px">
@@ -35,27 +46,29 @@ const VideoPlayer = () => {
     </>
   );
 };
-  {/* <Box zIndex={1} mb="20px" w={[300, 400, 600]} h={[200, 200, 350]}>
+{
+  /* <Box zIndex={1} mb="20px" w={[300, 400, 600]} h={[200, 200, 350]}>
     <ReactPlayer
       url="https://youtu.be/FpUNhx1IFec"
       controls
-      title="Bubble Breating Video"
+      title="Bubble Breathing Video"
       width="100%"
       height="100%"
     />
-  </Box> */}
-  //   <div>
-  //     <Box zIndex={1} mb="20px">
-  //       <Flex justify="center" alignItems="center">
-  //         <ReactPlayer
-  //           url="https://youtu.be/FpUNhx1IFec"
-  //           controls
-  //           width="600px"
-  //           height="300px"
-  //         />
-  //       </Flex>
-  //     </Box>
-  //   </div>
-  // );
+  </Box> */
+}
+//   <div>
+//     <Box zIndex={1} mb="20px">
+//       <Flex justify="center" alignItems="center">
+//         <ReactPlayer
+//           url="https://youtu.be/FpUNhx1IFec"
+//           controls
+//           width="600px"
+//           height="300px"
+//         />
+//       </Flex>
+//     </Box>
+//   </div>
+// );
 
 export default VideoPlayer;

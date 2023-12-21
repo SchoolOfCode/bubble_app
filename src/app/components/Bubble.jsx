@@ -100,7 +100,7 @@ export default function Bubble() {
               <ModalOverlay />
               <ModalContent bg="brand.orange">
                 <Flex justifyContent="center" alignItems="center" flexDirection="column" >
-                <ModalHeader>Bubble Breathing Video</ModalHeader>
+                <ModalHeader>Bubble Breating Video</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
                 <Center>
