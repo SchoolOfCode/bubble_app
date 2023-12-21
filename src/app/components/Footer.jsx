@@ -18,7 +18,7 @@ export default function Footer() {
       <Box>
         <Text>
           <strong>
-             © CalmCoders Ltd.Fostering mindful bubbles since 2023.
+            © CalmCoders Ltd. Fostering mindful bubbles since 2023.
           </strong>
         </Text>
       </Box>
