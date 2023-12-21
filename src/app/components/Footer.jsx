@@ -16,11 +16,7 @@ export default function Footer() {
       padding="5px"
     >
       <Box>
-        <Text>
-          <strong>
-            © CalmCoders Ltd. Fostering mindful bubbles since 2023.
-          </strong>
-        </Text>
+        <Text>© CalmCoders Ltd. Fostering mindful bubbles since 2023.</Text>
       </Box>
     </Flex>
   );
