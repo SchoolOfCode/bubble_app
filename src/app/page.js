@@ -94,7 +94,7 @@ export default function Home() {
             tabIndex="-1"
           >
             <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
-              Parent Zone
+              Grown-Up Zone
             </Text>
           </Button>
         </Link>

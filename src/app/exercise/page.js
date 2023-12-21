@@ -20,7 +20,7 @@ import BubbleBody from "../components/BubbleBody";
 
 function page() {
 
-  const bubbleSize = useBreakpointValue({ base: '350px', sm: '450px', md: '600px', lg: '600px' });
+  const bubbleSize = useBreakpointValue({ base: '350px', sm: '400px', md: '450px', lg: '450px' });
 
   const [animationComplete, setAnimationComplete] = useState(false);
 

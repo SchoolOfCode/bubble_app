@@ -162,6 +162,7 @@ const RatingButtons = () => {
                     align="center"
                     w="65px"
                     size="sm"
+                    fontWeight="bold"
                     css={{
                       "@media (max-width: 480px)": {
                         fontSize: "13px",
@@ -186,6 +187,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleHappinessRatingChange(1)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -218,6 +223,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleHappinessRatingChange(2)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -250,6 +259,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleHappinessRatingChange(3)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -282,6 +295,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleHappinessRatingChange(4)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -314,6 +331,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleHappinessRatingChange(5)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -336,6 +357,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -371,6 +393,7 @@ const RatingButtons = () => {
                   <Text
                     textAlign="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -397,6 +420,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleSadnessRatingChange(1)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -429,6 +456,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleSadnessRatingChange(2)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -461,6 +492,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleSadnessRatingChange(3)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -493,6 +528,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleSadnessRatingChange(4)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -525,6 +564,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleSadnessRatingChange(5)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -547,6 +590,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -582,6 +626,7 @@ const RatingButtons = () => {
                   <Text
                     align="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -607,6 +652,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleAngryRatingChange(1)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -639,6 +688,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleAngryRatingChange(2)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -671,6 +724,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleAngryRatingChange(3)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -703,6 +760,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleAngryRatingChange(4)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -735,6 +796,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleAngryRatingChange(5)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -757,6 +822,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -792,6 +858,7 @@ const RatingButtons = () => {
                   <Text
                     align="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -817,6 +884,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleCheekyRatingChange(1)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -849,6 +920,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleCheekyRatingChange(2)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -881,6 +956,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleCheekyRatingChange(3)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -913,6 +992,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleCheekyRatingChange(4)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -945,6 +1028,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleCheekyRatingChange(5)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -967,6 +1054,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -1008,6 +1096,7 @@ const RatingButtons = () => {
                   <Text
                     align="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -1033,6 +1122,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleTiredRatingChange(1)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1065,6 +1158,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleTiredRatingChange(2)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1097,6 +1194,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleTiredRatingChange(3)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1129,6 +1230,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleTiredRatingChange(4)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1161,6 +1266,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleTiredRatingChange(5)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1183,6 +1292,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {
@@ -1218,6 +1328,7 @@ const RatingButtons = () => {
                   <Text
                     align="center"
                     w="65px"
+                    fontWeight="bold"
                     size="sm"
                     css={{
                       "@media (max-width: 480px)": {
@@ -1243,6 +1354,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleWorriedRatingChange(1)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1275,6 +1390,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleWorriedRatingChange(2)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1307,6 +1426,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleWorriedRatingChange(3)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1339,6 +1462,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleWorriedRatingChange(4)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1371,6 +1498,10 @@ const RatingButtons = () => {
 
                   <Text
                     onClick={() => handleWorriedRatingChange(5)}
+                    pt={{ base: "0", md: "1", lg: "1" }}
+                    pb={{ base: "0", md: "1", lg: "1" }}
+                    pl={{ base: "2.5", md: "3", lg: "3" }}
+                    pr={{ base: "2.5", md: "3", lg: "3" }}
                     position="absolute"
                     top="50%"
                     left="50%"
@@ -1394,6 +1525,7 @@ const RatingButtons = () => {
                 <Text
                   align="center"
                   w="65px"
+                  fontWeight="bold"
                   size="sm"
                   css={{
                     "@media (max-width: 480px)": {

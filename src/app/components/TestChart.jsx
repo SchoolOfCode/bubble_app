@@ -431,7 +431,7 @@ export function TestChart({ originalArray }) {
           <Heading fontSize="md" as="h2" p="3">
             Average Mood Scores
           </Heading>
-          <Text as="em" fontSize="sm">
+          <Text as="em" fontSize="sm" fontWeight="bold">
             This is from the &apos;dive deeper&apos; section of the app. This
             shows the average scores for the time period selected above.
           </Text>
