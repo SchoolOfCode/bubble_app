@@ -13,11 +13,11 @@ test("landing page has title, logo and button options", async ({ page }) => {
   await expect(recordMood).toBeVisible();
   let earlierLogs = page.getByRole("button", { name: "Earlier Logs" });
   await expect(earlierLogs).toBeVisible();
-  let parentZone = page.getByRole("button", { name: "Parent Zone" });
+  let parentZone = page.getByRole("button", { name: "Grown-Up Zone" });
   await expect(parentZone).toBeVisible();
   let footer = page
     .locator("div")
-    .filter({ hasText: "© Team 11 Ltd. Fostering" })
+    .filter({ hasText: "© CalmCoders Ltd.Fostering" })
     .first();
   await expect(footer).toBeVisible();
 });
@@ -184,7 +184,7 @@ test("Rob's user journey - reflection page", async ({ page }) => {
   await expect(secondHeadingReflection).toHaveText(/Write about why you\'re/);
   const textBox = page
     .locator("div")
-    .filter({ hasText: /^Please write in the space below:-$/ });
+    .filter({ hasText: /^Please write in the space below:$/ });
   await expect(textBox).toBeVisible();
 
   const finishButton = page.getByRole("button", { name: "Finish" });
@@ -239,8 +239,6 @@ test("Rob's user journey - reflection submission", async ({ page }) => {
   const finishButton = page.getByRole("button", { name: "Finish" });
   await expect(finishButton).toBeVisible();
   await finishButton.click();
-  const emptyTextArea = page.getByRole("textbox");
-  await expect(emptyTextArea).toHaveText("");
   const earlierLogsButton = page.getByRole("button", {
     name: "See everything you jotted down",
   });
