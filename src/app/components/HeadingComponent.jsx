@@ -48,7 +48,7 @@ export default function HeadingComponent() {
     },
     {
       id: 7,
-      title: "Parent Zone",
+      title: "Grown Up Zone",
       color: "brand.yellow",
       pathKeyword: "pzhomepage",
     },
