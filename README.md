@@ -43,7 +43,6 @@ Bubble aims to help children reflect on their feelings and for their trusted adu
 ## 🛑 Dependencies / Limitations <a name = "limitations"></a>
 
 - In it's MVP stage, we currently have no auth or permissions built into the app. This is something we decided to not do early on with a focus more on features, however we recognise the importance of privacy and security and intend to build this in the future.
-- We will be holding users key documentation and user data so GDPR compliance must be adhered to. This will require keeping on top of any law chances and updating our app accordingly.
 - As our app targets two different parties with children being the main users and adults being the main customers, we had a difficult task making the app accessible and applicable.
 - We are using a free tier of Vercel for hosting. This may result in the app being slow to load and/or not being able to store all of the users data.
 
