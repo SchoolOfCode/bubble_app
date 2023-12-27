@@ -1,8 +1,8 @@
 # The CalmCoders Presents
 
-[![Logo-With-Text.png](https://i.postimg.cc/hvsqV7Sk/Bubble-Logo.png)](https://postimg.cc/jnD9b2nc)
+[![projectintro.png](https://i.postimg.cc/Kv1tVwzC/projectintro.png)](https://postimg.cc/56MHQP8m)
 
-<h3 align="center">Bubble</h3>
+<h2 align="center"> Bubble <br> <i>where mindful momments are made...</i></h2>
 
 ---
 
