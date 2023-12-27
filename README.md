@@ -1,6 +1,6 @@
 # The CalmCoders Presents
 
-[![Logo-With-Text.png](https://i.postimg.cc/V6gZw7Cw/Logo-With-Text.png)](https://postimg.cc/FdfVgVpC)
+[![Logo-With-Text.png](https://i.postimg.cc/hvsqV7Sk/Bubble-Logo.png)](https://postimg.cc/jnD9b2nc)
 
 <h3 align="center">Bubble</h3>
 
