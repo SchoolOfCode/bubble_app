@@ -2,7 +2,7 @@
 
 [![projectintro.png](https://i.postimg.cc/Kv1tVwzC/projectintro.png)](https://postimg.cc/56MHQP8m)
 
-<h2 align="center"> Bubble <br> <i>where mindful momments are made...</i></h2>
+<h2 align="center"> Bubble <br> <i>where mindful moments are made...</i></h2>
 
 ---
 
