@@ -46,6 +46,12 @@ Bubble aims to help children reflect on their feelings and for their trusted adu
 - As our app targets two different parties with children being the main users and adults being the main customers, we had a difficult task making the app accessible and applicable.
 - We are using a free tier of Vercel for hosting. This may result in the app being slow to load and/or not being able to store all of the users data.
 
+## 💻 Setting Up A Local Enivronment <a name = "getting_started"></a>
+
+We came to an agreement to have weekly deploment aligned with each sprint, a production branch called "dev" acted as production branch before each deploment to ensure the app works and looks as intended. This was a vital step into detecting any errors, bugs and ultimately gaining feedback. Using Next as our React App, we had a development server that helped with 
+
+the build that was accessed using "npm run dev" in the terminal (a default script in the package.json to run Next dev).
+
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
 We didn't have time to implement secure document storage, as a result we scaled back our mvp to focus on the job board, ticket generation with a custom chat interface for said tickets, whilst having our user roles set we are in the process of finalising our database so that specific landlords can connect with specific tenants via linked IDs .
