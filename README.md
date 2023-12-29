@@ -68,11 +68,11 @@ You can visit our app here -> <a href="https://bubble-app-two.vercel.app/">Bubbl
 ## ⛏️ Tech Stack <a name = "tech_stack"></a>
 
 - [NextJs](https://nextjs.org/) - Web Framework
-- [JavaScript](https://www.typescriptlang.org) - Coding Language
+- [JavaScript](https://www.javascript.com/) - Coding Language
 - [NodeJs](https://nodejs.org/en/) - Server Environment
-- [ChakraUI](https://tailwindcss.com) - Styling
-- [Plawright](https://www.cypress.io) - Testing
-- [Supabase](https://www.postgresql.org) - Database
+- [ChakraUI](https://chakra-ui.com/) - Styling
+- [Plawright](https://playwright.dev/) - Testing
+- [Supabase](https://supabase.com/) - Database
 
 ## 🏫 Lessons Learned <a name = "lessons_learned"></a>
 
