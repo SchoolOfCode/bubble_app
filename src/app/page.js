@@ -36,7 +36,7 @@ export default function Home() {
                 boxShadow="lg"
                 tabIndex="-1"
               >
-                <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
+                <Text as="h1" fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                   Bubble Breathing
                 </Text>
               </Button>
@@ -51,7 +51,7 @@ export default function Home() {
                 boxShadow="lg"
                 tabIndex="-1"
               >
-                <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
+                <Text as="h1" fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                   Record Your Mood
                 </Text>
               </Button>
@@ -73,7 +73,7 @@ export default function Home() {
               tabIndex="-1"
               mt="20px"
             >
-              <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
+              <Text as="h1" fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
                 Earlier Logs
               </Text>
             </Button>
@@ -93,7 +93,7 @@ export default function Home() {
             boxShadow="lg"
             tabIndex="-1"
           >
-            <Text fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
+            <Text as="h1" fontSize={{ base: "lg", md: "2xl", lg: "2xl" }}>
               Grown-Up Zone
             </Text>
           </Button>
