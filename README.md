@@ -1,8 +1,8 @@
 # The CalmCoders Presents
 
-[![Logo-With-Text.png](https://i.postimg.cc/V6gZw7Cw/Logo-With-Text.png)](https://postimg.cc/FdfVgVpC)
+[![projectintro.png](https://i.postimg.cc/Kv1tVwzC/projectintro.png)](https://postimg.cc/56MHQP8m)
 
-<h3 align="center">Bubble</h3>
+<h2 align="center"> Bubble <br> <i>where mindful momments are made...</i></h2>
 
 ---
 
@@ -46,11 +46,20 @@ Bubble aims to help children reflect on their feelings and for their trusted adu
 - As our app targets two different parties with children being the main users and adults being the main customers, we had a difficult task making the app accessible and applicable.
 - We are using a free tier of Vercel for hosting. This may result in the app being slow to load and/or not being able to store all of the users data.
 
+## 💻 Setting Up A Local Enivronment <a name = "getting_started"></a>
+
+We came to an agreement to have weekly deploment aligned with each sprint, a production branch called "dev" acted as production branch before each deploment to ensure the app works and looks as intended. This was a vital step into detecting any errors, bugs and ultimately gaining feedback. Using Next as our React App, we had a development server that helped with 
+the build that was accessed using "npm run dev" in the terminal (a default script in the package.json to run Next dev).
+
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-We didn't have time to implement secure document storage, as a result we scaled back our mvp to focus on the job board, ticket generation with a custom chat interface for said tickets, whilst having our user roles set we are in the process of finalising our database so that specific landlords can connect with specific tenants via linked IDs .
+Our next sprint goal, would be to start on login and authentication. This is important to safeguarding the content of the reflection page so that entries are private to each user, we felt as this is a new technology to us for the timeframe of this project, this wasn't included in our MVP. The advice from bootcamp coaches also agreed with this decision. We could also introduce more control to the bubble breathing such as a pause & play or a slider to control the speed. 
 
-In the future we are confident that we can implement the above document storage as well as a host of other features ie: payment monitor, a tools and guides page to help tenants maintain the property themselves, the option to download transcripts and templates for things like inventories, checkout and tenancy agreements.
+In the next few weeks, we could work on accessibility, putting our focus to include keyboard users and a setting section in both the grown-up zone and child area. The settings would include options that allow the app to cater for an individual's experience. The personalisation would build trust and likely keep users engaged with the app. Options could include a toggle for a light mode and dark mode, controls for the background bubble and more. A disclaimer section would be built, only availablein the grown up zone, with helpful links to charities and the NHS service for mental health in children.
+
+In the next few months, Bubble will have a notification system to let the grown-up know when a a child under their account has filled in the mood logger form. We would also work on including a character as a representation of the app to build trust and commercialability, this character has appeared in our tutorial video, but we want the character to be providing the prompts and work on improving the contents of the prompts to fit the character. More content in the data analysis tailoring prompts depending the leading average emotion score. 
+
+In the near future, Bubble will include more content for both the grown-up and child. A variety in the mindfulness acitvities to keep users engaged, from "mindful-listening" to encourage children to be present in the moment and reflection to "paired yoga" to encourage physical movement and connection between our two users; the grown-up and child. We aim to educate both grown-ups and children, so we would provide more content in this respect; an education section for the grown-up for them to understand the science behind why mindfulness is important and for the child to understand why they are doing these activities.
 
 ## 🏁 Visit Our Website <a name = "vist_our_website"></a>
 
