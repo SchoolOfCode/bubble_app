@@ -19,6 +19,7 @@ import { UserIdContext } from "../context/useridcontext.js";
 import Footer from "../components/Footer.jsx";
 import Bubble from "../../../public/assets/Bubble.png";
 import "../page.module.css";
+import Rating from "../components/Rating.jsx";
 
 const RatingButtons = () => {
   const { uuid } = useContext(UserIdContext);
@@ -118,28 +119,31 @@ const RatingButtons = () => {
         pb="50px"
       >
         <HeadingComponent />
-        {/* <Box
-          fontSize={{ base: "lg", md: "lg", lg: "2xl" }}
-          bg="brand.blue"
-          borderRadius="20"
-          mb="1rem"
-          w={[300, 400, 500]}
+        <Rating emotion="happy" />
+        <Rating emotion="sad" />
+        <Rating emotion="angry" />
+        <Rating emotion="tired" />
+        <Rating emotion="cheeky" />
+        <Rating emotion="worried" />
+        <Button
+          bg="brand.purple"
           boxShadow="lg"
-          p="2"
-          mt="10"
+          size="lg"
+          mb="10px"
+          mt="10px"
+          onClick={() => SubmitEvent()}
         >
-          <Heading
-            as="h1"
-            align="center"
-            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-          >
-            Let&apos;s dive deeper...
-          </Heading>
-          <Text fontSize="xl" align="center">
-            (rate your emotions - click on the bubbles)
-          </Text>
-        </Box> */}
-        <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacingX={7}>
+          <Text size="xl">Next</Text>
+        </Button>
+      </Flex>
+      <Footer />
+    </>
+  );
+};
+
+export default RatingButtons;
+{
+  /* <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacingX={7}>
           <Box>
             <Box
               bg="brand.green"
@@ -1539,21 +1543,5 @@ const RatingButtons = () => {
               </Box>
             </Box>
           </Box>
-        </SimpleGrid>
-        <Button
-          bg="brand.purple"
-          boxShadow="lg"
-          size="lg"
-          mb="10px"
-          mt="10px"
-          onClick={() => SubmitEvent()}
-        >
-          <Text size="xl">Next</Text>
-        </Button>
-      </Flex>
-      <Footer />
-    </>
-  );
-};
-
-export default RatingButtons;
+        </SimpleGrid> */
+}
