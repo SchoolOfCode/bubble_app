@@ -54,7 +54,7 @@ const Rating = ({ emotion, onRatingChange }) => {
           <Flex alignItems="center" justifyContent="center">
             <Text
               align="center"
-              w="60px"
+              w="65px"
               h="65px"
               size="sm"
               fontWeight="bold"
