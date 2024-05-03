@@ -119,12 +119,20 @@ const RatingButtons = () => {
         pb="50px"
       >
         <HeadingComponent />
-        <Rating emotion="happy" onRatingChange={handleHappinessRatingChange} />
-        <Rating emotion="sad" onRatingChange={handleSadnessRatingChange} />
-        <Rating emotion="angry" onRatingChange={handleAngryRatingChange} />
-        <Rating emotion="tired" onRatingChange={handleTiredRatingChange} />
-        <Rating emotion="cheeky" onRatingChange={handleCheekyRatingChange} />
-        <Rating emotion="worried" onRatingChange={handleWorriedRatingChange} />
+        <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacing={3}>
+          <Rating
+            emotion="happy"
+            onRatingChange={handleHappinessRatingChange}
+          />
+          <Rating emotion="sad" onRatingChange={handleSadnessRatingChange} />
+          <Rating emotion="angry" onRatingChange={handleAngryRatingChange} />
+          <Rating emotion="tired" onRatingChange={handleTiredRatingChange} />
+          <Rating emotion="cheeky" onRatingChange={handleCheekyRatingChange} />
+          <Rating
+            emotion="worried"
+            onRatingChange={handleWorriedRatingChange}
+          />
+        </SimpleGrid>
         <Button
           bg="brand.purple"
           boxShadow="lg"

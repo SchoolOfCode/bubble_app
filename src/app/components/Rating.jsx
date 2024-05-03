@@ -35,98 +35,96 @@ const Rating = ({ emotion, onRatingChange }) => {
 
   return (
     <>
-      <SimpleGrid columns={{ base: 1, md: 1, lg: 1 }} spacingX={7}>
-        <Box>
-          <Box
-            bg={backgroundColor}
-            borderRadius="20"
-            p="1rem"
-            my="0.5rem"
-            w={[300, 400, 500]}
-            h={[100, 125, 125]}
+      <SimpleGrid columns={{base: 1, sm: 1, md: 1, lg: 1}} spacingX={7}>
+        <Box
+          bg={backgroundColor}
+          borderRadius="20"
+          p="1rem"
+          my="0.5rem"
+          w={[300, 400, 500]}
+          h={[100, 125, 125]}
+        >
+          <Heading
+            align="center"
+            fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
+            mb="10px"
           >
-            <Heading
+            How {emotion} do you feel?
+          </Heading>
+          <Flex alignItems="center" justifyContent="center">
+            <Text
               align="center"
-              fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
-              mb="10px"
+              w="60px"
+              h="65px"
+              size="sm"
+              fontWeight="bold"
+              noOfLines={2}
+              css={{
+                "@media (max-width: 480px)": {
+                  fontSize: "13px",
+                  alignSelf: "center",
+                },
+              }}
             >
-              How {emotion} do you feel?
-            </Heading>
-            <Flex alignItems="center" justifyContent="center">
-              <Text
-                align="center"
-                w="65px"
-                h="65px"
-                size="sm"
-                fontWeight="bold"
-                css={{
-                  "@media (max-width: 480px)": {
-                    fontSize: "13px",
-                    alignSelf: "center",
-                  },
-                }}
+              Not {emotion}
+            </Text>
+            {[1, 2, 3, 4, 5].map((num) => (
+              <Box
+                key={num}
+                position="relative"
+                display="inline-block"
+                onClick={() => handleRatingChange(num)}
               >
-                Not {emotion}
-              </Text>
-              {[1, 2, 3, 4, 5].map((num) => (
-                <Box
-                  key={num}
-                  position="relative"
-                  display="inline-block"
-                  onClick={() => handleRatingChange(num)}
+                <Image
+                  src={Bubble}
+                  alt={`Bubble${num}`}
+                  width={50}
+                  height={50}
+                  style={{
+                    filter: rating !== num ? "opacity(50%)" : "none",
+                  }}
+                  cursor="pointer"
+                />
+                <Text
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color={rating === num ? "black" : "grey"}
+                  cursor="pointer"
+                  css={{
+                    "@media (max-width: 480px)": {
+                      top: "18px",
+                      fontSize: "18px",
+                    },
+                  }}
                 >
-                  <Image
-                    src={Bubble}
-                    alt={`Bubble${num}`}
-                    width={50}
-                    height={50}
-                    style={{
-                      filter: rating !== num ? "opacity(50%)" : "none",
-                    }}
-                    cursor="pointer"
-                  />
-                  <Text
-                    position="absolute"
-                    top="50%"
-                    left="50%"
-                    transform="translate(-50%, -50%)"
-                    fontSize="lg"
-                    fontWeight="bold"
-                    color={rating === num ? "black" : "grey"}
-                    cursor="pointer"
-                    css={{
-                      "@media (max-width: 480px)": {
-                        top: "18px",
-                        fontSize: "18px",
-                      },
-                    }}
-                  >
-                    {num}
-                  </Text>
-                </Box>
-              ))}
-              <Text
-                align="center"
-                w="65px"
-                h="65px"
-                fontWeight="bold"
-                size="sm"
-                css={{
-                  "@media (max-width: 480px)": {
-                    fontSize: "13px",
-                    marginLeft: "3px",
-                  },
-                }}
-              >
-                Very {emotion}
-              </Text>
-            </Flex>
-          </Box>
+                  {num}
+                </Text>
+              </Box>
+            ))}
+            <Text
+              align="center"
+              w="65px"
+              h="65px"
+              fontWeight="bold"
+              size="sm"
+              css={{
+                "@media (max-width: 480px)": {
+                  fontSize: "13px",
+                  marginLeft: "3px",
+                },
+              }}
+            >
+              Very {emotion}
+            </Text>
+          </Flex>
         </Box>
       </SimpleGrid>
     </>
   );
 };
-
 
 export default Rating;
