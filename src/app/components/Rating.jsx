@@ -12,11 +12,12 @@ import { Box, Button, Heading, Text, Flex, SimpleGrid } from "@chakra-ui/react";
 import Bubble from "../../../public/assets/Bubble.png";
 import "../page.module.css";
 
-const Rating = ({ emotion }) => {
+const Rating = ({ emotion, onRatingChange }) => {
   const [rating, setRating] = useState(null);
 
-  const handleHappinessRatingChange = (value) => {
+  const handleRatingChange = (value) => {
     setRating(value);
+    onRatingChange(value); // Call the parent component's handler function
   };
 
   // Define color mappings for each emotion
@@ -37,7 +38,7 @@ const Rating = ({ emotion }) => {
       <SimpleGrid columns={{ base: 1, md: 1, lg: 1 }} spacingX={7}>
         <Box>
           <Box
-            bg={backgroundColor} // Set background color dynamically
+            bg={backgroundColor}
             borderRadius="20"
             p="1rem"
             my="0.5rem"
@@ -72,7 +73,7 @@ const Rating = ({ emotion }) => {
                   key={num}
                   position="relative"
                   display="inline-block"
-                  onClick={() => handleHappinessRatingChange(num)}
+                  onClick={() => handleRatingChange(num)}
                 >
                   <Image
                     src={Bubble}
@@ -126,5 +127,6 @@ const Rating = ({ emotion }) => {
     </>
   );
 };
+
 
 export default Rating;

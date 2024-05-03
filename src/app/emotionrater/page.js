@@ -119,12 +119,12 @@ const RatingButtons = () => {
         pb="50px"
       >
         <HeadingComponent />
-        <Rating emotion="happy" />
-        <Rating emotion="sad" />
-        <Rating emotion="angry" />
-        <Rating emotion="tired" />
-        <Rating emotion="cheeky" />
-        <Rating emotion="worried" />
+        <Rating emotion="happy" onRatingChange={handleHappinessRatingChange} />
+        <Rating emotion="sad" onRatingChange={handleSadnessRatingChange} />
+        <Rating emotion="angry" onRatingChange={handleAngryRatingChange} />
+        <Rating emotion="tired" onRatingChange={handleTiredRatingChange} />
+        <Rating emotion="cheeky" onRatingChange={handleCheekyRatingChange} />
+        <Rating emotion="worried" onRatingChange={handleWorriedRatingChange} />
         <Button
           bg="brand.purple"
           boxShadow="lg"
